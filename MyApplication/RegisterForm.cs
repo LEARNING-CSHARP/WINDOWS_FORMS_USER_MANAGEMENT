@@ -1,4 +1,7 @@
-﻿namespace MyApplication
+﻿using System.Linq;
+using System.Data.Entity;
+
+namespace MyApplication
 {
 	public partial class RegisterForm : System.Windows.Forms.Form
 	{
@@ -96,6 +99,8 @@
 			UsernameTextBox.Text = string.Empty;
 			PasswordTextBox.Text = string.Empty;
 			FullNameTextBox.Text = string.Empty;
+
+			UsernameTextBox.Focus();
 		}
 	}
 }
