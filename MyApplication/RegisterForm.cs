@@ -3,7 +3,7 @@ using System.Data.Entity;
 
 namespace MyApplication
 {
-	public partial class RegisterForm : System.Windows.Forms.Form
+	public partial class RegisterForm : Infrastructure.BaseForm
 	{
 		public RegisterForm()
 		{

@@ -3,7 +3,7 @@ using System.Data.Entity;
 
 namespace MyApplication
 {
-	public partial class MainForm : System.Windows.Forms.Form
+	public partial class MainForm : Infrastructure.BaseForm
 	{
 		public MainForm()
 		{
@@ -22,6 +22,13 @@ namespace MyApplication
 		{
 			UsernameToolStripStatusLabel.Text =
 				Infrastructure.Utility.AuthenticatedUser.Username;
+		}
+
+		private void updateProfileToolStripMenuItem_Click(object sender, System.EventArgs e)
+		{
+			UpdateProfileForm frmUpdateProfile = new UpdateProfileForm();
+
+			frmUpdateProfile.Show();
 		}
 	}
 }

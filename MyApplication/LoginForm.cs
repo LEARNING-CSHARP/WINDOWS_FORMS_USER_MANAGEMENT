@@ -3,7 +3,7 @@ using System.Data.Entity;
 
 namespace MyApplication
 {
-	public partial class LoginForm : System.Windows.Forms.Form
+	public partial class LoginForm : Infrastructure.BaseForm
 	{
 		public LoginForm()
 			: base()
