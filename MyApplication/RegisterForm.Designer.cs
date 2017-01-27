@@ -102,6 +102,7 @@
 			// 
 			// resetButton
 			// 
+			this.resetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.resetButton.Location = new System.Drawing.Point(164, 93);
 			this.resetButton.Name = "resetButton";
 			this.resetButton.Size = new System.Drawing.Size(75, 23);
@@ -112,6 +113,7 @@
 			// 
 			// registerButton
 			// 
+			this.registerButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.registerButton.Location = new System.Drawing.Point(83, 93);
 			this.registerButton.Name = "registerButton";
 			this.registerButton.Size = new System.Drawing.Size(75, 23);
@@ -122,6 +124,7 @@
 			// 
 			// exitButton
 			// 
+			this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.exitButton.Location = new System.Drawing.Point(245, 93);
 			this.exitButton.Name = "exitButton";
 			this.exitButton.Size = new System.Drawing.Size(75, 23);

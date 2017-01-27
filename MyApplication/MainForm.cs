@@ -10,6 +10,15 @@ namespace MyApplication
 			InitializeComponent();
 		}
 
+		private void MainForm_Load(object sender, System.EventArgs e)
+		{
+			//usernameToolStripStatusLabel.Text =
+			//	"Welcome " + Infrastructure.Utility.AuthenticatedUser.Username + "!";
+
+			usernameToolStripStatusLabel.Text =
+				string.Format("Welcome {0}!", Infrastructure.Utility.AuthenticatedUser.Username);
+		}
+
 		private void exitToolStripMenuItem_Click(object sender, System.EventArgs e)
 		{
 			//Note: Close() is not correct!
@@ -29,12 +38,6 @@ namespace MyApplication
 			{
 				System.Windows.Forms.Application.Exit();
 			}
-		}
-
-		private void MainForm_Load(object sender, System.EventArgs e)
-		{
-			UsernameToolStripStatusLabel.Text =
-				Infrastructure.Utility.AuthenticatedUser.Username;
 		}
 
 		private void updateProfileToolStripMenuItem_Click(object sender, System.EventArgs e)

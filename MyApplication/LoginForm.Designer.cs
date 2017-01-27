@@ -22,18 +22,42 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.loginButton = new System.Windows.Forms.Button();
+			this.exitButton = new System.Windows.Forms.Button();
 			this.registerButton = new System.Windows.Forms.Button();
 			this.resetButton = new System.Windows.Forms.Button();
 			this.passwordLabel = new System.Windows.Forms.Label();
 			this.passwordTextBox = new System.Windows.Forms.TextBox();
 			this.usernameTextBox = new System.Windows.Forms.TextBox();
 			this.usernameLabel = new System.Windows.Forms.Label();
-			this.loginButton = new System.Windows.Forms.Button();
-			this.exitButton = new System.Windows.Forms.Button();
 			this.SuspendLayout();
+			// 
+			// loginButton
+			// 
+			this.loginButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.loginButton.Location = new System.Drawing.Point(83, 66);
+			this.loginButton.Name = "loginButton";
+			this.loginButton.Size = new System.Drawing.Size(75, 23);
+			this.loginButton.TabIndex = 4;
+			this.loginButton.Text = "&Login";
+			this.loginButton.UseVisualStyleBackColor = true;
+			this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+			// 
+			// exitButton
+			// 
+			this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.exitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+			this.exitButton.Location = new System.Drawing.Point(326, 67);
+			this.exitButton.Name = "exitButton";
+			this.exitButton.Size = new System.Drawing.Size(75, 23);
+			this.exitButton.TabIndex = 7;
+			this.exitButton.Text = "E&xit";
+			this.exitButton.UseVisualStyleBackColor = true;
+			this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
 			// 
 			// registerButton
 			// 
+			this.registerButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.registerButton.Location = new System.Drawing.Point(245, 67);
 			this.registerButton.Name = "registerButton";
 			this.registerButton.Size = new System.Drawing.Size(75, 23);
@@ -44,6 +68,7 @@
 			// 
 			// resetButton
 			// 
+			this.resetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.resetButton.Location = new System.Drawing.Point(164, 66);
 			this.resetButton.Name = "resetButton";
 			this.resetButton.Size = new System.Drawing.Size(75, 23);
@@ -93,30 +118,12 @@
 			this.usernameLabel.TabIndex = 0;
 			this.usernameLabel.Text = "&Username";
 			// 
-			// loginButton
-			// 
-			this.loginButton.Location = new System.Drawing.Point(83, 66);
-			this.loginButton.Name = "loginButton";
-			this.loginButton.Size = new System.Drawing.Size(75, 23);
-			this.loginButton.TabIndex = 4;
-			this.loginButton.Text = "&Login";
-			this.loginButton.UseVisualStyleBackColor = true;
-			this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
-			// 
-			// exitButton
-			// 
-			this.exitButton.Location = new System.Drawing.Point(326, 67);
-			this.exitButton.Name = "exitButton";
-			this.exitButton.Size = new System.Drawing.Size(75, 23);
-			this.exitButton.TabIndex = 7;
-			this.exitButton.Text = "E&xit";
-			this.exitButton.UseVisualStyleBackColor = true;
-			this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
-			// 
 			// LoginForm
 			// 
+			this.AcceptButton = this.loginButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.CancelButton = this.exitButton;
 			this.ClientSize = new System.Drawing.Size(413, 101);
 			this.ControlBox = false;
 			this.Controls.Add(this.exitButton);
