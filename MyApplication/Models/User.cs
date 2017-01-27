@@ -2,8 +2,7 @@
 {
 	public class User : BaseEntity
 	{
-		public User()
-			: base()
+		public User() : base()
 		{
 		}
 

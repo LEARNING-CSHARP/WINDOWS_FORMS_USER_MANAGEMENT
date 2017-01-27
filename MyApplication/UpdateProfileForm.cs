@@ -69,6 +69,8 @@ namespace MyApplication
 
 				oDatabaseContext.SaveChanges();
 
+				Infrastructure.Utility.AuthenticatedUser = oUser;
+
 				System.Windows.Forms.MessageBox.Show("Your profile was updated successfully...");
 			}
 			catch (System.Exception ex)

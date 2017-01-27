@@ -5,10 +5,27 @@
 		[System.STAThread]
 		static void Main()
 		{
+			// **************************************************
 			System.Windows.Forms.Application.EnableVisualStyles();
 			System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
+			// **************************************************
 
-			System.Windows.Forms.Application.Run(new LoginForm());
+			// **************************************************
+			//LoginForm startupForm = new LoginForm();
+			RegisterForm startupForm = new RegisterForm();
+
+			System.Windows.Forms.Application.Run(startupForm);
+
+			if (startupForm != null)
+			{
+				if (startupForm.IsDisposed == false)
+				{
+					startupForm.Dispose();
+				}
+
+				startupForm = null;
+			}
+			// **************************************************
 		}
 	}
 }

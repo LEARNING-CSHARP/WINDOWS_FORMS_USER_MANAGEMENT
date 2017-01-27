@@ -28,108 +28,113 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.UsernameLabel = new System.Windows.Forms.Label();
-			this.UsernameTextBox = new System.Windows.Forms.TextBox();
-			this.PasswordTextBox = new System.Windows.Forms.TextBox();
-			this.FullNameTextBox = new System.Windows.Forms.TextBox();
-			this.PasswordLabel = new System.Windows.Forms.Label();
-			this.FullNameLabel = new System.Windows.Forms.Label();
-			this.ResetButton = new System.Windows.Forms.Button();
-			this.SubmitButton = new System.Windows.Forms.Button();
+			this.usernameLabel = new System.Windows.Forms.Label();
+			this.usernameTextBox = new System.Windows.Forms.TextBox();
+			this.passwordTextBox = new System.Windows.Forms.TextBox();
+			this.fullNameTextBox = new System.Windows.Forms.TextBox();
+			this.passwordLabel = new System.Windows.Forms.Label();
+			this.fullNameLabel = new System.Windows.Forms.Label();
+			this.resetButton = new System.Windows.Forms.Button();
+			this.registerButton = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
-			// UsernameLabel
+			// usernameLabel
 			// 
-			this.UsernameLabel.AutoSize = true;
-			this.UsernameLabel.Location = new System.Drawing.Point(12, 15);
-			this.UsernameLabel.Name = "UsernameLabel";
-			this.UsernameLabel.Size = new System.Drawing.Size(65, 13);
-			this.UsernameLabel.TabIndex = 0;
-			this.UsernameLabel.Text = "&Username";
+			this.usernameLabel.AutoSize = true;
+			this.usernameLabel.ForeColor = System.Drawing.Color.White;
+			this.usernameLabel.Location = new System.Drawing.Point(12, 15);
+			this.usernameLabel.Name = "usernameLabel";
+			this.usernameLabel.Size = new System.Drawing.Size(65, 13);
+			this.usernameLabel.TabIndex = 0;
+			this.usernameLabel.Text = "&Username";
 			// 
-			// UsernameTextBox
+			// usernameTextBox
 			// 
-			this.UsernameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.usernameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.UsernameTextBox.Location = new System.Drawing.Point(83, 12);
-			this.UsernameTextBox.Name = "UsernameTextBox";
-			this.UsernameTextBox.Size = new System.Drawing.Size(155, 21);
-			this.UsernameTextBox.TabIndex = 1;
+			this.usernameTextBox.Location = new System.Drawing.Point(83, 12);
+			this.usernameTextBox.MaxLength = 20;
+			this.usernameTextBox.Name = "usernameTextBox";
+			this.usernameTextBox.Size = new System.Drawing.Size(155, 21);
+			this.usernameTextBox.TabIndex = 1;
 			// 
-			// PasswordTextBox
+			// passwordTextBox
 			// 
-			this.PasswordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.passwordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.PasswordTextBox.Location = new System.Drawing.Point(83, 39);
-			this.PasswordTextBox.Name = "PasswordTextBox";
-			this.PasswordTextBox.PasswordChar = '*';
-			this.PasswordTextBox.Size = new System.Drawing.Size(155, 21);
-			this.PasswordTextBox.TabIndex = 3;
+			this.passwordTextBox.Location = new System.Drawing.Point(83, 39);
+			this.passwordTextBox.MaxLength = 40;
+			this.passwordTextBox.Name = "passwordTextBox";
+			this.passwordTextBox.PasswordChar = '*';
+			this.passwordTextBox.Size = new System.Drawing.Size(155, 21);
+			this.passwordTextBox.TabIndex = 3;
 			// 
-			// FullNameTextBox
+			// fullNameTextBox
 			// 
-			this.FullNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.fullNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.FullNameTextBox.Location = new System.Drawing.Point(83, 66);
-			this.FullNameTextBox.Name = "FullNameTextBox";
-			this.FullNameTextBox.Size = new System.Drawing.Size(155, 21);
-			this.FullNameTextBox.TabIndex = 5;
+			this.fullNameTextBox.Location = new System.Drawing.Point(83, 66);
+			this.fullNameTextBox.MaxLength = 50;
+			this.fullNameTextBox.Name = "fullNameTextBox";
+			this.fullNameTextBox.Size = new System.Drawing.Size(155, 21);
+			this.fullNameTextBox.TabIndex = 5;
 			// 
-			// PasswordLabel
+			// passwordLabel
 			// 
-			this.PasswordLabel.AutoSize = true;
-			this.PasswordLabel.Location = new System.Drawing.Point(12, 42);
-			this.PasswordLabel.Name = "PasswordLabel";
-			this.PasswordLabel.Size = new System.Drawing.Size(61, 13);
-			this.PasswordLabel.TabIndex = 2;
-			this.PasswordLabel.Text = "&Password";
+			this.passwordLabel.AutoSize = true;
+			this.passwordLabel.ForeColor = System.Drawing.Color.White;
+			this.passwordLabel.Location = new System.Drawing.Point(12, 42);
+			this.passwordLabel.Name = "passwordLabel";
+			this.passwordLabel.Size = new System.Drawing.Size(61, 13);
+			this.passwordLabel.TabIndex = 2;
+			this.passwordLabel.Text = "&Password";
 			// 
-			// FullNameLabel
+			// fullNameLabel
 			// 
-			this.FullNameLabel.AutoSize = true;
-			this.FullNameLabel.Location = new System.Drawing.Point(12, 69);
-			this.FullNameLabel.Name = "FullNameLabel";
-			this.FullNameLabel.Size = new System.Drawing.Size(59, 13);
-			this.FullNameLabel.TabIndex = 4;
-			this.FullNameLabel.Text = "&FullName";
+			this.fullNameLabel.AutoSize = true;
+			this.fullNameLabel.ForeColor = System.Drawing.Color.White;
+			this.fullNameLabel.Location = new System.Drawing.Point(12, 69);
+			this.fullNameLabel.Name = "fullNameLabel";
+			this.fullNameLabel.Size = new System.Drawing.Size(59, 13);
+			this.fullNameLabel.TabIndex = 4;
+			this.fullNameLabel.Text = "&FullName";
 			// 
-			// ResetButton
+			// resetButton
 			// 
-			this.ResetButton.Location = new System.Drawing.Point(164, 93);
-			this.ResetButton.Name = "ResetButton";
-			this.ResetButton.Size = new System.Drawing.Size(75, 23);
-			this.ResetButton.TabIndex = 7;
-			this.ResetButton.Text = "&Reset";
-			this.ResetButton.UseVisualStyleBackColor = true;
-			this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
+			this.resetButton.Location = new System.Drawing.Point(164, 93);
+			this.resetButton.Name = "resetButton";
+			this.resetButton.Size = new System.Drawing.Size(75, 23);
+			this.resetButton.TabIndex = 7;
+			this.resetButton.Text = "&Reset";
+			this.resetButton.UseVisualStyleBackColor = true;
+			this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
 			// 
-			// SubmitButton
+			// registerButton
 			// 
-			this.SubmitButton.Location = new System.Drawing.Point(83, 93);
-			this.SubmitButton.Name = "SubmitButton";
-			this.SubmitButton.Size = new System.Drawing.Size(75, 23);
-			this.SubmitButton.TabIndex = 6;
-			this.SubmitButton.Text = "Re&gister";
-			this.SubmitButton.UseVisualStyleBackColor = true;
-			this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
+			this.registerButton.Location = new System.Drawing.Point(83, 93);
+			this.registerButton.Name = "registerButton";
+			this.registerButton.Size = new System.Drawing.Size(75, 23);
+			this.registerButton.TabIndex = 6;
+			this.registerButton.Text = "Re&gister";
+			this.registerButton.UseVisualStyleBackColor = true;
+			this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
 			// 
 			// RegisterForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(250, 127);
-			this.Controls.Add(this.SubmitButton);
-			this.Controls.Add(this.ResetButton);
-			this.Controls.Add(this.FullNameLabel);
-			this.Controls.Add(this.PasswordLabel);
-			this.Controls.Add(this.FullNameTextBox);
-			this.Controls.Add(this.PasswordTextBox);
-			this.Controls.Add(this.UsernameTextBox);
-			this.Controls.Add(this.UsernameLabel);
-			this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Controls.Add(this.registerButton);
+			this.Controls.Add(this.resetButton);
+			this.Controls.Add(this.fullNameLabel);
+			this.Controls.Add(this.passwordLabel);
+			this.Controls.Add(this.fullNameTextBox);
+			this.Controls.Add(this.passwordTextBox);
+			this.Controls.Add(this.usernameTextBox);
+			this.Controls.Add(this.usernameLabel);
+			this.MaximumSize = new System.Drawing.Size(800, 166);
 			this.MinimumSize = new System.Drawing.Size(266, 166);
 			this.Name = "RegisterForm";
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Register";
 			this.Load += new System.EventHandler(this.RegisterForm_Load);
 			this.ResumeLayout(false);
@@ -139,14 +144,14 @@
 
 		#endregion
 
-		private System.Windows.Forms.Label UsernameLabel;
-		private System.Windows.Forms.TextBox UsernameTextBox;
-		private System.Windows.Forms.TextBox PasswordTextBox;
-		private System.Windows.Forms.TextBox FullNameTextBox;
-		private System.Windows.Forms.Label PasswordLabel;
-		private System.Windows.Forms.Label FullNameLabel;
-		private System.Windows.Forms.Button ResetButton;
-		private System.Windows.Forms.Button SubmitButton;
+		private System.Windows.Forms.Label usernameLabel;
+		private System.Windows.Forms.TextBox usernameTextBox;
+		private System.Windows.Forms.TextBox passwordTextBox;
+		private System.Windows.Forms.TextBox fullNameTextBox;
+		private System.Windows.Forms.Label passwordLabel;
+		private System.Windows.Forms.Label fullNameLabel;
+		private System.Windows.Forms.Button resetButton;
+		private System.Windows.Forms.Button registerButton;
 	}
 }
 

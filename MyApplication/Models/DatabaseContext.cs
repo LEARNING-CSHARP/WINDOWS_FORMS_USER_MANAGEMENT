@@ -6,8 +6,7 @@
 		{
 		}
 
-		public DatabaseContext()
-			: base()
+		public DatabaseContext() : base()
 		{
 		}
 

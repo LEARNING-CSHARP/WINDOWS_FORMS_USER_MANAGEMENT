@@ -1,9 +1,8 @@
 ﻿namespace Models
 {
-	public class BaseEntity : System.Object
+	public class BaseEntity : object
 	{
-		public BaseEntity()
-			: base()
+		public BaseEntity() : base()
 		{
 			Id = System.Guid.NewGuid();
 		}
