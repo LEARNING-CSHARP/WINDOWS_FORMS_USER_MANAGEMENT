@@ -36,6 +36,7 @@
 			this.fullNameLabel = new System.Windows.Forms.Label();
 			this.resetButton = new System.Windows.Forms.Button();
 			this.registerButton = new System.Windows.Forms.Button();
+			this.exitButton = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// usernameLabel
@@ -55,7 +56,7 @@
 			this.usernameTextBox.Location = new System.Drawing.Point(83, 12);
 			this.usernameTextBox.MaxLength = 20;
 			this.usernameTextBox.Name = "usernameTextBox";
-			this.usernameTextBox.Size = new System.Drawing.Size(155, 21);
+			this.usernameTextBox.Size = new System.Drawing.Size(236, 21);
 			this.usernameTextBox.TabIndex = 1;
 			// 
 			// passwordTextBox
@@ -66,7 +67,7 @@
 			this.passwordTextBox.MaxLength = 40;
 			this.passwordTextBox.Name = "passwordTextBox";
 			this.passwordTextBox.PasswordChar = '*';
-			this.passwordTextBox.Size = new System.Drawing.Size(155, 21);
+			this.passwordTextBox.Size = new System.Drawing.Size(236, 21);
 			this.passwordTextBox.TabIndex = 3;
 			// 
 			// fullNameTextBox
@@ -76,7 +77,7 @@
 			this.fullNameTextBox.Location = new System.Drawing.Point(83, 66);
 			this.fullNameTextBox.MaxLength = 50;
 			this.fullNameTextBox.Name = "fullNameTextBox";
-			this.fullNameTextBox.Size = new System.Drawing.Size(155, 21);
+			this.fullNameTextBox.Size = new System.Drawing.Size(236, 21);
 			this.fullNameTextBox.TabIndex = 5;
 			// 
 			// passwordLabel
@@ -119,11 +120,23 @@
 			this.registerButton.UseVisualStyleBackColor = true;
 			this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
 			// 
+			// exitButton
+			// 
+			this.exitButton.Location = new System.Drawing.Point(245, 93);
+			this.exitButton.Name = "exitButton";
+			this.exitButton.Size = new System.Drawing.Size(75, 23);
+			this.exitButton.TabIndex = 8;
+			this.exitButton.Text = "E&xit";
+			this.exitButton.UseVisualStyleBackColor = true;
+			this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+			// 
 			// RegisterForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(250, 127);
+			this.ClientSize = new System.Drawing.Size(331, 127);
+			this.ControlBox = false;
+			this.Controls.Add(this.exitButton);
 			this.Controls.Add(this.registerButton);
 			this.Controls.Add(this.resetButton);
 			this.Controls.Add(this.fullNameLabel);
@@ -133,7 +146,7 @@
 			this.Controls.Add(this.usernameTextBox);
 			this.Controls.Add(this.usernameLabel);
 			this.MaximumSize = new System.Drawing.Size(800, 166);
-			this.MinimumSize = new System.Drawing.Size(266, 166);
+			this.MinimumSize = new System.Drawing.Size(347, 166);
 			this.Name = "RegisterForm";
 			this.Text = "Register";
 			this.Load += new System.EventHandler(this.RegisterForm_Load);
@@ -152,6 +165,7 @@
 		private System.Windows.Forms.Label fullNameLabel;
 		private System.Windows.Forms.Button resetButton;
 		private System.Windows.Forms.Button registerButton;
+		private System.Windows.Forms.Button exitButton;
 	}
 }
 

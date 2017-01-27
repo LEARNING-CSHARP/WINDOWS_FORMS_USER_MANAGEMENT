@@ -15,12 +15,27 @@ namespace MyApplication
 		{
 		}
 
-		private void LoginButton_Click(object sender, System.EventArgs e)
+		private void loginButton_Click(object sender, System.EventArgs e)
 		{
 			// **************************************************
-			if ((string.IsNullOrWhiteSpace(UsernameTextBox.Text)) ||
-				(string.IsNullOrWhiteSpace(PasswordTextBox.Text)))
+			if ((string.IsNullOrWhiteSpace(usernameTextBox.Text)) ||
+				(string.IsNullOrWhiteSpace(passwordTextBox.Text)))
 			{
+				usernameTextBox.Text =
+					usernameTextBox.Text.Trim();
+
+				passwordTextBox.Text =
+					passwordTextBox.Text.Trim();
+
+				if (usernameTextBox.Text == string.Empty)
+				{
+					usernameTextBox.Focus();
+				}
+				else
+				{
+					passwordTextBox.Focus();
+				}
+
 				System.Windows.Forms.MessageBox.Show("Username and Password is requied!");
 
 				return;
@@ -36,24 +51,30 @@ namespace MyApplication
 
 				Models.User oUser =
 					oDatabaseContext.Users
-					.Where(current => string.Compare(current.Username, UsernameTextBox.Text, true) == 0)
+					.Where(current => string.Compare(current.Username, usernameTextBox.Text, true) == 0)
 					.FirstOrDefault();
 
 				if (oUser == null)
 				{
-					System.Windows.Forms.MessageBox.Show("Username and/or Password is not correct!");
+					System.Windows.Forms.MessageBox
+						.Show("Username and/or Password is not correct!");
+
 					return;
 				}
 
-				if (string.Compare(oUser.Password, PasswordTextBox.Text, ignoreCase: false) != 0)
+				if (string.Compare(oUser.Password, passwordTextBox.Text, ignoreCase: false) != 0)
 				{
-					System.Windows.Forms.MessageBox.Show("Username and/or Password is not correct!");
+					System.Windows.Forms.MessageBox
+						.Show("Username and/or Password is not correct!");
+
 					return;
 				}
 
 				if (oUser.IsActive == false)
 				{
-					System.Windows.Forms.MessageBox.Show("You can not login to this application! Please contact support.");
+					System.Windows.Forms.MessageBox
+						.Show("You can not login to this application! Please contact support.");
+
 					return;
 				}
 
@@ -61,9 +82,9 @@ namespace MyApplication
 
 				Hide();
 
-				MainForm frmMain = new MainForm();
+				MainForm mainForm = new MainForm();
 
-				frmMain.Show();
+				mainForm.Show();
 			}
 			catch (System.Exception ex)
 			{
@@ -79,21 +100,26 @@ namespace MyApplication
 			}
 		}
 
-		private void ResetButton_Click(object sender, System.EventArgs e)
+		private void resetButton_Click(object sender, System.EventArgs e)
 		{
-			PasswordTextBox.Text = string.Empty;
-			UsernameTextBox.Text = string.Empty;
+			passwordTextBox.Text = string.Empty;
+			usernameTextBox.Text = string.Empty;
 
-			UsernameTextBox.Focus();
+			usernameTextBox.Focus();
 		}
 
-		private void RegisterButton_Click(object sender, System.EventArgs e)
+		private void registerButton_Click(object sender, System.EventArgs e)
 		{
 			Hide();
 
-			RegisterForm frmRegister = new RegisterForm();
+			RegisterForm registerForm = new RegisterForm();
 
-			frmRegister.Show();
+			registerForm.Show();
+		}
+
+		private void exitButton_Click(object sender, System.EventArgs e)
+		{
+			System.Windows.Forms.Application.Exit();
 		}
 	}
 }

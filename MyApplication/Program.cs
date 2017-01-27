@@ -11,8 +11,8 @@
 			// **************************************************
 
 			// **************************************************
-			//LoginForm startupForm = new LoginForm();
-			RegisterForm startupForm = new RegisterForm();
+			LoginForm startupForm = new LoginForm();
+			//RegisterForm startupForm = new RegisterForm();
 
 			System.Windows.Forms.Application.Run(startupForm);
 
