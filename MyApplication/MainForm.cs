@@ -12,6 +12,15 @@ namespace MyApplication
 
 		private void MainForm_Load(object sender, System.EventArgs e)
 		{
+			if (Infrastructure.Utility.AuthenticatedUser.IsAdmin)
+			{
+				adminToolStripMenuItem.Visible = true;
+			}
+			else
+			{
+				adminToolStripMenuItem.Visible = false;
+			}
+
 			//usernameToolStripStatusLabel.Text =
 			//	"Welcome " + Infrastructure.Utility.AuthenticatedUser.Username + "!";
 
@@ -56,6 +65,15 @@ namespace MyApplication
 			changePasswordForm.MdiParent = this;
 
 			changePasswordForm.Show();
+		}
+
+		private void usersListToolStripMenuItem_Click(object sender, System.EventArgs e)
+		{
+			Admin.UsersListForm usersListForm = new Admin.UsersListForm();
+
+			usersListForm.MdiParent = this;
+
+			usersListForm.Show();
 		}
 	}
 }

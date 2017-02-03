@@ -2,12 +2,17 @@
 {
 	public class User : BaseEntity
 	{
-		public User() : base()
+		public User()
+			: base()
 		{
 		}
 
 		// **********
 		public bool IsActive { get; set; }
+		// **********
+
+		// **********
+		public bool IsAdmin { get; set; }
 		// **********
 
 		// **********
