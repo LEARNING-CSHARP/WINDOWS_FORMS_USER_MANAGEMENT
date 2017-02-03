@@ -42,9 +42,20 @@ namespace MyApplication
 
 		private void updateProfileToolStripMenuItem_Click(object sender, System.EventArgs e)
 		{
-			UpdateProfileForm frmUpdateProfile = new UpdateProfileForm();
+			UpdateProfileForm updateProfileForm = new UpdateProfileForm();
 
-			frmUpdateProfile.Show();
+			updateProfileForm.MdiParent = this;
+
+			updateProfileForm.Show();
+		}
+
+		private void changePasswordToolStripMenuItem_Click(object sender, System.EventArgs e)
+		{
+			ChangePasswordForm changePasswordForm = new ChangePasswordForm();
+
+			changePasswordForm.MdiParent = this;
+
+			changePasswordForm.Show();
 		}
 	}
 }

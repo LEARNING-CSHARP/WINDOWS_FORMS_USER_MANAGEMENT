@@ -28,8 +28,8 @@ namespace MyApplication
 					System.Windows.Forms.Application.Exit();
 				}
 
-				FullNameTextBox.Text = oUser.FullName;
-				DescriptionTextBox.Text = oUser.Description;
+				fullNameTextBox.Text = oUser.FullName;
+				descriptionTextBox.Text = oUser.Description;
 			}
 			catch (System.Exception ex)
 			{
@@ -45,7 +45,7 @@ namespace MyApplication
 			}
 		}
 
-		private void SaveButton_Click(object sender, System.EventArgs e)
+		private void saveButton_Click(object sender, System.EventArgs e)
 		{
 			Models.DatabaseContext oDatabaseContext = null;
 
@@ -64,14 +64,15 @@ namespace MyApplication
 					System.Windows.Forms.Application.Exit();
 				}
 
-				oUser.FullName = FullNameTextBox.Text;
-				oUser.Description = DescriptionTextBox.Text;
+				oUser.FullName = fullNameTextBox.Text;
+				oUser.Description = descriptionTextBox.Text;
 
 				oDatabaseContext.SaveChanges();
 
 				Infrastructure.Utility.AuthenticatedUser = oUser;
 
-				System.Windows.Forms.MessageBox.Show("Your profile was updated successfully...");
+				System.Windows.Forms.MessageBox
+					.Show("Your profile was updated successfully...");
 			}
 			catch (System.Exception ex)
 			{
