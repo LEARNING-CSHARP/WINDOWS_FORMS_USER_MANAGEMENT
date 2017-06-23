@@ -20,11 +20,19 @@ namespace MyApplication
 			if ((string.IsNullOrWhiteSpace(usernameTextBox.Text)) ||
 				(string.IsNullOrWhiteSpace(passwordTextBox.Text)))
 			{
+				//usernameTextBox.Text =
+				//	usernameTextBox.Text.Trim();
+
+				//passwordTextBox.Text =
+				//	passwordTextBox.Text.Trim();
+
 				usernameTextBox.Text =
-					usernameTextBox.Text.Trim();
+					usernameTextBox.Text.Replace(" ", string.Empty);
 
 				passwordTextBox.Text =
-					passwordTextBox.Text.Trim();
+					passwordTextBox.Text.Replace(" ", string.Empty);
+
+				System.Windows.Forms.MessageBox.Show("Username and Password is requied!");
 
 				if (usernameTextBox.Text == string.Empty)
 				{
@@ -34,8 +42,6 @@ namespace MyApplication
 				{
 					passwordTextBox.Focus();
 				}
-
-				System.Windows.Forms.MessageBox.Show("Username and Password is requied!");
 
 				return;
 			}
@@ -83,7 +89,8 @@ namespace MyApplication
 
 				if (oUser != null)
 				{
-					System.Windows.Forms.MessageBox.Show("This username is already exist! Please choose another one...");
+					System.Windows.Forms.MessageBox.Show
+						("This username is already exist! Please choose another one...");
 
 					usernameTextBox.Focus();
 

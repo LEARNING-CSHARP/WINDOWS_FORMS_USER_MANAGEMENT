@@ -33,7 +33,6 @@
 			this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Name = "BaseForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "BaseForm";
 			this.Load += new System.EventHandler(this.BaseForm_Load);
 			this.ResumeLayout(false);
 

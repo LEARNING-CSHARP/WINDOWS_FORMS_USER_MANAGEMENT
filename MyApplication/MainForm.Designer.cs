@@ -118,8 +118,7 @@
 			// usernameToolStripStatusLabel
 			// 
 			this.usernameToolStripStatusLabel.Name = "usernameToolStripStatusLabel";
-			this.usernameToolStripStatusLabel.Size = new System.Drawing.Size(118, 17);
-			this.usernameToolStripStatusLabel.Text = "toolStripStatusLabel1";
+			this.usernameToolStripStatusLabel.Size = new System.Drawing.Size(0, 17);
 			// 
 			// MainForm
 			// 

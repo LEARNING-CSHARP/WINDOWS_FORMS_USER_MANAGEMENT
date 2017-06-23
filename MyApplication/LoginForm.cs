@@ -21,11 +21,19 @@ namespace MyApplication
 			if ((string.IsNullOrWhiteSpace(usernameTextBox.Text)) ||
 				(string.IsNullOrWhiteSpace(passwordTextBox.Text)))
 			{
+				//usernameTextBox.Text =
+				//	usernameTextBox.Text.Trim();
+
+				//passwordTextBox.Text =
+				//	passwordTextBox.Text.Trim();
+
 				usernameTextBox.Text =
-					usernameTextBox.Text.Trim();
+					usernameTextBox.Text.Replace(" ", string.Empty);
 
 				passwordTextBox.Text =
-					passwordTextBox.Text.Trim();
+					passwordTextBox.Text.Replace(" ", string.Empty);
+
+				System.Windows.Forms.MessageBox.Show("Username and Password is requied!");
 
 				if (usernameTextBox.Text == string.Empty)
 				{
@@ -35,8 +43,6 @@ namespace MyApplication
 				{
 					passwordTextBox.Focus();
 				}
-
-				System.Windows.Forms.MessageBox.Show("Username and Password is requied!");
 
 				return;
 			}
@@ -56,16 +62,26 @@ namespace MyApplication
 
 				if (oUser == null)
 				{
+					//System.Windows.Forms.MessageBox
+					//	.Show("Username is not correct!");
+
 					System.Windows.Forms.MessageBox
 						.Show("Username and/or Password is not correct!");
+
+					usernameTextBox.Focus();
 
 					return;
 				}
 
 				if (string.Compare(oUser.Password, passwordTextBox.Text, ignoreCase: false) != 0)
 				{
+					//System.Windows.Forms.MessageBox
+					//	.Show("Password is not correct!");
+
 					System.Windows.Forms.MessageBox
 						.Show("Username and/or Password is not correct!");
+
+					usernameTextBox.Focus();
 
 					return;
 				}
@@ -74,6 +90,8 @@ namespace MyApplication
 				{
 					System.Windows.Forms.MessageBox
 						.Show("You can not login to this application! Please contact support.");
+
+					usernameTextBox.Focus();
 
 					return;
 				}

@@ -29,11 +29,12 @@ namespace MyApplication
 				{
 					Models.User oAdminUser = new Models.User();
 
-					oAdminUser.FullName = "Mr. Dariush Tasdighi";
-					oAdminUser.IsActive = true;
 					oAdminUser.IsAdmin = true;
+					oAdminUser.IsActive = true;
+
 					oAdminUser.Username = "Dariush";
 					oAdminUser.Password = "1234512345";
+					oAdminUser.FullName = "Mr. Dariush Tasdighi";
 
 					oDatabaseContext.Users.Add(oAdminUser);
 
