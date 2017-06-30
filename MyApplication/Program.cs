@@ -58,6 +58,7 @@ namespace MyApplication
 			// **************************************************
 
 			// **************************************************
+			#region Runing Startup Form and then Disposing!
 			LoginForm startupForm = new LoginForm();
 			//RegisterForm startupForm = new RegisterForm();
 
@@ -72,6 +73,7 @@ namespace MyApplication
 
 				startupForm = null;
 			}
+			#endregion /Runing Startup Form and then Disposing!
 			// **************************************************
 		}
 	}

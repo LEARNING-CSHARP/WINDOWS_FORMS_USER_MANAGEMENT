@@ -18,7 +18,8 @@ namespace MyApplication.Admin
 				new Models.DatabaseContext();
 		}
 
-		private void UsersListForm_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
+		private void UsersListForm_FormClosed
+			(object sender, System.Windows.Forms.FormClosedEventArgs e)
 		{
 			if (_myDatabaseContext != null)
 			{
@@ -31,7 +32,10 @@ namespace MyApplication.Admin
 		{
 			System.Collections.Generic.List<Models.User> oUsers = null;
 
-			if (string.IsNullOrWhiteSpace(fullNameTextBox.Text))
+			fullNameTextBox.Text =
+				fullNameTextBox.Text.Trim();
+
+			if (fullNameTextBox.Text == string.Empty)
 			{
 				oUsers =
 					_myDatabaseContext.Users
@@ -49,6 +53,7 @@ namespace MyApplication.Admin
 					;
 			}
 
+			// Binding
 			usersListBox.ValueMember = "Id";
 			usersListBox.DisplayMember = "FullName";
 			usersListBox.DataSource = oUsers;
@@ -66,7 +71,7 @@ namespace MyApplication.Admin
 
 			if (oSelectedUser != null)
 			{
-				Admin.UpdateUserForm updateUserForm = new UpdateUserForm();
+				UpdateUserForm updateUserForm = new UpdateUserForm();
 
 				updateUserForm.UserId = oSelectedUser.Id;
 

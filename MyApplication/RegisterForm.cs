@@ -99,10 +99,11 @@ namespace MyApplication
 
 				oUser = new Models.User();
 
-				oUser.IsActive = true;
 				oUser.FullName = fullNameTextBox.Text;
 				oUser.Password = passwordTextBox.Text;
 				oUser.Username = usernameTextBox.Text;
+
+				oUser.IsActive = true; // بستگی به سناریو و قواعد شرکت یا پروژه دارد
 
 				oDatabaseContext.Users.Add(oUser);
 

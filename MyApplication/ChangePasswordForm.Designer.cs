@@ -123,6 +123,7 @@
 			this.MinimumSize = new System.Drawing.Size(429, 165);
 			this.Name = "ChangePasswordForm";
 			this.Text = "Login";
+			this.Load += new System.EventHandler(this.ChangePasswordForm_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

@@ -5,8 +5,7 @@ namespace MyApplication
 {
 	public partial class LoginForm : Infrastructure.BaseForm
 	{
-		public LoginForm()
-			: base()
+		public LoginForm() : base()
 		{
 			InitializeComponent();
 		}
