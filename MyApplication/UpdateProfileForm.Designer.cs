@@ -38,7 +38,7 @@
 			// saveButton
 			// 
 			this.saveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.saveButton.Location = new System.Drawing.Point(385, 288);
+			this.saveButton.Location = new System.Drawing.Point(365, 213);
 			this.saveButton.Name = "saveButton";
 			this.saveButton.Size = new System.Drawing.Size(87, 23);
 			this.saveButton.TabIndex = 4;
@@ -65,7 +65,7 @@
 			this.descriptionTextBox.Multiline = true;
 			this.descriptionTextBox.Name = "descriptionTextBox";
 			this.descriptionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.descriptionTextBox.Size = new System.Drawing.Size(381, 244);
+			this.descriptionTextBox.Size = new System.Drawing.Size(361, 169);
 			this.descriptionTextBox.TabIndex = 3;
 			// 
 			// fullNameTextBox
@@ -74,7 +74,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.fullNameTextBox.Location = new System.Drawing.Point(91, 12);
 			this.fullNameTextBox.Name = "fullNameTextBox";
-			this.fullNameTextBox.Size = new System.Drawing.Size(381, 21);
+			this.fullNameTextBox.Size = new System.Drawing.Size(361, 21);
 			this.fullNameTextBox.TabIndex = 1;
 			// 
 			// fullNameLabel
@@ -89,14 +89,17 @@
 			// 
 			// UpdateProfileForm
 			// 
+			this.AcceptButton = this.saveButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(486, 323);
+			this.ClientSize = new System.Drawing.Size(466, 248);
 			this.Controls.Add(this.saveButton);
 			this.Controls.Add(this.descriptionLabel);
 			this.Controls.Add(this.descriptionTextBox);
 			this.Controls.Add(this.fullNameTextBox);
 			this.Controls.Add(this.fullNameLabel);
+			this.MinimizeBox = false;
+			this.MinimumSize = new System.Drawing.Size(440, 270);
 			this.Name = "UpdateProfileForm";
 			this.Text = "Update Profile";
 			this.Load += new System.EventHandler(this.UpdateProfileForm_Load);

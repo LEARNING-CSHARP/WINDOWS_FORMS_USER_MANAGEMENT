@@ -3,7 +3,7 @@ using System.Data.Entity;
 
 namespace MyApplication
 {
-	public partial class MainForm : Infrastructure.BaseForm
+	public partial class MainForm : System.Windows.Forms.Form
 	{
 		public MainForm()
 		{
@@ -49,20 +49,48 @@ namespace MyApplication
 			}
 		}
 
+		//private void updateProfileToolStripMenuItem_Click(object sender, System.EventArgs e)
+		//{
+		//	UpdateProfileForm updateProfileForm = new UpdateProfileForm();
+
+		//	updateProfileForm.MdiParent = this;
+
+		//	updateProfileForm.Show();
+		//}
+
+		private UpdateProfileForm updateProfileForm;
+
 		private void updateProfileToolStripMenuItem_Click(object sender, System.EventArgs e)
 		{
-			UpdateProfileForm updateProfileForm = new UpdateProfileForm();
+			if ((updateProfileForm == null) || (updateProfileForm.IsDisposed))
+			{
+				updateProfileForm = new UpdateProfileForm();
 
-			updateProfileForm.MdiParent = this;
+				updateProfileForm.MdiParent = this;
+			}
 
 			updateProfileForm.Show();
 		}
 
+		//private void changePasswordToolStripMenuItem_Click(object sender, System.EventArgs e)
+		//{
+		//	ChangePasswordForm changePasswordForm = new ChangePasswordForm();
+
+		//	changePasswordForm.MdiParent = this;
+
+		//	changePasswordForm.Show();
+		//}
+
+		private ChangePasswordForm changePasswordForm;
+
 		private void changePasswordToolStripMenuItem_Click(object sender, System.EventArgs e)
 		{
-			ChangePasswordForm changePasswordForm = new ChangePasswordForm();
+			if ((changePasswordForm != null) || (changePasswordForm.IsDisposed))
+			{
+				changePasswordForm = new ChangePasswordForm();
 
-			changePasswordForm.MdiParent = this;
+				changePasswordForm.MdiParent = this;
+			}
 
 			changePasswordForm.Show();
 		}

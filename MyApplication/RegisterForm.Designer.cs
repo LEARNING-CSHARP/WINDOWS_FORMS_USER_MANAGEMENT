@@ -125,6 +125,7 @@
 			// exitButton
 			// 
 			this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.exitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.exitButton.Location = new System.Drawing.Point(245, 93);
 			this.exitButton.Name = "exitButton";
 			this.exitButton.Size = new System.Drawing.Size(75, 23);
@@ -135,8 +136,10 @@
 			// 
 			// RegisterForm
 			// 
+			this.AcceptButton = this.registerButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.CancelButton = this.exitButton;
 			this.ClientSize = new System.Drawing.Size(331, 127);
 			this.ControlBox = false;
 			this.Controls.Add(this.exitButton);

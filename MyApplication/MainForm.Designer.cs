@@ -49,7 +49,8 @@
             this.adminToolStripMenuItem});
 			this.myMenuStrip.Location = new System.Drawing.Point(0, 0);
 			this.myMenuStrip.Name = "myMenuStrip";
-			this.myMenuStrip.Size = new System.Drawing.Size(331, 24);
+			this.myMenuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+			this.myMenuStrip.Size = new System.Drawing.Size(505, 24);
 			this.myMenuStrip.TabIndex = 0;
 			this.myMenuStrip.Text = "menuStrip1";
 			// 
@@ -109,9 +110,10 @@
 			// 
 			this.myStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usernameToolStripStatusLabel});
-			this.myStatusStrip.Location = new System.Drawing.Point(0, 239);
+			this.myStatusStrip.Location = new System.Drawing.Point(0, 375);
 			this.myStatusStrip.Name = "myStatusStrip";
-			this.myStatusStrip.Size = new System.Drawing.Size(331, 22);
+			this.myStatusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
+			this.myStatusStrip.Size = new System.Drawing.Size(505, 22);
 			this.myStatusStrip.TabIndex = 1;
 			this.myStatusStrip.Text = "statusStrip1";
 			// 
@@ -122,15 +124,16 @@
 			// 
 			// MainForm
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(331, 261);
+			this.ClientSize = new System.Drawing.Size(505, 397);
 			this.Controls.Add(this.myStatusStrip);
 			this.Controls.Add(this.myMenuStrip);
 			this.IsMdiContainer = true;
 			this.MainMenuStrip = this.myMenuStrip;
 			this.Name = "MainForm";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Main";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.Load += new System.EventHandler(this.MainForm_Load);
