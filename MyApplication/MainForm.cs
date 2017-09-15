@@ -85,7 +85,7 @@ namespace MyApplication
 
 		private void changePasswordToolStripMenuItem_Click(object sender, System.EventArgs e)
 		{
-			if ((changePasswordForm != null) || (changePasswordForm.IsDisposed))
+			if ((changePasswordForm == null) || (changePasswordForm.IsDisposed))
 			{
 				changePasswordForm = new ChangePasswordForm();
 
@@ -95,13 +95,32 @@ namespace MyApplication
 			changePasswordForm.Show();
 		}
 
+		//private void usersListToolStripMenuItem_Click(object sender, System.EventArgs e)
+		//{
+		//	Admin.UsersListForm usersListForm = new Admin.UsersListForm();
+
+		//	usersListForm.MdiParent = this;
+
+		//	usersListForm.Show();
+		//}
+
+		private Admin.UsersListForm _usersListForm;
+
 		private void usersListToolStripMenuItem_Click(object sender, System.EventArgs e)
 		{
-			Admin.UsersListForm usersListForm = new Admin.UsersListForm();
+			if ((_usersListForm == null) || (_usersListForm.IsDisposed))
+			{
+				_usersListForm = new Admin.UsersListForm();
 
-			usersListForm.MdiParent = this;
+				_usersListForm.MdiParent = this;
+			}
 
-			usersListForm.Show();
+			_usersListForm.Show();
+		}
+
+		private void MainForm_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
+		{
+			System.Windows.Forms.Application.Exit();
 		}
 	}
 }

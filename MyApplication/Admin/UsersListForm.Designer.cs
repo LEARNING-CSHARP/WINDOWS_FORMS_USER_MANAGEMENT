@@ -40,8 +40,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.fullNameTextBox.Location = new System.Drawing.Point(81, 12);
 			this.fullNameTextBox.Name = "fullNameTextBox";
-			this.fullNameTextBox.Size = new System.Drawing.Size(238, 21);
-			this.fullNameTextBox.TabIndex = 0;
+			this.fullNameTextBox.Size = new System.Drawing.Size(322, 21);
+			this.fullNameTextBox.TabIndex = 1;
 			// 
 			// fullNameLabel
 			// 
@@ -50,7 +50,7 @@
 			this.fullNameLabel.Location = new System.Drawing.Point(12, 15);
 			this.fullNameLabel.Name = "fullNameLabel";
 			this.fullNameLabel.Size = new System.Drawing.Size(63, 13);
-			this.fullNameLabel.TabIndex = 1;
+			this.fullNameLabel.TabIndex = 0;
 			this.fullNameLabel.Text = "&Full Name";
 			// 
 			// searchButton
@@ -71,7 +71,7 @@
 			this.usersListBox.FormattingEnabled = true;
 			this.usersListBox.Location = new System.Drawing.Point(12, 68);
 			this.usersListBox.Name = "usersListBox";
-			this.usersListBox.Size = new System.Drawing.Size(307, 186);
+			this.usersListBox.Size = new System.Drawing.Size(391, 212);
 			this.usersListBox.TabIndex = 3;
 			this.usersListBox.DoubleClick += new System.EventHandler(this.usersListBox_DoubleClick);
 			// 
@@ -79,7 +79,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(331, 261);
+			this.ClientSize = new System.Drawing.Size(415, 293);
 			this.Controls.Add(this.usersListBox);
 			this.Controls.Add(this.searchButton);
 			this.Controls.Add(this.fullNameLabel);

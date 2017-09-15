@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using System.Data.Entity;
 
 namespace MyApplication.Admin
 {
@@ -10,57 +9,117 @@ namespace MyApplication.Admin
 			InitializeComponent();
 		}
 
-		private Models.DatabaseContext _myDatabaseContext;
+		//private Models.DatabaseContext _myDatabaseContext;
 
 		private void UsersListForm_Load(object sender, System.EventArgs e)
 		{
-			_myDatabaseContext =
-				new Models.DatabaseContext();
+			//_myDatabaseContext =
+			//	new Models.DatabaseContext();
 		}
 
 		private void UsersListForm_FormClosed
 			(object sender, System.Windows.Forms.FormClosedEventArgs e)
 		{
-			if (_myDatabaseContext != null)
-			{
-				_myDatabaseContext.Dispose();
-				_myDatabaseContext = null;
-			}
+			//if (_myDatabaseContext != null)
+			//{
+			//	_myDatabaseContext.Dispose();
+			//	_myDatabaseContext = null;
+			//}
 		}
 
 		private void searchButton_Click(object sender, System.EventArgs e)
 		{
-			System.Collections.Generic.List<Models.User> oUsers = null;
+			Models.DatabaseContext oDatabaseContext = null;
 
-			fullNameTextBox.Text =
-				fullNameTextBox.Text.Trim();
-
-			if (fullNameTextBox.Text == string.Empty)
+			try
 			{
-				oUsers =
-					_myDatabaseContext.Users
-					.OrderBy(current => current.FullName)
-					.ToList()
-					;
+				oDatabaseContext =
+					new Models.DatabaseContext();
+
+				System.Collections.Generic.List<Models.User> oUsers = null;
+
+				// **************************************************
+				fullNameTextBox.Text =
+					fullNameTextBox.Text.Trim();
+
+				// تا وقتی که در داخل متن، دو فاصله وجود دارد
+				// دو فاصله را به یک فاصله تبدیل کن
+				while (fullNameTextBox.Text.Contains("  "))
+				{
+					fullNameTextBox.Text =
+						fullNameTextBox.Text.Replace("  ", " ");
+				}
+				// **************************************************
+
+				if (fullNameTextBox.Text == string.Empty)
+				{
+					oUsers =
+						oDatabaseContext.Users
+						.OrderBy(current => current.FullName)
+						.ToList()
+						;
+				}
+				else
+				{
+					//oUsers =
+					//	oDatabaseContext.Users
+					//	.Where(current => current.FullName == fullNameTextBox.Text)
+					//	.OrderBy(current => current.FullName)
+					//	.ToList()
+					//	;
+
+					//oUsers =
+					//	oDatabaseContext.Users
+					//	.Where(current => string.Compare(current.FullName, fullNameTextBox.Text, true) == 0)
+					//	.OrderBy(current => current.FullName)
+					//	.ToList()
+					//	;
+
+					//oUsers =
+					//	oDatabaseContext.Users
+					//	.Where(current => current.FullName.StartsWith(fullNameTextBox.Text))
+					//	.OrderBy(current => current.FullName)
+					//	.ToList()
+					//	;
+
+					//oUsers =
+					//	oDatabaseContext.Users
+					//	.Where(current => current.FullName.EndsWith(fullNameTextBox.Text))
+					//	.OrderBy(current => current.FullName)
+					//	.ToList()
+					//	;
+
+					oUsers =
+						oDatabaseContext.Users
+						.Where(current => current.FullName.Contains(fullNameTextBox.Text))
+						.OrderBy(current => current.FullName)
+						.ToList()
+						;
+				}
+
+				// Binding
+				//usersListBox.DataSource = null;
+				usersListBox.ValueMember = "Id";
+				//usersListBox.DisplayMember = "FullName";
+				usersListBox.DisplayMember = "DisplayName";
+				usersListBox.DataSource = oUsers;
+
+				if (oUsers.Count == 0)
+				{
+					System.Windows.Forms.MessageBox.Show("There is not any user with this full name!");
+				}
 			}
-			else
+			catch (System.Exception ex)
 			{
-				oUsers =
-					_myDatabaseContext.Users
-					.Where(current => current.FullName.Contains(fullNameTextBox.Text))
-					.OrderBy(current => current.FullName)
-					.ToList()
-					;
+				System.Windows.Forms.MessageBox.Show(ex.Message);
 			}
-
-			// Binding
-			usersListBox.ValueMember = "Id";
-			usersListBox.DisplayMember = "FullName";
-			usersListBox.DataSource = oUsers;
-
-			if (oUsers.Count == 0)
+			finally
 			{
-				System.Windows.Forms.MessageBox.Show("No Users!");
+				if (oDatabaseContext != null)
+				{
+					oDatabaseContext.Dispose();
+					oDatabaseContext = null;
+				}
 			}
 		}
 
@@ -73,7 +132,8 @@ namespace MyApplication.Admin
 			{
 				UpdateUserForm updateUserForm = new UpdateUserForm();
 
-				updateUserForm.UserId = oSelectedUser.Id;
+				updateUserForm.User = oSelectedUser;
+				//updateUserForm.UserId = oSelectedUser.Id;
 
 				updateUserForm.ShowDialog();
 			}

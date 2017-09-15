@@ -9,7 +9,8 @@ namespace MyApplication.Admin
 			InitializeComponent();
 		}
 
-		public System.Guid UserId { get; set; }
+		public Models.User User { get; set; }
+		//public System.Guid UserId { get; set; }
 
 		private void UpdateUserForm_Load(object sender, System.EventArgs e)
 		{
@@ -22,7 +23,8 @@ namespace MyApplication.Admin
 
 				Models.User oUser =
 					oDatabaseContext.Users
-					.Where(current => current.Id == UserId)
+					.Where(current => current.Id == User.Id)
+					//.Where(current => current.Id == UserId)
 					.FirstOrDefault();
 
 				if (oUser == null)
@@ -60,7 +62,8 @@ namespace MyApplication.Admin
 
 				Models.User oUser =
 					oDatabaseContext.Users
-					.Where(current => current.Id == UserId)
+					.Where(current => current.Id == User.Id)
+					//.Where(current => current.Id == UserId)
 					.FirstOrDefault();
 
 				if (oUser == null)

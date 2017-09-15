@@ -47,5 +47,27 @@
 		// **********
 		public string Description { get; set; }
 		// **********
+
+		// **********
+		public string DisplayName
+		{
+			get
+			{
+				string strResult = string.Empty;
+
+				if (string.IsNullOrWhiteSpace(FullName) == false)
+				{
+					strResult += FullName;
+				}
+
+				if (string.IsNullOrWhiteSpace(Username) == false)
+				{
+					strResult += " - [" + Username + "]";
+				}
+
+				return (strResult);
+			}
+		}
+		// **********
 	}
 }
