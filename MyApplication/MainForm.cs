@@ -24,8 +24,22 @@ namespace MyApplication
 			//usernameToolStripStatusLabel.Text =
 			//	"Welcome " + Infrastructure.Utility.AuthenticatedUser.Username + "!";
 
-			usernameToolStripStatusLabel.Text =
-				string.Format("Welcome {0}!", Infrastructure.Utility.AuthenticatedUser.Username);
+			//usernameToolStripStatusLabel.Text =
+			//	string.Format("Welcome {0}!", Infrastructure.Utility.AuthenticatedUser.Username);
+
+			//usernameToolStripStatusLabel.Text =
+			//	$"Welcome { Infrastructure.Utility.AuthenticatedUser.Username }!";
+
+			if (string.IsNullOrWhiteSpace(Infrastructure.Utility.AuthenticatedUser.FullName))
+			{
+				usernameToolStripStatusLabel.Text =
+					$"Welcome { Infrastructure.Utility.AuthenticatedUser.Username }!";
+			}
+			else
+			{
+				usernameToolStripStatusLabel.Text =
+					$"Welcome { Infrastructure.Utility.AuthenticatedUser.FullName }!";
+			}
 		}
 
 		private void exitToolStripMenuItem_Click(object sender, System.EventArgs e)

@@ -53,19 +53,21 @@
 		{
 			get
 			{
-				string strResult = string.Empty;
+				string result = string.Empty;
 
 				if (string.IsNullOrWhiteSpace(FullName) == false)
 				{
-					strResult += FullName;
+					result = FullName;
 				}
 
-				if (string.IsNullOrWhiteSpace(Username) == false)
+				if (result != string.Empty)
 				{
-					strResult += " - [" + Username + "]";
+					result += " - ";
 				}
 
-				return (strResult);
+				result += $"[{ Username }]";
+
+				return (result);
 			}
 		}
 		// **********

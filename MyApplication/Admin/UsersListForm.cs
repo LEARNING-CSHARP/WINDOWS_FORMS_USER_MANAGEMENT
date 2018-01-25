@@ -9,34 +9,34 @@ namespace MyApplication.Admin
 			InitializeComponent();
 		}
 
-		//private Models.DatabaseContext _myDatabaseContext;
+		//private Models.DatabaseContext databaseContext;
 
 		private void UsersListForm_Load(object sender, System.EventArgs e)
 		{
-			//_myDatabaseContext =
+			//databaseContext =
 			//	new Models.DatabaseContext();
 		}
 
 		private void UsersListForm_FormClosed
 			(object sender, System.Windows.Forms.FormClosedEventArgs e)
 		{
-			//if (_myDatabaseContext != null)
+			//if (databaseContext != null)
 			//{
-			//	_myDatabaseContext.Dispose();
-			//	_myDatabaseContext = null;
+			//	databaseContext.Dispose();
+			//	databaseContext = null;
 			//}
 		}
 
 		private void searchButton_Click(object sender, System.EventArgs e)
 		{
-			Models.DatabaseContext oDatabaseContext = null;
+			Models.DatabaseContext databaseContext = null;
 
 			try
 			{
-				oDatabaseContext =
+				databaseContext =
 					new Models.DatabaseContext();
 
-				System.Collections.Generic.List<Models.User> oUsers = null;
+				System.Collections.Generic.List<Models.User> users = null;
 
 				// **************************************************
 				fullNameTextBox.Text =
@@ -53,44 +53,44 @@ namespace MyApplication.Admin
 
 				if (fullNameTextBox.Text == string.Empty)
 				{
-					oUsers =
-						oDatabaseContext.Users
+					users =
+						databaseContext.Users
 						.OrderBy(current => current.FullName)
 						.ToList()
 						;
 				}
 				else
 				{
-					//oUsers =
-					//	oDatabaseContext.Users
+					//users =
+					//	databaseContext.Users
 					//	.Where(current => current.FullName == fullNameTextBox.Text)
 					//	.OrderBy(current => current.FullName)
 					//	.ToList()
 					//	;
 
-					//oUsers =
-					//	oDatabaseContext.Users
+					//users =
+					//	databaseContext.Users
 					//	.Where(current => string.Compare(current.FullName, fullNameTextBox.Text, true) == 0)
 					//	.OrderBy(current => current.FullName)
 					//	.ToList()
 					//	;
 
-					//oUsers =
-					//	oDatabaseContext.Users
+					//users =
+					//	databaseContext.Users
 					//	.Where(current => current.FullName.StartsWith(fullNameTextBox.Text))
 					//	.OrderBy(current => current.FullName)
 					//	.ToList()
 					//	;
 
-					//oUsers =
-					//	oDatabaseContext.Users
+					//users =
+					//	databaseContext.Users
 					//	.Where(current => current.FullName.EndsWith(fullNameTextBox.Text))
 					//	.OrderBy(current => current.FullName)
 					//	.ToList()
 					//	;
 
-					oUsers =
-						oDatabaseContext.Users
+					users =
+						databaseContext.Users
 						.Where(current => current.FullName.Contains(fullNameTextBox.Text))
 						.OrderBy(current => current.FullName)
 						.ToList()
@@ -99,12 +99,13 @@ namespace MyApplication.Admin
 
 				// Binding
 				//usersListBox.DataSource = null;
+
 				usersListBox.ValueMember = "Id";
 				//usersListBox.DisplayMember = "FullName";
 				usersListBox.DisplayMember = "DisplayName";
-				usersListBox.DataSource = oUsers;
+				usersListBox.DataSource = users;
 
-				if (oUsers.Count == 0)
+				if (users.Count == 0)
 				{
 					System.Windows.Forms.MessageBox.Show("There is not any user with this full name!");
 				}
@@ -115,10 +116,10 @@ namespace MyApplication.Admin
 			}
 			finally
 			{
-				if (oDatabaseContext != null)
+				if (databaseContext != null)
 				{
-					oDatabaseContext.Dispose();
-					oDatabaseContext = null;
+					databaseContext.Dispose();
+					databaseContext = null;
 				}
 			}
 		}

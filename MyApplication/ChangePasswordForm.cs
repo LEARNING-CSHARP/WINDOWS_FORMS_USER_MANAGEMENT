@@ -16,95 +16,97 @@ namespace MyApplication
 
 		private void changePasswordButton_Click(object sender, System.EventArgs e)
 		{
-			string strErrorMessages = string.Empty;
+			string errorMessages = string.Empty;
 
 			if (string.IsNullOrWhiteSpace(oldPasswordTextBox.Text))
 			{
-				strErrorMessages =
+				errorMessages =
 					"Old password is required!";
 			}
 			else
 			{
 				if (oldPasswordTextBox.Text.Length < 8)
 				{
-					strErrorMessages =
+					errorMessages =
 						"The old password length should be greater than or equal to 8 characters!";
 				}
 			}
 
 			if (string.IsNullOrWhiteSpace(newPasswordTextBox.Text))
 			{
-				if (strErrorMessages != string.Empty)
+				if (errorMessages != string.Empty)
 				{
-					strErrorMessages += System.Environment.NewLine;
+					errorMessages += System.Environment.NewLine;
 				}
 
-				strErrorMessages +=
+				errorMessages +=
 					"New password is required!";
 			}
 			else
 			{
 				if (newPasswordTextBox.Text.Length < 8)
 				{
-					if (strErrorMessages != string.Empty)
+					if (errorMessages != string.Empty)
 					{
-						strErrorMessages += System.Environment.NewLine;
+						errorMessages += System.Environment.NewLine;
 					}
 
-					strErrorMessages +=
+					errorMessages +=
 						"The new password length should be greater than or equal to 8 characters!";
 				}
 			}
 
 			if (string.IsNullOrWhiteSpace(confirmNewPasswordTextBox.Text))
 			{
-				if (strErrorMessages != string.Empty)
+				if (errorMessages != string.Empty)
 				{
-					strErrorMessages += System.Environment.NewLine;
+					errorMessages += System.Environment.NewLine;
 				}
 
-				strErrorMessages +=
+				errorMessages +=
 					"Confirm new password is required!";
 			}
 			else
 			{
 				if (string.Compare(confirmNewPasswordTextBox.Text, newPasswordTextBox.Text, ignoreCase: false) != 0)
 				{
-					if (strErrorMessages != string.Empty)
+					if (errorMessages != string.Empty)
 					{
-						strErrorMessages += System.Environment.NewLine;
+						errorMessages += System.Environment.NewLine;
 					}
 
-					strErrorMessages +=
+					errorMessages +=
 						"The confirm new password is not equal to new password!";
 				}
 			}
 
-			if (strErrorMessages != string.Empty)
+			if (errorMessages != string.Empty)
 			{
-				System.Windows.Forms.MessageBox.Show(strErrorMessages);
+				System.Windows.Forms.MessageBox.Show(errorMessages);
+
+				oldPasswordTextBox.Focus();
 
 				return;
 			}
 
-			Models.DatabaseContext oDatabaseContext = null;
+			Models.DatabaseContext databaseContext = null;
 
 			try
 			{
-				oDatabaseContext =
+				databaseContext =
 					new Models.DatabaseContext();
 
-				Models.User oUser =
-					oDatabaseContext.Users
+				Models.User currentUser =
+					databaseContext.Users
 					.Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
 					.FirstOrDefault();
 
-				if (oUser == null)
+				if (currentUser == null)
 				{
 					System.Windows.Forms.Application.Exit();
 				}
 
-				if (string.Compare(oUser.Password, oldPasswordTextBox.Text, ignoreCase: false) != 0)
+				if (string.Compare(currentUser.Password, oldPasswordTextBox.Text, ignoreCase: false) != 0)
 				{
 					System.Windows.Forms.MessageBox.Show("Old password is not correct!");
 
@@ -113,9 +115,9 @@ namespace MyApplication
 					return;
 				}
 
-				oUser.Password = newPasswordTextBox.Text;
+				currentUser.Password = newPasswordTextBox.Text;
 
-				oDatabaseContext.SaveChanges();
+				databaseContext.SaveChanges();
 
 				System.Windows.Forms.MessageBox.Show("Your password was changed successfully.");
 			}
@@ -125,10 +127,10 @@ namespace MyApplication
 			}
 			finally
 			{
-				if (oDatabaseContext != null)
+				if (databaseContext != null)
 				{
-					oDatabaseContext.Dispose();
-					oDatabaseContext = null;
+					databaseContext.Dispose();
+					databaseContext = null;
 				}
 			}
 		}

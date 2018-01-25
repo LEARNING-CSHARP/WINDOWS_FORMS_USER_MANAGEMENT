@@ -40,7 +40,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.fullNameTextBox.Location = new System.Drawing.Point(81, 12);
 			this.fullNameTextBox.Name = "fullNameTextBox";
-			this.fullNameTextBox.Size = new System.Drawing.Size(322, 21);
+			this.fullNameTextBox.Size = new System.Drawing.Size(321, 21);
 			this.fullNameTextBox.TabIndex = 1;
 			// 
 			// fullNameLabel
@@ -71,7 +71,7 @@
 			this.usersListBox.FormattingEnabled = true;
 			this.usersListBox.Location = new System.Drawing.Point(12, 68);
 			this.usersListBox.Name = "usersListBox";
-			this.usersListBox.Size = new System.Drawing.Size(391, 212);
+			this.usersListBox.Size = new System.Drawing.Size(390, 147);
 			this.usersListBox.TabIndex = 3;
 			this.usersListBox.DoubleClick += new System.EventHandler(this.usersListBox_DoubleClick);
 			// 
@@ -79,11 +79,12 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(415, 293);
+			this.ClientSize = new System.Drawing.Size(414, 231);
 			this.Controls.Add(this.usersListBox);
 			this.Controls.Add(this.searchButton);
 			this.Controls.Add(this.fullNameLabel);
 			this.Controls.Add(this.fullNameTextBox);
+			this.MinimumSize = new System.Drawing.Size(430, 270);
 			this.Name = "UsersListForm";
 			this.Text = "Users List";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UsersListForm_FormClosed);

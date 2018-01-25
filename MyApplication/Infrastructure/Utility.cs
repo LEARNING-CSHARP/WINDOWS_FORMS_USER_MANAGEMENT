@@ -7,6 +7,8 @@ namespace Infrastructure
 		{
 		}
 
+		//public static System.Guid UserId { get; set; }
+
 		public static Models.User AuthenticatedUser { get; set; }
 	}
 }

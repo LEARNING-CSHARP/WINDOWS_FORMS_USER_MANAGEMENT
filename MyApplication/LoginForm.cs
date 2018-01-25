@@ -47,19 +47,19 @@ namespace MyApplication
 			}
 			// **************************************************
 
-			Models.DatabaseContext oDatabaseContext = null;
+			Models.DatabaseContext databaseContext = null;
 
 			try
 			{
-				oDatabaseContext =
+				databaseContext =
 					new Models.DatabaseContext();
 
-				Models.User oUser =
-					oDatabaseContext.Users
+				Models.User user =
+					databaseContext.Users
 					.Where(current => string.Compare(current.Username, usernameTextBox.Text, true) == 0)
 					.FirstOrDefault();
 
-				if (oUser == null)
+				if (user == null)
 				{
 					//System.Windows.Forms.MessageBox
 					//	.Show("Username is not correct!");
@@ -72,7 +72,7 @@ namespace MyApplication
 					return;
 				}
 
-				if (string.Compare(oUser.Password, passwordTextBox.Text, ignoreCase: false) != 0)
+				if (string.Compare(user.Password, passwordTextBox.Text, ignoreCase: false) != 0)
 				{
 					//System.Windows.Forms.MessageBox
 					//	.Show("Password is not correct!");
@@ -85,17 +85,19 @@ namespace MyApplication
 					return;
 				}
 
-				if (oUser.IsActive == false)
+				if (user.IsActive == false)
 				{
 					System.Windows.Forms.MessageBox
-						.Show("You can not login to this application! Please contact support.");
+						.Show("You can not login to this application! Please contact support team.");
 
 					usernameTextBox.Focus();
 
 					return;
 				}
 
-				Infrastructure.Utility.AuthenticatedUser = oUser;
+				//System.Windows.Forms.MessageBox.Show("Welcome!");
+
+				Infrastructure.Utility.AuthenticatedUser = user;
 
 				Hide();
 
@@ -109,10 +111,10 @@ namespace MyApplication
 			}
 			finally
 			{
-				if (oDatabaseContext != null)
+				if (databaseContext != null)
 				{
-					oDatabaseContext.Dispose();
-					oDatabaseContext = null;
+					databaseContext.Dispose();
+					databaseContext = null;
 				}
 			}
 		}

@@ -4,6 +4,10 @@ namespace MyApplication
 {
 	static class Program
 	{
+		static Program()
+		{
+		}
+
 		[System.STAThread]
 		static void Main()
 		{
@@ -13,32 +17,32 @@ namespace MyApplication
 			// **************************************************
 
 			// **************************************************
-			Models.DatabaseContext oDatabaseContext = null;
+			Models.DatabaseContext databaseContext = null;
 
 			try
 			{
-				oDatabaseContext =
+				databaseContext =
 					new Models.DatabaseContext();
 
-				int intAdminCount =
-					oDatabaseContext.Users
+				int adminCount =
+					databaseContext.Users
 					.Where(current => current.IsAdmin)
 					.Count();
 
-				if (intAdminCount == 0)
+				if (adminCount == 0)
 				{
-					Models.User oAdminUser = new Models.User();
+					Models.User adminUser = new Models.User();
 
-					oAdminUser.IsAdmin = true;
-					oAdminUser.IsActive = true;
+					adminUser.IsAdmin = true;
+					adminUser.IsActive = true;
 
-					oAdminUser.Username = "Dariush";
-					oAdminUser.Password = "1234512345";
-					oAdminUser.FullName = "Mr. Dariush Tasdighi";
+					adminUser.Username = "Dariush";
+					adminUser.Password = "1234512345";
+					adminUser.FullName = "Mr. Dariush Tasdighi";
 
-					oDatabaseContext.Users.Add(oAdminUser);
+					databaseContext.Users.Add(adminUser);
 
-					oDatabaseContext.SaveChanges();
+					databaseContext.SaveChanges();
 				}
 			}
 			catch (System.Exception ex)
@@ -49,10 +53,10 @@ namespace MyApplication
 			}
 			finally
 			{
-				if (oDatabaseContext != null)
+				if (databaseContext != null)
 				{
-					oDatabaseContext.Dispose();
-					oDatabaseContext = null;
+					databaseContext.Dispose();
+					databaseContext = null;
 				}
 			}
 			// **************************************************

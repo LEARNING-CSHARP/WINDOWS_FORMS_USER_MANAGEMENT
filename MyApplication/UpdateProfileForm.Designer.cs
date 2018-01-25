@@ -38,7 +38,7 @@
 			// saveButton
 			// 
 			this.saveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.saveButton.Location = new System.Drawing.Point(365, 213);
+			this.saveButton.Location = new System.Drawing.Point(358, 198);
 			this.saveButton.Name = "saveButton";
 			this.saveButton.Size = new System.Drawing.Size(87, 23);
 			this.saveButton.TabIndex = 4;
@@ -65,7 +65,7 @@
 			this.descriptionTextBox.Multiline = true;
 			this.descriptionTextBox.Name = "descriptionTextBox";
 			this.descriptionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.descriptionTextBox.Size = new System.Drawing.Size(361, 169);
+			this.descriptionTextBox.Size = new System.Drawing.Size(354, 154);
 			this.descriptionTextBox.TabIndex = 3;
 			// 
 			// fullNameTextBox
@@ -74,7 +74,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.fullNameTextBox.Location = new System.Drawing.Point(91, 12);
 			this.fullNameTextBox.Name = "fullNameTextBox";
-			this.fullNameTextBox.Size = new System.Drawing.Size(361, 21);
+			this.fullNameTextBox.Size = new System.Drawing.Size(354, 21);
 			this.fullNameTextBox.TabIndex = 1;
 			// 
 			// fullNameLabel
@@ -92,7 +92,7 @@
 			this.AcceptButton = this.saveButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(466, 248);
+			this.ClientSize = new System.Drawing.Size(459, 233);
 			this.Controls.Add(this.saveButton);
 			this.Controls.Add(this.descriptionLabel);
 			this.Controls.Add(this.descriptionTextBox);

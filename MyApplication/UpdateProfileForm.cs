@@ -11,25 +11,25 @@ namespace MyApplication
 
 		private void UpdateProfileForm_Load(object sender, System.EventArgs e)
 		{
-			Models.DatabaseContext oDatabaseContext = null;
+			Models.DatabaseContext databaseContext = null;
 
 			try
 			{
-				oDatabaseContext =
+				databaseContext =
 					new Models.DatabaseContext();
 
-				Models.User oUser =
-					oDatabaseContext.Users
+				Models.User currentUser =
+					databaseContext.Users
 					.Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
 					.FirstOrDefault();
 
-				if (oUser == null)
+				if (currentUser == null)
 				{
 					System.Windows.Forms.Application.Exit();
 				}
 
-				fullNameTextBox.Text = oUser.FullName;
-				descriptionTextBox.Text = oUser.Description;
+				fullNameTextBox.Text = currentUser.FullName;
+				descriptionTextBox.Text = currentUser.Description;
 			}
 			catch (System.Exception ex)
 			{
@@ -37,39 +37,39 @@ namespace MyApplication
 			}
 			finally
 			{
-				if (oDatabaseContext != null)
+				if (databaseContext != null)
 				{
-					oDatabaseContext.Dispose();
-					oDatabaseContext = null;
+					databaseContext.Dispose();
+					databaseContext = null;
 				}
 			}
 		}
 
 		private void saveButton_Click(object sender, System.EventArgs e)
 		{
-			Models.DatabaseContext oDatabaseContext = null;
+			Models.DatabaseContext databaseContext = null;
 
 			try
 			{
-				oDatabaseContext =
+				databaseContext =
 					new Models.DatabaseContext();
 
-				Models.User oUser =
-					oDatabaseContext.Users
+				Models.User currentUser =
+					databaseContext.Users
 					.Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
 					.FirstOrDefault();
 
-				if (oUser == null)
+				if (currentUser == null)
 				{
 					System.Windows.Forms.Application.Exit();
 				}
 
-				oUser.FullName = fullNameTextBox.Text;
-				oUser.Description = descriptionTextBox.Text;
+				currentUser.FullName = fullNameTextBox.Text;
+				currentUser.Description = descriptionTextBox.Text;
 
-				oDatabaseContext.SaveChanges();
+				databaseContext.SaveChanges();
 
-				Infrastructure.Utility.AuthenticatedUser = oUser;
+				Infrastructure.Utility.AuthenticatedUser = currentUser;
 
 				System.Windows.Forms.MessageBox
 					.Show("Your profile was updated successfully...");
@@ -80,10 +80,10 @@ namespace MyApplication
 			}
 			finally
 			{
-				if (oDatabaseContext != null)
+				if (databaseContext != null)
 				{
-					oDatabaseContext.Dispose();
-					oDatabaseContext = null;
+					databaseContext.Dispose();
+					databaseContext = null;
 				}
 			}
 		}

@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using System.Data.Entity;
 
 namespace MyApplication
 {
@@ -16,6 +15,8 @@ namespace MyApplication
 
 		private void registerButton_Click(object sender, System.EventArgs e)
 		{
+			// **************************************************
+			// **************************************************
 			// **************************************************
 			if ((string.IsNullOrWhiteSpace(usernameTextBox.Text)) ||
 				(string.IsNullOrWhiteSpace(passwordTextBox.Text)))
@@ -45,49 +46,68 @@ namespace MyApplication
 
 				return;
 			}
+			// **************************************************
 
-			string strErrorMessages = string.Empty;
+			// **************************************************
+			string errorMessages = string.Empty;
 
 			if (usernameTextBox.Text.Length < 6)
 			{
-				strErrorMessages =
+				errorMessages =
 					"Username length should be at least 6 characters!";
 			}
 
 			if (passwordTextBox.Text.Length < 8)
 			{
-				if (strErrorMessages != string.Empty)
+				if (errorMessages != string.Empty)
 				{
-					strErrorMessages +=
+					errorMessages +=
 						System.Environment.NewLine;
 				}
 
-				strErrorMessages +=
+				errorMessages +=
 					"Password length should be at least 8 characters!";
 			}
 
 			// اگر خطایی وجود داشت
-			if (strErrorMessages != string.Empty)
+			if (errorMessages != string.Empty)
 			{
-				System.Windows.Forms.MessageBox.Show(strErrorMessages);
+				System.Windows.Forms.MessageBox.Show(errorMessages);
 
 				return;
 			}
 			// **************************************************
+			// **************************************************
+			// **************************************************
 
-			Models.DatabaseContext oDatabaseContext = null;
+			Models.DatabaseContext databaseContext = null;
 
 			try
 			{
-				oDatabaseContext =
+				databaseContext =
 					new Models.DatabaseContext();
 
-				Models.User oUser =
-					oDatabaseContext.Users
+				//Models.User user =
+				//	databaseContext.Users
+				//	.Where(current => current.Username == usernameTextBox.Text)
+				//	.FirstOrDefault();
+
+				Models.User user =
+					databaseContext.Users
 					.Where(current => string.Compare(current.Username, usernameTextBox.Text, true) == 0)
 					.FirstOrDefault();
 
-				if (oUser != null)
+				//Models.User user =
+				//	databaseContext.Users
+				//	.Where(current => string.Compare(current.Username, usernameTextBox.Text, true) == 0)
+				//	.First();
+
+				//Models.User user =
+				//	databaseContext.Users
+				//	.Where(current => string.Compare(current.Username, usernameTextBox.Text, true) == 0)
+				//	.Single();
+
+				if (user != null)
 				{
 					System.Windows.Forms.MessageBox.Show
 						("This username is already exist! Please choose another one...");
@@ -97,17 +117,17 @@ namespace MyApplication
 					return;
 				}
 
-				oUser = new Models.User();
+				user = new Models.User();
 
-				oUser.FullName = fullNameTextBox.Text;
-				oUser.Password = passwordTextBox.Text;
-				oUser.Username = usernameTextBox.Text;
+				user.FullName = fullNameTextBox.Text;
+				user.Password = passwordTextBox.Text;
+				user.Username = usernameTextBox.Text;
 
-				oUser.IsActive = true; // بستگی به سناریو و قواعد شرکت یا پروژه دارد
+				user.IsActive = true; // بستگی به سناریو و قواعد شرکت یا پروژه دارد
 
-				oDatabaseContext.Users.Add(oUser);
+				databaseContext.Users.Add(user);
 
-				oDatabaseContext.SaveChanges();
+				databaseContext.SaveChanges();
 
 				System.Windows.Forms.MessageBox.Show("Registration Done!");
 
@@ -123,10 +143,10 @@ namespace MyApplication
 			}
 			finally
 			{
-				if (oDatabaseContext != null)
+				if (databaseContext != null)
 				{
-					oDatabaseContext.Dispose();
-					oDatabaseContext = null;
+					databaseContext.Dispose();
+					databaseContext = null;
 				}
 			}
 		}
