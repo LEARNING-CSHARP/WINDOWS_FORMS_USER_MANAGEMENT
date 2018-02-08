@@ -32,6 +32,7 @@
 			this.fullNameLabel = new System.Windows.Forms.Label();
 			this.searchButton = new System.Windows.Forms.Button();
 			this.usersListBox = new System.Windows.Forms.ListBox();
+			this.deleteUsersButton = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// fullNameTextBox
@@ -71,15 +72,28 @@
 			this.usersListBox.FormattingEnabled = true;
 			this.usersListBox.Location = new System.Drawing.Point(12, 68);
 			this.usersListBox.Name = "usersListBox";
-			this.usersListBox.Size = new System.Drawing.Size(390, 147);
+			this.usersListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+			this.usersListBox.Size = new System.Drawing.Size(390, 121);
 			this.usersListBox.TabIndex = 3;
 			this.usersListBox.DoubleClick += new System.EventHandler(this.usersListBox_DoubleClick);
+			// 
+			// deleteUsersButton
+			// 
+			this.deleteUsersButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.deleteUsersButton.Location = new System.Drawing.Point(12, 196);
+			this.deleteUsersButton.Name = "deleteUsersButton";
+			this.deleteUsersButton.Size = new System.Drawing.Size(144, 23);
+			this.deleteUsersButton.TabIndex = 4;
+			this.deleteUsersButton.Text = "&Delete Users";
+			this.deleteUsersButton.UseVisualStyleBackColor = true;
+			this.deleteUsersButton.Click += new System.EventHandler(this.deleteUsersButton_Click);
 			// 
 			// UsersListForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(414, 231);
+			this.Controls.Add(this.deleteUsersButton);
 			this.Controls.Add(this.usersListBox);
 			this.Controls.Add(this.searchButton);
 			this.Controls.Add(this.fullNameLabel);
@@ -100,5 +114,6 @@
 		private System.Windows.Forms.Label fullNameLabel;
 		private System.Windows.Forms.Button searchButton;
 		private System.Windows.Forms.ListBox usersListBox;
+		private System.Windows.Forms.Button deleteUsersButton;
 	}
 }

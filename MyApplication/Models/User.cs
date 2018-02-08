@@ -67,6 +67,24 @@
 
 				result += $"[{ Username }]";
 
+				if (IsActive)
+				{
+					result += " [Enabled]";
+				}
+				else
+				{
+					result += " [Disabled]";
+				}
+
+				if (IsAdmin)
+				{
+					result += " [Admin]";
+				}
+				else
+				{
+					result += " [User]";
+				}
+
 				return (result);
 			}
 		}

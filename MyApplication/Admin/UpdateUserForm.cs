@@ -9,36 +9,36 @@ namespace MyApplication.Admin
 			InitializeComponent();
 		}
 
-		public Models.User User { get; set; }
-		//public System.Guid UserId { get; set; }
+		public Models.User SelectedUser { get; set; }
+		//public System.Guid SelectedUserId { get; set; }
 
 		private void UpdateUserForm_Load(object sender, System.EventArgs e)
 		{
-			Models.DatabaseContext oDatabaseContext = null;
+			Models.DatabaseContext databaseContext = null;
 
 			try
 			{
-				oDatabaseContext =
+				databaseContext =
 					new Models.DatabaseContext();
 
-				Models.User oUser =
-					oDatabaseContext.Users
-					.Where(current => current.Id == User.Id)
-					//.Where(current => current.Id == UserId)
+				Models.User selectedUser =
+					databaseContext.Users
+					.Where(current => current.Id == SelectedUser.Id)
+					//.Where(current => current.Id == SelectedUserId)
 					.FirstOrDefault();
 
-				if (oUser == null)
+				if (selectedUser == null)
 				{
 					System.Windows.Forms.MessageBox.Show("There is no such a user!");
 
 					Close();
 				}
 
-				isAdminCheckBox.Checked = oUser.IsAdmin;
-				isActiveCheckBox.Checked = oUser.IsActive;
+				isAdminCheckBox.Checked = selectedUser.IsAdmin;
+				isActiveCheckBox.Checked = selectedUser.IsActive;
 
-				fullNameTextBox.Text = oUser.FullName;
-				descriptionTextBox.Text = oUser.Description;
+				fullNameTextBox.Text = selectedUser.FullName;
+				descriptionTextBox.Text = selectedUser.Description;
 			}
 			catch (System.Exception ex)
 			{
@@ -48,38 +48,43 @@ namespace MyApplication.Admin
 			}
 			finally
 			{
+				if (databaseContext != null)
+				{
+					databaseContext.Dispose();
+					databaseContext = null;
+				}
 			}
 		}
 
 		private void saveButton_Click(object sender, System.EventArgs e)
 		{
-			Models.DatabaseContext oDatabaseContext = null;
+			Models.DatabaseContext databaseContext = null;
 
 			try
 			{
-				oDatabaseContext =
+				databaseContext =
 					new Models.DatabaseContext();
 
-				Models.User oUser =
-					oDatabaseContext.Users
-					.Where(current => current.Id == User.Id)
-					//.Where(current => current.Id == UserId)
+				Models.User selectedUser =
+					databaseContext.Users
+					.Where(current => current.Id == SelectedUser.Id)
+					//.Where(current => current.Id == SelectedUserId)
 					.FirstOrDefault();
 
-				if (oUser == null)
+				if (selectedUser == null)
 				{
 					System.Windows.Forms.MessageBox.Show("There is no such a user!");
 
 					Close();
 				}
 
-				oUser.IsAdmin = isAdminCheckBox.Checked;
-				oUser.IsActive = isActiveCheckBox.Checked;
+				selectedUser.IsAdmin = isAdminCheckBox.Checked;
+				selectedUser.IsActive = isActiveCheckBox.Checked;
 
-				oUser.FullName = fullNameTextBox.Text;
-				oUser.Description = descriptionTextBox.Text;
+				selectedUser.FullName = fullNameTextBox.Text;
+				selectedUser.Description = descriptionTextBox.Text;
 
-				oDatabaseContext.SaveChanges();
+				databaseContext.SaveChanges();
 
 				Close();
 			}
@@ -91,6 +96,11 @@ namespace MyApplication.Admin
 			}
 			finally
 			{
+				if (databaseContext != null)
+				{
+					databaseContext.Dispose();
+					databaseContext = null;
+				}
 			}
 		}
 	}

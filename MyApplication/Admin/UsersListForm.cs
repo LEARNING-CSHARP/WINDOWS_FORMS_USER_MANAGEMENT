@@ -29,6 +29,81 @@ namespace MyApplication.Admin
 
 		private void searchButton_Click(object sender, System.EventArgs e)
 		{
+			Search();
+		}
+
+		private void usersListBox_DoubleClick(object sender, System.EventArgs e)
+		{
+			// روش احمقانه
+			//Models.User oSelectedUser =
+			//	(Models.User)usersListBox.SelectedItem;
+
+			Models.User selectedUser =
+				usersListBox.SelectedItem as Models.User;
+
+			if (selectedUser != null)
+			{
+				UpdateUserForm updateUserForm = new UpdateUserForm();
+
+				updateUserForm.SelectedUser = selectedUser;
+				//updateUserForm.SelectedUserId = oSelectedUser.Id;
+
+				updateUserForm.ShowDialog();
+			}
+		}
+
+		private void deleteUsersButton_Click(object sender, System.EventArgs e)
+		{
+			if (usersListBox.SelectedItems.Count == 0)
+			{
+				System.Windows.Forms.MessageBox.Show("You did not select any users for deleting!");
+
+				return;
+			}
+
+			Models.DatabaseContext databaseContext = null;
+
+			try
+			{
+				databaseContext =
+					new Models.DatabaseContext();
+
+				foreach (var selectedItem in usersListBox.SelectedItems)
+				{
+					Models.User selectedUser = selectedItem as Models.User;
+
+					if (selectedUser != null)
+					{
+						if (selectedUser.IsAdmin == false)
+						{
+							databaseContext.Entry(selectedUser).State = System.Data.Entity.EntityState.Deleted;
+
+							// Note: Does Not Work!
+							//databaseContext.Users.Remove(selectedUser);
+
+							databaseContext.SaveChanges();
+						}
+					}
+				}
+
+				Search();
+			}
+			catch (System.Exception ex)
+			{
+				System.Windows.Forms.MessageBox.Show(ex.Message);
+			}
+			finally
+			{
+				if (databaseContext != null)
+				{
+					databaseContext.Dispose();
+					databaseContext = null;
+				}
+			}
+		}
+
+		private void Search()
+		{
 			Models.DatabaseContext databaseContext = null;
 
 			try
@@ -121,22 +196,6 @@ namespace MyApplication.Admin
 					databaseContext.Dispose();
 					databaseContext = null;
 				}
-			}
-		}
-
-		private void usersListBox_DoubleClick(object sender, System.EventArgs e)
-		{
-			Models.User oSelectedUser =
-				usersListBox.SelectedItem as Models.User;
-
-			if (oSelectedUser != null)
-			{
-				UpdateUserForm updateUserForm = new UpdateUserForm();
-
-				updateUserForm.User = oSelectedUser;
-				//updateUserForm.UserId = oSelectedUser.Id;
-
-				updateUserForm.ShowDialog();
 			}
 		}
 	}

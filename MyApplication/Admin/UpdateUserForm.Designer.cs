@@ -56,7 +56,7 @@
 			this.descriptionTextBox.Multiline = true;
 			this.descriptionTextBox.Name = "descriptionTextBox";
 			this.descriptionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.descriptionTextBox.Size = new System.Drawing.Size(407, 183);
+			this.descriptionTextBox.Size = new System.Drawing.Size(353, 139);
 			this.descriptionTextBox.TabIndex = 3;
 			// 
 			// fullNameTextBox
@@ -65,7 +65,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.fullNameTextBox.Location = new System.Drawing.Point(89, 12);
 			this.fullNameTextBox.Name = "fullNameTextBox";
-			this.fullNameTextBox.Size = new System.Drawing.Size(407, 21);
+			this.fullNameTextBox.Size = new System.Drawing.Size(353, 21);
 			this.fullNameTextBox.TabIndex = 1;
 			// 
 			// fullNameLabel
@@ -83,7 +83,7 @@
 			this.isActiveCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.isActiveCheckBox.AutoSize = true;
 			this.isActiveCheckBox.ForeColor = System.Drawing.Color.White;
-			this.isActiveCheckBox.Location = new System.Drawing.Point(89, 228);
+			this.isActiveCheckBox.Location = new System.Drawing.Point(89, 184);
 			this.isActiveCheckBox.Name = "isActiveCheckBox";
 			this.isActiveCheckBox.Size = new System.Drawing.Size(61, 17);
 			this.isActiveCheckBox.TabIndex = 4;
@@ -95,7 +95,7 @@
 			this.isAdminCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.isAdminCheckBox.AutoSize = true;
 			this.isAdminCheckBox.ForeColor = System.Drawing.Color.White;
-			this.isAdminCheckBox.Location = new System.Drawing.Point(89, 251);
+			this.isAdminCheckBox.Location = new System.Drawing.Point(89, 207);
 			this.isAdminCheckBox.Name = "isAdminCheckBox";
 			this.isAdminCheckBox.Size = new System.Drawing.Size(62, 17);
 			this.isAdminCheckBox.TabIndex = 5;
@@ -105,7 +105,7 @@
 			// saveButton
 			// 
 			this.saveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.saveButton.Location = new System.Drawing.Point(89, 274);
+			this.saveButton.Location = new System.Drawing.Point(89, 230);
 			this.saveButton.Name = "saveButton";
 			this.saveButton.Size = new System.Drawing.Size(75, 23);
 			this.saveButton.TabIndex = 6;
@@ -115,9 +115,10 @@
 			// 
 			// UpdateUserForm
 			// 
+			this.AcceptButton = this.saveButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(508, 305);
+			this.ClientSize = new System.Drawing.Size(454, 261);
 			this.Controls.Add(this.saveButton);
 			this.Controls.Add(this.isAdminCheckBox);
 			this.Controls.Add(this.isActiveCheckBox);
@@ -125,6 +126,7 @@
 			this.Controls.Add(this.descriptionTextBox);
 			this.Controls.Add(this.fullNameTextBox);
 			this.Controls.Add(this.fullNameLabel);
+			this.MinimumSize = new System.Drawing.Size(470, 300);
 			this.Name = "UpdateUserForm";
 			this.Text = "Update User";
 			this.Load += new System.EventHandler(this.UpdateUserForm_Load);
