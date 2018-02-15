@@ -49,7 +49,7 @@ namespace MyApplication
 			// **************************************************
 
 			// **************************************************
-			string errorMessages = string.Empty;
+			string errorMessages = string.Empty; // ""
 
 			if (usernameTextBox.Text.Length < 6)
 			{
@@ -62,7 +62,7 @@ namespace MyApplication
 				if (errorMessages != string.Empty)
 				{
 					errorMessages +=
-						System.Environment.NewLine;
+						System.Environment.NewLine; // "\n\r"
 				}
 
 				errorMessages +=
@@ -123,7 +123,8 @@ namespace MyApplication
 				user.Password = passwordTextBox.Text;
 				user.Username = usernameTextBox.Text;
 
-				user.IsActive = true; // بستگی به سناریو و قواعد شرکت یا پروژه دارد
+				// بستگی به سناریو و قواعد و قوانین شرکت یا پروژه دارد
+				user.IsActive = true;
 
 				databaseContext.Users.Add(user);
 
@@ -131,11 +132,13 @@ namespace MyApplication
 
 				System.Windows.Forms.MessageBox.Show("Registration Done!");
 
-				fullNameTextBox.Text = string.Empty;
-				passwordTextBox.Text = string.Empty;
-				usernameTextBox.Text = string.Empty;
+				//fullNameTextBox.Text = string.Empty;
+				//passwordTextBox.Text = string.Empty;
+				//usernameTextBox.Text = string.Empty;
 
-				usernameTextBox.Focus();
+				//usernameTextBox.Focus();
+
+				resetButton_Click(null, null);
 			}
 			catch (System.Exception ex)
 			{
@@ -162,6 +165,8 @@ namespace MyApplication
 
 		private void exitButton_Click(object sender, System.EventArgs e)
 		{
+			//Close();
+
 			System.Windows.Forms.Application.Exit();
 		}
 	}

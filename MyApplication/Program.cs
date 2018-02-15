@@ -24,12 +24,20 @@ namespace MyApplication
 				databaseContext =
 					new Models.DatabaseContext();
 
-				int adminCount =
-					databaseContext.Users
-					.Where(current => current.IsAdmin)
-					.Count();
+				//int adminCount =
+				//	databaseContext.Users
+				//	.Where(current => current.IsAdmin)
+				//	.Count();
 
-				if (adminCount == 0)
+				//int userCount =
+				//	databaseContext.Users
+				//	.Count();
+
+				bool hasAnyUser =
+					databaseContext.Users
+					.Any();
+
+				if (hasAnyUser == false)
 				{
 					Models.User adminUser = new Models.User();
 
@@ -63,8 +71,8 @@ namespace MyApplication
 
 			// **************************************************
 			#region Runing Startup Form and then Disposing!
-			LoginForm startupForm = new LoginForm();
-			//RegisterForm startupForm = new RegisterForm();
+			//LoginForm startupForm = new LoginForm();
+			RegisterForm startupForm = new RegisterForm();
 
 			System.Windows.Forms.Application.Run(startupForm);
 
