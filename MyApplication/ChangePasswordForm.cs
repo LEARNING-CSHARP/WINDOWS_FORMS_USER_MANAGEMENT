@@ -119,7 +119,7 @@ namespace MyApplication
 
 				databaseContext.SaveChanges();
 
-				System.Windows.Forms.MessageBox.Show("Your password was changed successfully.");
+				System.Windows.Forms.MessageBox.Show("Your password has been changed successfully.");
 			}
 			catch (System.Exception ex)
 			{

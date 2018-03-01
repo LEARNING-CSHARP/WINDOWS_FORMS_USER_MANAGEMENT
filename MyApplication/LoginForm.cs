@@ -54,12 +54,12 @@ namespace MyApplication
 				databaseContext =
 					new Models.DatabaseContext();
 
-				Models.User user =
+				Models.User foundedUser =
 					databaseContext.Users
 					.Where(current => string.Compare(current.Username, usernameTextBox.Text, true) == 0)
 					.FirstOrDefault();
 
-				if (user == null)
+				if (foundedUser == null)
 				{
 					//System.Windows.Forms.MessageBox
 					//	.Show("Username is not correct!");
@@ -72,7 +72,7 @@ namespace MyApplication
 					return;
 				}
 
-				if (string.Compare(user.Password, passwordTextBox.Text, ignoreCase: false) != 0)
+				if (string.Compare(foundedUser.Password, passwordTextBox.Text, ignoreCase: false) != 0)
 				{
 					//System.Windows.Forms.MessageBox
 					//	.Show("Password is not correct!");
@@ -85,7 +85,7 @@ namespace MyApplication
 					return;
 				}
 
-				if (user.IsActive == false)
+				if (foundedUser.IsActive == false)
 				{
 					System.Windows.Forms.MessageBox
 						.Show("You can not login to this application! Please contact support team.");
@@ -97,7 +97,7 @@ namespace MyApplication
 
 				//System.Windows.Forms.MessageBox.Show("Welcome!");
 
-				Infrastructure.Utility.AuthenticatedUser = user;
+				Infrastructure.Utility.AuthenticatedUser = foundedUser;
 
 				Hide();
 
