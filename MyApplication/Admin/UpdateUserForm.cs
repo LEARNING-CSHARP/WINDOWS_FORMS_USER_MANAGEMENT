@@ -21,24 +21,24 @@ namespace MyApplication.Admin
 				databaseContext =
 					new Models.DatabaseContext();
 
-				Models.User selectedUser =
+				Models.User foundedUser =
 					databaseContext.Users
 					.Where(current => current.Id == SelectedUser.Id)
 					//.Where(current => current.Id == SelectedUserId)
 					.FirstOrDefault();
 
-				if (selectedUser == null)
+				if (foundedUser == null)
 				{
-					System.Windows.Forms.MessageBox.Show("There is no such a user!");
+					System.Windows.Forms.MessageBox.Show("There is no such a user anymore!");
 
 					Close();
 				}
 
-				isAdminCheckBox.Checked = selectedUser.IsAdmin;
-				isActiveCheckBox.Checked = selectedUser.IsActive;
+				isAdminCheckBox.Checked = foundedUser.IsAdmin;
+				isActiveCheckBox.Checked = foundedUser.IsActive;
 
-				fullNameTextBox.Text = selectedUser.FullName;
-				descriptionTextBox.Text = selectedUser.Description;
+				fullNameTextBox.Text = foundedUser.FullName;
+				descriptionTextBox.Text = foundedUser.Description;
 			}
 			catch (System.Exception ex)
 			{
@@ -65,24 +65,24 @@ namespace MyApplication.Admin
 				databaseContext =
 					new Models.DatabaseContext();
 
-				Models.User selectedUser =
+				Models.User foundedUser =
 					databaseContext.Users
 					.Where(current => current.Id == SelectedUser.Id)
 					//.Where(current => current.Id == SelectedUserId)
 					.FirstOrDefault();
 
-				if (selectedUser == null)
+				if (foundedUser == null)
 				{
-					System.Windows.Forms.MessageBox.Show("There is no such a user!");
+					System.Windows.Forms.MessageBox.Show("There is no such a user anymore!");
 
 					Close();
 				}
 
-				selectedUser.IsAdmin = isAdminCheckBox.Checked;
-				selectedUser.IsActive = isActiveCheckBox.Checked;
+				foundedUser.IsAdmin = isAdminCheckBox.Checked;
+				foundedUser.IsActive = isActiveCheckBox.Checked;
 
-				selectedUser.FullName = fullNameTextBox.Text;
-				selectedUser.Description = descriptionTextBox.Text;
+				foundedUser.FullName = fullNameTextBox.Text;
+				foundedUser.Description = descriptionTextBox.Text;
 
 				databaseContext.SaveChanges();
 

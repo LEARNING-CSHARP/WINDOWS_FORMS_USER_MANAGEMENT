@@ -118,18 +118,18 @@ namespace MyApplication
 		//	usersListForm.Show();
 		//}
 
-		private Admin.UsersListForm _usersListForm;
+		private Admin.UsersListForm usersListForm;
 
 		private void usersListToolStripMenuItem_Click(object sender, System.EventArgs e)
 		{
-			if ((_usersListForm == null) || (_usersListForm.IsDisposed))
+			if ((usersListForm == null) || (usersListForm.IsDisposed))
 			{
-				_usersListForm = new Admin.UsersListForm();
+				usersListForm = new Admin.UsersListForm();
 
-				_usersListForm.MdiParent = this;
+				usersListForm.MdiParent = this;
 			}
 
-			_usersListForm.Show();
+			usersListForm.Show();
 		}
 
 		private void MainForm_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)

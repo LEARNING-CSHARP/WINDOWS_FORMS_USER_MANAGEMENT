@@ -2,14 +2,14 @@
 
 namespace MyApplication
 {
-	static class Program
+	internal static class Program
 	{
 		static Program()
 		{
 		}
 
 		[System.STAThread]
-		static void Main()
+		internal static void Main()
 		{
 			// **************************************************
 			System.Windows.Forms.Application.EnableVisualStyles();
@@ -71,8 +71,8 @@ namespace MyApplication
 
 			// **************************************************
 			#region Runing Startup Form and then Disposing!
-			LoginForm startupForm = new LoginForm();
-			//RegisterForm startupForm = new RegisterForm();
+			//Infrastructure.BaseForm startupForm = new LoginForm();
+			Infrastructure.BaseForm startupForm = new RegisterForm();
 
 			System.Windows.Forms.Application.Run(startupForm);
 

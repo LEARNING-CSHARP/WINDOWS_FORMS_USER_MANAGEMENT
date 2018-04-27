@@ -17,16 +17,6 @@ namespace MyApplication.Admin
 			//	new Models.DatabaseContext();
 		}
 
-		private void UsersListForm_FormClosed
-			(object sender, System.Windows.Forms.FormClosedEventArgs e)
-		{
-			//if (databaseContext != null)
-			//{
-			//	databaseContext.Dispose();
-			//	databaseContext = null;
-			//}
-		}
-
 		private void searchButton_Click(object sender, System.EventArgs e)
 		{
 			Search();
@@ -49,6 +39,8 @@ namespace MyApplication.Admin
 				//updateUserForm.SelectedUserId = oSelectedUser.Id;
 
 				updateUserForm.ShowDialog();
+
+				Search();
 			}
 		}
 
@@ -180,10 +172,10 @@ namespace MyApplication.Admin
 				usersListBox.DisplayMember = "DisplayName";
 				usersListBox.DataSource = users;
 
-				if (users.Count == 0)
-				{
-					System.Windows.Forms.MessageBox.Show("There is not any user with this full name!");
-				}
+				//if (users.Count == 0)
+				//{
+				//	System.Windows.Forms.MessageBox.Show("There is not any user with this full name!");
+				//}
 			}
 			catch (System.Exception ex)
 			{
@@ -197,6 +189,16 @@ namespace MyApplication.Admin
 					databaseContext = null;
 				}
 			}
+		}
+
+		private void UsersListForm_FormClosed
+			(object sender, System.Windows.Forms.FormClosedEventArgs e)
+		{
+			//if (databaseContext != null)
+			//{
+			//	databaseContext.Dispose();
+			//	databaseContext = null;
+			//}
 		}
 	}
 }

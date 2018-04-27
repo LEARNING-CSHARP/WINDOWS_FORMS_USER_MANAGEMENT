@@ -97,16 +97,6 @@ namespace MyApplication
 					.Where(current => string.Compare(current.Username, usernameTextBox.Text, true) == 0)
 					.FirstOrDefault();
 
-				//Models.User user =
-				//	databaseContext.Users
-				//	.Where(current => string.Compare(current.Username, usernameTextBox.Text, true) == 0)
-				//	.First();
-
-				//Models.User user =
-				//	databaseContext.Users
-				//	.Where(current => string.Compare(current.Username, usernameTextBox.Text, true) == 0)
-				//	.Single();
-
 				if (user != null)
 				{
 					System.Windows.Forms.MessageBox.Show
