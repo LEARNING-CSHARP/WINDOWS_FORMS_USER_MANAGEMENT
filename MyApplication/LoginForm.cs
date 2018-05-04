@@ -17,6 +17,8 @@ namespace MyApplication
 		private void loginButton_Click(object sender, System.EventArgs e)
 		{
 			// **************************************************
+			// **************************************************
+			// **************************************************
 			if ((string.IsNullOrWhiteSpace(usernameTextBox.Text)) ||
 				(string.IsNullOrWhiteSpace(passwordTextBox.Text)))
 			{
@@ -45,6 +47,8 @@ namespace MyApplication
 
 				return;
 			}
+			// **************************************************
+			// **************************************************
 			// **************************************************
 
 			Models.DatabaseContext databaseContext = null;
@@ -95,8 +99,11 @@ namespace MyApplication
 					return;
 				}
 
+				// **************************************************
 				//System.Windows.Forms.MessageBox.Show("Welcome!");
+				// **************************************************
 
+				// **************************************************
 				Infrastructure.Utility.AuthenticatedUser = foundedUser;
 
 				Hide();
@@ -104,6 +111,7 @@ namespace MyApplication
 				MainForm mainForm = new MainForm();
 
 				mainForm.Show();
+				// **************************************************
 			}
 			catch (System.Exception ex)
 			{

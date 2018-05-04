@@ -16,6 +16,9 @@ namespace MyApplication
 
 		private void changePasswordButton_Click(object sender, System.EventArgs e)
 		{
+			// **************************************************
+			// **************************************************
+			// **************************************************
 			string errorMessages = string.Empty;
 
 			if (string.IsNullOrWhiteSpace(oldPasswordTextBox.Text))
@@ -88,6 +91,9 @@ namespace MyApplication
 
 				return;
 			}
+			// **************************************************
+			// **************************************************
+			// **************************************************
 
 			Models.DatabaseContext databaseContext = null;
 

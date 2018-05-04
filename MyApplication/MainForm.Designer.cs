@@ -37,7 +37,7 @@
 			this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.usersListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.myStatusStrip = new System.Windows.Forms.StatusStrip();
-			this.usernameToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+			this.welcomeToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.myMenuStrip.SuspendLayout();
 			this.myStatusStrip.SuspendLayout();
 			this.SuspendLayout();
@@ -109,7 +109,7 @@
 			// myStatusStrip
 			// 
 			this.myStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usernameToolStripStatusLabel});
+            this.welcomeToolStripStatusLabel});
 			this.myStatusStrip.Location = new System.Drawing.Point(0, 375);
 			this.myStatusStrip.Name = "myStatusStrip";
 			this.myStatusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
@@ -119,8 +119,8 @@
 			// 
 			// usernameToolStripStatusLabel
 			// 
-			this.usernameToolStripStatusLabel.Name = "usernameToolStripStatusLabel";
-			this.usernameToolStripStatusLabel.Size = new System.Drawing.Size(0, 17);
+			this.welcomeToolStripStatusLabel.Name = "usernameToolStripStatusLabel";
+			this.welcomeToolStripStatusLabel.Size = new System.Drawing.Size(0, 17);
 			// 
 			// MainForm
 			// 
@@ -155,7 +155,7 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
 		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
 		private System.Windows.Forms.StatusStrip myStatusStrip;
-		private System.Windows.Forms.ToolStripStatusLabel usernameToolStripStatusLabel;
+		private System.Windows.Forms.ToolStripStatusLabel welcomeToolStripStatusLabel;
 		private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem usersListToolStripMenuItem;

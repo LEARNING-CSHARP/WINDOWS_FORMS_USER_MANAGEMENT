@@ -71,8 +71,8 @@ namespace MyApplication
 
 			// **************************************************
 			#region Runing Startup Form and then Disposing!
-			//Infrastructure.BaseForm startupForm = new LoginForm();
-			Infrastructure.BaseForm startupForm = new RegisterForm();
+			Infrastructure.BaseForm startupForm = new LoginForm();
+			//Infrastructure.BaseForm startupForm = new RegisterForm();
 
 			System.Windows.Forms.Application.Run(startupForm);
 

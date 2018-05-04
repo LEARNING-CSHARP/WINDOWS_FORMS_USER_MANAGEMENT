@@ -12,6 +12,8 @@ namespace MyApplication
 
 		private void MainForm_Load(object sender, System.EventArgs e)
 		{
+			UpdateWelcomeToolStripStatusLabel();
+
 			if (Infrastructure.Utility.AuthenticatedUser.IsAdmin)
 			{
 				adminToolStripMenuItem.Visible = true;
@@ -20,7 +22,10 @@ namespace MyApplication
 			{
 				adminToolStripMenuItem.Visible = false;
 			}
+		}
 
+		public void UpdateWelcomeToolStripStatusLabel()
+		{
 			//usernameToolStripStatusLabel.Text =
 			//	"Welcome " + Infrastructure.Utility.AuthenticatedUser.Username + "!";
 
@@ -32,12 +37,12 @@ namespace MyApplication
 
 			if (string.IsNullOrWhiteSpace(Infrastructure.Utility.AuthenticatedUser.FullName))
 			{
-				usernameToolStripStatusLabel.Text =
+				welcomeToolStripStatusLabel.Text =
 					$"Welcome { Infrastructure.Utility.AuthenticatedUser.Username }!";
 			}
 			else
 			{
-				usernameToolStripStatusLabel.Text =
+				welcomeToolStripStatusLabel.Text =
 					$"Welcome { Infrastructure.Utility.AuthenticatedUser.FullName }!";
 			}
 		}
