@@ -52,7 +52,7 @@ namespace MyApplication
 			//Note: Close() is not correct!
 			//Close();
 
-			System.Windows.Forms.DialogResult enmResult =
+			System.Windows.Forms.DialogResult result =
 				System.Windows.Forms.MessageBox.Show
 					(text: "آیا به خروج از برنامه اطمینان دارید؟",
 					caption: "سوال",
@@ -62,7 +62,7 @@ namespace MyApplication
 					options: System.Windows.Forms.MessageBoxOptions.RightAlign |
 					System.Windows.Forms.MessageBoxOptions.RtlReading);
 
-			if (enmResult == System.Windows.Forms.DialogResult.Yes)
+			if (result == System.Windows.Forms.DialogResult.Yes)
 			{
 				System.Windows.Forms.Application.Exit();
 			}
@@ -137,7 +137,8 @@ namespace MyApplication
 			usersListForm.Show();
 		}
 
-		private void MainForm_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
+		private void MainForm_FormClosed
+			(object sender, System.Windows.Forms.FormClosedEventArgs e)
 		{
 			System.Windows.Forms.Application.Exit();
 		}
