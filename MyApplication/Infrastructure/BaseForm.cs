@@ -1,8 +1,6 @@
-﻿using System.Linq;
-
-namespace Infrastructure
+﻿namespace Infrastructure
 {
-	public partial class BaseForm : System.Windows.Forms.Form
+	public partial class BaseForm : Dtx.Windows.Forms.BaseForm
 	{
 		public BaseForm()
 		{

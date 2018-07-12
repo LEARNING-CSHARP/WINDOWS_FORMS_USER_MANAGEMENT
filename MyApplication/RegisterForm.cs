@@ -80,6 +80,8 @@ namespace MyApplication
 			// **************************************************
 			// **************************************************
 
+			// از این قسمت به بعد باید سر کلاس نوشته شود
+
 			Models.DatabaseContext databaseContext = null;
 
 			try
@@ -151,6 +153,17 @@ namespace MyApplication
 			fullNameTextBox.Text = string.Empty;
 
 			usernameTextBox.Focus();
+		}
+
+		private void loginButton_Click(object sender, System.EventArgs e)
+		{
+			Hide();
+
+			//LoginForm loginForm = new LoginForm();
+
+			//loginForm.Show();
+
+			Infrastructure.Utility.LoginForm.Show();
 		}
 
 		private void exitButton_Click(object sender, System.EventArgs e)

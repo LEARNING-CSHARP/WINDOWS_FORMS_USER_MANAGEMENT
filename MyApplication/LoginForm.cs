@@ -51,6 +51,8 @@ namespace MyApplication
 			// **************************************************
 			// **************************************************
 
+			// از این قسمت به بعد باید سر کلاس نوشته شود
+
 			Models.DatabaseContext databaseContext = null;
 
 			try
@@ -68,6 +70,8 @@ namespace MyApplication
 					//System.Windows.Forms.MessageBox
 					//	.Show("Username is not correct!");
 
+					// دقت کنید که در این حالت پیغام باید گنگ باشد
+
 					System.Windows.Forms.MessageBox
 						.Show("Username and/or Password is not correct!");
 
@@ -80,6 +84,8 @@ namespace MyApplication
 				{
 					//System.Windows.Forms.MessageBox
 					//	.Show("Password is not correct!");
+
+					// دقت کنید که در این حالت پیغام باید گنگ باشد
 
 					System.Windows.Forms.MessageBox
 						.Show("Username and/or Password is not correct!");
@@ -100,17 +106,17 @@ namespace MyApplication
 				}
 
 				// **************************************************
-				//System.Windows.Forms.MessageBox.Show("Welcome!");
+				System.Windows.Forms.MessageBox.Show("Welcome!");
 				// **************************************************
 
 				// **************************************************
-				Infrastructure.Utility.AuthenticatedUser = foundedUser;
+				//Infrastructure.Utility.AuthenticatedUser = foundedUser;
 
-				Hide();
+				//Hide();
 
-				MainForm mainForm = new MainForm();
+				//MainForm mainForm = new MainForm();
 
-				mainForm.Show();
+				//mainForm.Show();
 				// **************************************************
 			}
 			catch (System.Exception ex)
@@ -139,9 +145,11 @@ namespace MyApplication
 		{
 			Hide();
 
-			RegisterForm registerForm = new RegisterForm();
+			//RegisterForm registerForm = new RegisterForm();
 
-			registerForm.Show();
+			//registerForm.Show();
+
+			Infrastructure.Utility.RegisterForm.Show();
 		}
 
 		private void exitButton_Click(object sender, System.EventArgs e)

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyApplication", "MyApplication\MyApplication.csproj", "{DC169A84-B4EA-4F70-9D88-D13121E7F1B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dtx", "Dtx\Dtx.csproj", "{932E8A7C-6DCF-4E0C-98F2-8AA0DE1250A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{DC169A84-B4EA-4F70-9D88-D13121E7F1B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC169A84-B4EA-4F70-9D88-D13121E7F1B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC169A84-B4EA-4F70-9D88-D13121E7F1B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{932E8A7C-6DCF-4E0C-98F2-8AA0DE1250A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{932E8A7C-6DCF-4E0C-98F2-8AA0DE1250A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{932E8A7C-6DCF-4E0C-98F2-8AA0DE1250A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{932E8A7C-6DCF-4E0C-98F2-8AA0DE1250A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DAA7E16A-8A54-46FD-BC23-D733EA924A40}
 	EndGlobalSection
 EndGlobal

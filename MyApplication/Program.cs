@@ -70,22 +70,28 @@ namespace MyApplication
 			// **************************************************
 
 			// **************************************************
-			#region Runing Startup Form and then Disposing!
-			Infrastructure.BaseForm startupForm = new LoginForm();
-			//Infrastructure.BaseForm startupForm = new RegisterForm();
+			//#region Solution (1)
+			//Infrastructure.BaseForm startupForm = new LoginForm();
+			////Infrastructure.BaseForm startupForm = new RegisterForm();
 
-			System.Windows.Forms.Application.Run(startupForm);
+			//System.Windows.Forms.Application.Run(startupForm);
 
-			if (startupForm != null)
-			{
-				if (startupForm.IsDisposed == false)
-				{
-					startupForm.Dispose();
-				}
+			//if (startupForm != null)
+			//{
+			//	if (startupForm.IsDisposed == false)
+			//	{
+			//		startupForm.Dispose();
+			//	}
 
-				startupForm = null;
-			}
-			#endregion /Runing Startup Form and then Disposing!
+			//	startupForm = null;
+			//}
+			//#endregion /Solution (1)
+			// **************************************************
+
+			// **************************************************
+			#region Solution (2)
+			System.Windows.Forms.Application.Run(Infrastructure.Utility.LoginForm);
+			#endregion /Solution (2)
 			// **************************************************
 		}
 	}
