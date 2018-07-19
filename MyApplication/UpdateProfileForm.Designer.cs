@@ -28,11 +28,11 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.saveButton = new System.Windows.Forms.Button();
-			this.descriptionLabel = new System.Windows.Forms.Label();
-			this.descriptionTextBox = new System.Windows.Forms.TextBox();
-			this.fullNameTextBox = new System.Windows.Forms.TextBox();
-			this.fullNameLabel = new System.Windows.Forms.Label();
+			this.saveButton = new Dtx.Windows.Forms.Button();
+			this.descriptionLabel = new Dtx.Windows.Forms.Label();
+			this.descriptionTextBox = new Dtx.Windows.Forms.TextBox();
+			this.fullNameTextBox = new Dtx.Windows.Forms.TextBox();
+			this.fullNameLabel = new Dtx.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// saveButton
@@ -110,10 +110,10 @@
 
 		#endregion
 
-		private System.Windows.Forms.Label descriptionLabel;
-		private System.Windows.Forms.TextBox descriptionTextBox;
-		private System.Windows.Forms.TextBox fullNameTextBox;
-		private System.Windows.Forms.Label fullNameLabel;
-		private System.Windows.Forms.Button saveButton;
+		private Dtx.Windows.Forms.Label descriptionLabel;
+		private Dtx.Windows.Forms.TextBox descriptionTextBox;
+		private Dtx.Windows.Forms.TextBox fullNameTextBox;
+		private Dtx.Windows.Forms.Label fullNameLabel;
+		private Dtx.Windows.Forms.Button saveButton;
 	}
 }

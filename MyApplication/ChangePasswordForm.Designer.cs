@@ -22,13 +22,13 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.changePasswordButton = new System.Windows.Forms.Button();
-			this.newPasswordLabel = new System.Windows.Forms.Label();
-			this.newPasswordTextBox = new System.Windows.Forms.TextBox();
-			this.oldPasswordTextBox = new System.Windows.Forms.TextBox();
-			this.oldPasswordLabel = new System.Windows.Forms.Label();
-			this.confirmNewPasswordLabel = new System.Windows.Forms.Label();
-			this.confirmNewPasswordTextBox = new System.Windows.Forms.TextBox();
+			this.changePasswordButton = new Dtx.Windows.Forms.Button();
+			this.newPasswordLabel = new Dtx.Windows.Forms.Label();
+			this.newPasswordTextBox = new Dtx.Windows.Forms.TextBox();
+			this.oldPasswordTextBox = new Dtx.Windows.Forms.TextBox();
+			this.oldPasswordLabel = new Dtx.Windows.Forms.Label();
+			this.confirmNewPasswordLabel = new Dtx.Windows.Forms.Label();
+			this.confirmNewPasswordTextBox = new Dtx.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
 			// changePasswordButton
@@ -131,12 +131,12 @@
 
 		#endregion
 
-		private System.Windows.Forms.Label newPasswordLabel;
-		private System.Windows.Forms.TextBox newPasswordTextBox;
-		private System.Windows.Forms.TextBox oldPasswordTextBox;
-		private System.Windows.Forms.Label oldPasswordLabel;
-		private System.Windows.Forms.Button changePasswordButton;
-		private System.Windows.Forms.Label confirmNewPasswordLabel;
-		private System.Windows.Forms.TextBox confirmNewPasswordTextBox;
+		private Dtx.Windows.Forms.Label newPasswordLabel;
+		private Dtx.Windows.Forms.TextBox newPasswordTextBox;
+		private Dtx.Windows.Forms.TextBox oldPasswordTextBox;
+		private Dtx.Windows.Forms.Label oldPasswordLabel;
+		private Dtx.Windows.Forms.Button changePasswordButton;
+		private Dtx.Windows.Forms.Label confirmNewPasswordLabel;
+		private Dtx.Windows.Forms.TextBox confirmNewPasswordTextBox;
 	}
 }
