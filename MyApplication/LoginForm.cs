@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using System.Data.Entity;
 
 namespace MyApplication
 {
@@ -106,17 +105,17 @@ namespace MyApplication
 				}
 
 				// **************************************************
-				System.Windows.Forms.MessageBox.Show("Welcome!");
+				//System.Windows.Forms.MessageBox.Show("Welcome!");
 				// **************************************************
 
 				// **************************************************
-				//Infrastructure.Utility.AuthenticatedUser = foundedUser;
+				Infrastructure.Utility.AuthenticatedUser = foundedUser;
 
-				//Hide();
+				Hide();
 
-				//MainForm mainForm = new MainForm();
+				MainForm mainForm = new MainForm();
 
-				//mainForm.Show();
+				mainForm.Show();
 				// **************************************************
 			}
 			catch (System.Exception ex)

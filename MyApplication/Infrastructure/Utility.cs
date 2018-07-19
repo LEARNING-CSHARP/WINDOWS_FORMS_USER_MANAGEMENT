@@ -7,10 +7,13 @@ namespace Infrastructure
 		{
 		}
 
+		// **************************************************
 		//public static System.Guid UserId { get; set; }
 
 		public static Models.User AuthenticatedUser { get; set; }
+		// **************************************************
 
+		// **************************************************
 		private static MyApplication.LoginForm loginForm;
 
 		/// <summary>
@@ -29,7 +32,9 @@ namespace Infrastructure
 				return (loginForm);
 			}
 		}
+		// **************************************************
 
+		// **************************************************
 		private static MyApplication.RegisterForm registerForm;
 
 		/// <summary>
@@ -48,5 +53,6 @@ namespace Infrastructure
 				return (registerForm);
 			}
 		}
+		// **************************************************
 	}
 }

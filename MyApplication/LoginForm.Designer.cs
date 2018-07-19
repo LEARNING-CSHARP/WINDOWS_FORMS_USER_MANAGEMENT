@@ -22,14 +22,14 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.loginButton = new System.Windows.Forms.Button();
-			this.exitButton = new System.Windows.Forms.Button();
-			this.registerButton = new System.Windows.Forms.Button();
-			this.resetButton = new System.Windows.Forms.Button();
-			this.passwordLabel = new System.Windows.Forms.Label();
-			this.passwordTextBox = new System.Windows.Forms.TextBox();
-			this.usernameTextBox = new System.Windows.Forms.TextBox();
-			this.usernameLabel = new System.Windows.Forms.Label();
+			this.loginButton = new Dtx.Windows.Forms.Button();
+			this.exitButton = new Dtx.Windows.Forms.Button();
+			this.registerButton = new Dtx.Windows.Forms.Button();
+			this.resetButton = new Dtx.Windows.Forms.Button();
+			this.passwordLabel = new Dtx.Windows.Forms.Label();
+			this.passwordTextBox = new Dtx.Windows.Forms.TextBox();
+			this.usernameTextBox = new Dtx.Windows.Forms.TextBox();
+			this.usernameLabel = new Dtx.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// loginButton
@@ -147,13 +147,13 @@
 
 		#endregion
 
-		private System.Windows.Forms.Button registerButton;
-		private System.Windows.Forms.Button resetButton;
-		private System.Windows.Forms.Label passwordLabel;
-		private System.Windows.Forms.TextBox passwordTextBox;
-		private System.Windows.Forms.TextBox usernameTextBox;
-		private System.Windows.Forms.Label usernameLabel;
-		private System.Windows.Forms.Button loginButton;
-		private System.Windows.Forms.Button exitButton;
+		private Dtx.Windows.Forms.Button registerButton;
+		private Dtx.Windows.Forms.Button resetButton;
+		private Dtx.Windows.Forms.Label passwordLabel;
+		private Dtx.Windows.Forms.TextBox passwordTextBox;
+		private Dtx.Windows.Forms.TextBox usernameTextBox;
+		private Dtx.Windows.Forms.Label usernameLabel;
+		private Dtx.Windows.Forms.Button loginButton;
+		private Dtx.Windows.Forms.Button exitButton;
 	}
 }

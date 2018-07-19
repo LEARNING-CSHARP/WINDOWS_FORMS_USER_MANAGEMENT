@@ -102,7 +102,7 @@
 			// usersListToolStripMenuItem
 			// 
 			this.usersListToolStripMenuItem.Name = "usersListToolStripMenuItem";
-			this.usersListToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.usersListToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
 			this.usersListToolStripMenuItem.Text = "Users List";
 			this.usersListToolStripMenuItem.Click += new System.EventHandler(this.usersListToolStripMenuItem_Click);
 			// 
@@ -117,10 +117,11 @@
 			this.myStatusStrip.TabIndex = 1;
 			this.myStatusStrip.Text = "statusStrip1";
 			// 
-			// usernameToolStripStatusLabel
+			// welcomeToolStripStatusLabel
 			// 
-			this.welcomeToolStripStatusLabel.Name = "usernameToolStripStatusLabel";
-			this.welcomeToolStripStatusLabel.Size = new System.Drawing.Size(0, 17);
+			this.welcomeToolStripStatusLabel.Name = "welcomeToolStripStatusLabel";
+			this.welcomeToolStripStatusLabel.Size = new System.Drawing.Size(32, 17);
+			this.welcomeToolStripStatusLabel.Text = "-----";
 			// 
 			// MainForm
 			// 
@@ -134,7 +135,7 @@
 			this.MainMenuStrip = this.myMenuStrip;
 			this.Name = "MainForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Main";
+			this.Text = "User Management";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
 			this.Load += new System.EventHandler(this.MainForm_Load);

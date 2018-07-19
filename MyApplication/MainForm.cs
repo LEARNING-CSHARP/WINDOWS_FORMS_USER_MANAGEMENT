@@ -1,7 +1,4 @@
-﻿using System.Linq;
-using System.Data.Entity;
-
-namespace MyApplication
+﻿namespace MyApplication
 {
 	public partial class MainForm : System.Windows.Forms.Form
 	{
@@ -14,27 +11,41 @@ namespace MyApplication
 		{
 			UpdateWelcomeToolStripStatusLabel();
 
-			if (Infrastructure.Utility.AuthenticatedUser.IsAdmin)
-			{
-				adminToolStripMenuItem.Visible = true;
-			}
-			else
-			{
-				adminToolStripMenuItem.Visible = false;
-			}
+			// **************************************************
+			//if (Infrastructure.Utility.AuthenticatedUser.IsAdmin)
+			//{
+			//	adminToolStripMenuItem.Visible = true;
+			//}
+			//else
+			//{
+			//	adminToolStripMenuItem.Visible = false;
+			//}
+			// **************************************************
+
+			// **************************************************
+			adminToolStripMenuItem.Visible =
+				Infrastructure.Utility.AuthenticatedUser.IsAdmin;
+			// **************************************************
 		}
 
 		public void UpdateWelcomeToolStripStatusLabel()
 		{
-			//usernameToolStripStatusLabel.Text =
+			// **************************************************
+			//welcomeToolStripStatusLabel.Text =
 			//	"Welcome " + Infrastructure.Utility.AuthenticatedUser.Username + "!";
+			// **************************************************
 
-			//usernameToolStripStatusLabel.Text =
+			// **************************************************
+			//welcomeToolStripStatusLabel.Text =
 			//	string.Format("Welcome {0}!", Infrastructure.Utility.AuthenticatedUser.Username);
+			// **************************************************
 
-			//usernameToolStripStatusLabel.Text =
+			// **************************************************
+			//welcomeToolStripStatusLabel.Text =
 			//	$"Welcome { Infrastructure.Utility.AuthenticatedUser.Username }!";
+			// **************************************************
 
+			// **************************************************
 			if (string.IsNullOrWhiteSpace(Infrastructure.Utility.AuthenticatedUser.FullName))
 			{
 				welcomeToolStripStatusLabel.Text =
@@ -45,6 +56,7 @@ namespace MyApplication
 				welcomeToolStripStatusLabel.Text =
 					$"Welcome { Infrastructure.Utility.AuthenticatedUser.FullName }!";
 			}
+			// **************************************************
 		}
 
 		private void exitToolStripMenuItem_Click(object sender, System.EventArgs e)
