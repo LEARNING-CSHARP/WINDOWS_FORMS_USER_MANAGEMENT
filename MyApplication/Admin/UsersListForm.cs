@@ -103,6 +103,8 @@ namespace MyApplication.Admin
 				databaseContext =
 					new Models.DatabaseContext();
 
+				//var users; // Note: Compile Error!
+
 				System.Collections.Generic.List<Models.User> users = null;
 
 				// **************************************************
@@ -163,6 +165,15 @@ namespace MyApplication.Admin
 						.ToList()
 						;
 				}
+
+				// Unbinding
+
+				//usersListBox.Items.Clear();
+
+				//foreach (var item in users)
+				//{
+				//	usersListBox.Items.Add(item.DisplayName);
+				//}
 
 				// Binding
 				//usersListBox.DataSource = null;
