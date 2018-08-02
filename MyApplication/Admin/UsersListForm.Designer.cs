@@ -2,21 +2,15 @@
 {
 	partial class UsersListForm
 	{
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
 		private System.ComponentModel.IContainer components = null;
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing && (components != null))
 			{
 				components.Dispose();
 			}
+
 			base.Dispose(disposing);
 		}
 
@@ -28,11 +22,11 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.fullNameTextBox = new System.Windows.Forms.TextBox();
-			this.fullNameLabel = new System.Windows.Forms.Label();
-			this.searchButton = new System.Windows.Forms.Button();
-			this.usersListBox = new System.Windows.Forms.ListBox();
-			this.deleteUsersButton = new System.Windows.Forms.Button();
+			this.fullNameTextBox = new Dtx.Windows.Forms.TextBox();
+			this.fullNameLabel = new Dtx.Windows.Forms.Label();
+			this.searchButton = new Dtx.Windows.Forms.Button();
+			this.usersListBox = new Dtx.Windows.Forms.ListBox();
+			this.deleteUsersButton = new Dtx.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// fullNameTextBox
@@ -111,10 +105,10 @@
 
 		#endregion
 
-		private System.Windows.Forms.TextBox fullNameTextBox;
-		private System.Windows.Forms.Label fullNameLabel;
-		private System.Windows.Forms.Button searchButton;
-		private System.Windows.Forms.ListBox usersListBox;
-		private System.Windows.Forms.Button deleteUsersButton;
+		private Dtx.Windows.Forms.TextBox fullNameTextBox;
+		private Dtx.Windows.Forms.Label fullNameLabel;
+		private Dtx.Windows.Forms.Button searchButton;
+		private Dtx.Windows.Forms.ListBox usersListBox;
+		private Dtx.Windows.Forms.Button deleteUsersButton;
 	}
 }

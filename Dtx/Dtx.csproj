@@ -48,7 +48,13 @@
     <Compile Include="Windows\Forms\Button.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Windows\Forms\CheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Windows\Forms\Label.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms\ListBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Windows\Forms\TextBox.cs">

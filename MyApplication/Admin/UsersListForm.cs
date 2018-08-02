@@ -25,7 +25,7 @@ namespace MyApplication.Admin
 		private void usersListBox_DoubleClick(object sender, System.EventArgs e)
 		{
 			// روش احمقانه
-			//Models.User oSelectedUser =
+			//Models.User selectedUser =
 			//	(Models.User)usersListBox.SelectedItem;
 
 			Models.User selectedUser =
@@ -36,7 +36,7 @@ namespace MyApplication.Admin
 				UpdateUserForm updateUserForm = new UpdateUserForm();
 
 				updateUserForm.SelectedUser = selectedUser;
-				//updateUserForm.SelectedUserId = oSelectedUser.Id;
+				//updateUserForm.SelectedUserId = selectedUser.Id;
 
 				updateUserForm.ShowDialog();
 
