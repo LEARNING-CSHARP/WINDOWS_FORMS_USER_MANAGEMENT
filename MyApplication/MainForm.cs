@@ -59,7 +59,7 @@
 			// **************************************************
 		}
 
-		private void exitToolStripMenuItem_Click(object sender, System.EventArgs e)
+		private void ExitToolStripMenuItem_Click(object sender, System.EventArgs e)
 		{
 			//Note: Close() is not correct!
 			//Close();
@@ -80,7 +80,7 @@
 			}
 		}
 
-		//private void updateProfileToolStripMenuItem_Click(object sender, System.EventArgs e)
+		//private void UpdateProfileToolStripMenuItem_Click(object sender, System.EventArgs e)
 		//{
 		//	UpdateProfileForm updateProfileForm = new UpdateProfileForm();
 
@@ -91,19 +91,20 @@
 
 		private UpdateProfileForm updateProfileForm;
 
-		private void updateProfileToolStripMenuItem_Click(object sender, System.EventArgs e)
+		private void UpdateProfileToolStripMenuItem_Click(object sender, System.EventArgs e)
 		{
 			if ((updateProfileForm == null) || (updateProfileForm.IsDisposed))
 			{
-				updateProfileForm = new UpdateProfileForm();
-
-				updateProfileForm.MdiParent = this;
+				updateProfileForm = new UpdateProfileForm
+				{
+					MdiParent = this
+				};
 			}
 
 			updateProfileForm.Show();
 		}
 
-		//private void changePasswordToolStripMenuItem_Click(object sender, System.EventArgs e)
+		//private void ChangePasswordToolStripMenuItem_Click(object sender, System.EventArgs e)
 		//{
 		//	ChangePasswordForm changePasswordForm = new ChangePasswordForm();
 
@@ -114,19 +115,20 @@
 
 		private ChangePasswordForm changePasswordForm;
 
-		private void changePasswordToolStripMenuItem_Click(object sender, System.EventArgs e)
+		private void ChangePasswordToolStripMenuItem_Click(object sender, System.EventArgs e)
 		{
 			if ((changePasswordForm == null) || (changePasswordForm.IsDisposed))
 			{
-				changePasswordForm = new ChangePasswordForm();
-
-				changePasswordForm.MdiParent = this;
+				changePasswordForm = new ChangePasswordForm
+				{
+					MdiParent = this
+				};
 			}
 
 			changePasswordForm.Show();
 		}
 
-		//private void usersListToolStripMenuItem_Click(object sender, System.EventArgs e)
+		//private void UsersListToolStripMenuItem_Click(object sender, System.EventArgs e)
 		//{
 		//	Admin.UsersListForm usersListForm = new Admin.UsersListForm();
 
@@ -137,13 +139,14 @@
 
 		private Admin.UsersListForm usersListForm;
 
-		private void usersListToolStripMenuItem_Click(object sender, System.EventArgs e)
+		private void UsersListToolStripMenuItem_Click(object sender, System.EventArgs e)
 		{
 			if ((usersListForm == null) || (usersListForm.IsDisposed))
 			{
-				usersListForm = new Admin.UsersListForm();
-
-				usersListForm.MdiParent = this;
+				usersListForm = new Admin.UsersListForm
+				{
+					MdiParent = this
+				};
 			}
 
 			usersListForm.Show();

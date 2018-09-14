@@ -17,12 +17,12 @@ namespace MyApplication.Admin
 			//	new Models.DatabaseContext();
 		}
 
-		private void searchButton_Click(object sender, System.EventArgs e)
+		private void SearchButton_Click(object sender, System.EventArgs e)
 		{
 			Search();
 		}
 
-		private void usersListBox_DoubleClick(object sender, System.EventArgs e)
+		private void UsersListBox_DoubleClick(object sender, System.EventArgs e)
 		{
 			// روش احمقانه
 			//Models.User selectedUser =
@@ -33,9 +33,11 @@ namespace MyApplication.Admin
 
 			if (selectedUser != null)
 			{
-				UpdateUserForm updateUserForm = new UpdateUserForm();
+				UpdateUserForm updateUserForm = new UpdateUserForm
+				{
+					SelectedUser = selectedUser
+				};
 
-				updateUserForm.SelectedUser = selectedUser;
 				//updateUserForm.SelectedUserId = selectedUser.Id;
 
 				updateUserForm.ShowDialog();
@@ -44,7 +46,7 @@ namespace MyApplication.Admin
 			}
 		}
 
-		private void deleteUsersButton_Click(object sender, System.EventArgs e)
+		private void DeleteUsersButton_Click(object sender, System.EventArgs e)
 		{
 			if (usersListBox.SelectedItems.Count == 0)
 			{

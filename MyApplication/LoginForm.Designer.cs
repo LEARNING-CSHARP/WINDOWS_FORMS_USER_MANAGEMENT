@@ -41,7 +41,7 @@
 			this.loginButton.TabIndex = 4;
 			this.loginButton.Text = "&Login";
 			this.loginButton.UseVisualStyleBackColor = true;
-			this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+			this.loginButton.Click += new System.EventHandler(this.LoginButton_Click);
 			// 
 			// exitButton
 			// 
@@ -53,7 +53,7 @@
 			this.exitButton.TabIndex = 7;
 			this.exitButton.Text = "E&xit";
 			this.exitButton.UseVisualStyleBackColor = true;
-			this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+			this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
 			// 
 			// registerButton
 			// 
@@ -64,7 +64,7 @@
 			this.registerButton.TabIndex = 6;
 			this.registerButton.Text = "Re&gister";
 			this.registerButton.UseVisualStyleBackColor = true;
-			this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
+			this.registerButton.Click += new System.EventHandler(this.RegisterButton_Click);
 			// 
 			// resetButton
 			// 
@@ -75,7 +75,7 @@
 			this.resetButton.TabIndex = 5;
 			this.resetButton.Text = "&Reset";
 			this.resetButton.UseVisualStyleBackColor = true;
-			this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
+			this.resetButton.Click += new System.EventHandler(this.ResetButton_Click);
 			// 
 			// passwordLabel
 			// 

@@ -13,7 +13,7 @@ namespace MyApplication
 		{
 		}
 
-		private void loginButton_Click(object sender, System.EventArgs e)
+		private void LoginButton_Click(object sender, System.EventArgs e)
 		{
 			// **************************************************
 			// **************************************************
@@ -105,17 +105,17 @@ namespace MyApplication
 				}
 
 				// **************************************************
-				//System.Windows.Forms.MessageBox.Show("Welcome!");
+				System.Windows.Forms.MessageBox.Show("Welcome!");
 				// **************************************************
 
 				// **************************************************
-				Infrastructure.Utility.AuthenticatedUser = foundedUser;
+				//Infrastructure.Utility.AuthenticatedUser = foundedUser;
 
-				Hide();
+				//Hide();
 
-				MainForm mainForm = new MainForm();
+				//MainForm mainForm = new MainForm();
 
-				mainForm.Show();
+				//mainForm.Show();
 				// **************************************************
 			}
 			catch (System.Exception ex)
@@ -132,7 +132,7 @@ namespace MyApplication
 			}
 		}
 
-		private void resetButton_Click(object sender, System.EventArgs e)
+		private void ResetButton_Click(object sender, System.EventArgs e)
 		{
 			passwordTextBox.Text = string.Empty;
 			usernameTextBox.Text = string.Empty;
@@ -140,7 +140,7 @@ namespace MyApplication
 			usernameTextBox.Focus();
 		}
 
-		private void registerButton_Click(object sender, System.EventArgs e)
+		private void RegisterButton_Click(object sender, System.EventArgs e)
 		{
 			Hide();
 
@@ -151,7 +151,7 @@ namespace MyApplication
 			Infrastructure.Utility.RegisterForm.Show();
 		}
 
-		private void exitButton_Click(object sender, System.EventArgs e)
+		private void ExitButton_Click(object sender, System.EventArgs e)
 		{
 			System.Windows.Forms.Application.Exit();
 		}

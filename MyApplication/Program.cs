@@ -91,6 +91,7 @@ namespace MyApplication
 			// **************************************************
 			#region Solution (2)
 			System.Windows.Forms.Application.Run(Infrastructure.Utility.LoginForm);
+			//System.Windows.Forms.Application.Run(Infrastructure.Utility.RegisterForm);
 			#endregion /Solution (2)
 			// **************************************************
 		}

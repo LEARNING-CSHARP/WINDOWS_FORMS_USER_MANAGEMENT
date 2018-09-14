@@ -70,14 +70,14 @@
 			this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
 			this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
 			this.updateProfileToolStripMenuItem.Text = "&Update Profile";
-			this.updateProfileToolStripMenuItem.Click += new System.EventHandler(this.updateProfileToolStripMenuItem_Click);
+			this.updateProfileToolStripMenuItem.Click += new System.EventHandler(this.UpdateProfileToolStripMenuItem_Click);
 			// 
 			// changePasswordToolStripMenuItem
 			// 
 			this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
 			this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
 			this.changePasswordToolStripMenuItem.Text = "Change Password";
-			this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
+			this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.ChangePasswordToolStripMenuItem_Click);
 			// 
 			// toolStripMenuItem1
 			// 
@@ -89,7 +89,7 @@
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
 			this.exitToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
 			this.exitToolStripMenuItem.Text = "E&xit";
-			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+			this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
 			// 
 			// adminToolStripMenuItem
 			// 
@@ -104,7 +104,7 @@
 			this.usersListToolStripMenuItem.Name = "usersListToolStripMenuItem";
 			this.usersListToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
 			this.usersListToolStripMenuItem.Text = "Users List";
-			this.usersListToolStripMenuItem.Click += new System.EventHandler(this.usersListToolStripMenuItem_Click);
+			this.usersListToolStripMenuItem.Click += new System.EventHandler(this.UsersListToolStripMenuItem_Click);
 			// 
 			// myStatusStrip
 			// 

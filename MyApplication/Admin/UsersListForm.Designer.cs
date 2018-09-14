@@ -56,7 +56,7 @@
 			this.searchButton.TabIndex = 2;
 			this.searchButton.Text = "&Search";
 			this.searchButton.UseVisualStyleBackColor = true;
-			this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+			this.searchButton.Click += new System.EventHandler(this.SearchButton_Click);
 			// 
 			// usersListBox
 			// 
@@ -69,7 +69,7 @@
 			this.usersListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
 			this.usersListBox.Size = new System.Drawing.Size(390, 121);
 			this.usersListBox.TabIndex = 3;
-			this.usersListBox.DoubleClick += new System.EventHandler(this.usersListBox_DoubleClick);
+			this.usersListBox.DoubleClick += new System.EventHandler(this.UsersListBox_DoubleClick);
 			// 
 			// deleteUsersButton
 			// 
@@ -80,7 +80,7 @@
 			this.deleteUsersButton.TabIndex = 4;
 			this.deleteUsersButton.Text = "&Delete Users";
 			this.deleteUsersButton.UseVisualStyleBackColor = true;
-			this.deleteUsersButton.Click += new System.EventHandler(this.deleteUsersButton_Click);
+			this.deleteUsersButton.Click += new System.EventHandler(this.DeleteUsersButton_Click);
 			// 
 			// UsersListForm
 			// 

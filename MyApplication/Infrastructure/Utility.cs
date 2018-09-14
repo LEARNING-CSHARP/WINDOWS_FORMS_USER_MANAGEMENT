@@ -29,7 +29,7 @@ namespace Infrastructure
 						new MyApplication.LoginForm();
 				}
 
-				return (loginForm);
+				return loginForm;
 			}
 		}
 		// **************************************************
@@ -50,7 +50,7 @@ namespace Infrastructure
 						new MyApplication.RegisterForm();
 				}
 
-				return (registerForm);
+				return registerForm;
 			}
 		}
 		// **************************************************

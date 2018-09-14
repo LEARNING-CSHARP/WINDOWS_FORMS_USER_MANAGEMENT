@@ -56,7 +56,7 @@ namespace MyApplication.Admin
 			}
 		}
 
-		private void saveButton_Click(object sender, System.EventArgs e)
+		private void SaveButton_Click(object sender, System.EventArgs e)
 		{
 			Models.DatabaseContext databaseContext = null;
 

@@ -14,7 +14,7 @@ namespace MyApplication
 		{
 		}
 
-		private void changePasswordButton_Click(object sender, System.EventArgs e)
+		private void ChangePasswordButton_Click(object sender, System.EventArgs e)
 		{
 			// **************************************************
 			// **************************************************

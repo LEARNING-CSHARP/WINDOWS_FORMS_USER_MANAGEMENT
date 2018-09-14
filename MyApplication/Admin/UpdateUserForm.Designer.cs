@@ -105,7 +105,7 @@
 			this.saveAndCloseButton.TabIndex = 6;
 			this.saveAndCloseButton.Text = "&Save And Close";
 			this.saveAndCloseButton.UseVisualStyleBackColor = true;
-			this.saveAndCloseButton.Click += new System.EventHandler(this.saveButton_Click);
+			this.saveAndCloseButton.Click += new System.EventHandler(this.SaveButton_Click);
 			// 
 			// UpdateUserForm
 			// 

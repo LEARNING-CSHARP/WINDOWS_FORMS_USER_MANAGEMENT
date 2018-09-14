@@ -13,7 +13,7 @@ namespace MyApplication
 		{
 		}
 
-		private void registerButton_Click(object sender, System.EventArgs e)
+		private void RegisterButton_Click(object sender, System.EventArgs e)
 		{
 			// **************************************************
 			// **************************************************
@@ -109,14 +109,15 @@ namespace MyApplication
 					return;
 				}
 
-				user = new Models.User();
+				user = new Models.User
+				{
+					FullName = fullNameTextBox.Text,
+					Password = passwordTextBox.Text,
+					Username = usernameTextBox.Text,
 
-				user.FullName = fullNameTextBox.Text;
-				user.Password = passwordTextBox.Text;
-				user.Username = usernameTextBox.Text;
-
-				// بستگی به سناریو و قواعد و قوانین شرکت یا پروژه دارد
-				user.IsActive = true;
+					// بستگی به سناریو و قواعد و قوانین شرکت یا پروژه دارد
+					IsActive = true
+				};
 
 				databaseContext.Users.Add(user);
 
@@ -130,7 +131,7 @@ namespace MyApplication
 
 				//usernameTextBox.Focus();
 
-				resetButton_Click(null, null);
+				ResetButton_Click(null, null);
 			}
 			catch (System.Exception ex)
 			{
@@ -146,7 +147,7 @@ namespace MyApplication
 			}
 		}
 
-		private void resetButton_Click(object sender, System.EventArgs e)
+		private void ResetButton_Click(object sender, System.EventArgs e)
 		{
 			usernameTextBox.Text = string.Empty;
 			passwordTextBox.Text = string.Empty;
@@ -155,7 +156,7 @@ namespace MyApplication
 			usernameTextBox.Focus();
 		}
 
-		private void loginButton_Click(object sender, System.EventArgs e)
+		private void LoginButton_Click(object sender, System.EventArgs e)
 		{
 			Hide();
 
@@ -166,7 +167,7 @@ namespace MyApplication
 			Infrastructure.Utility.LoginForm.Show();
 		}
 
-		private void exitButton_Click(object sender, System.EventArgs e)
+		private void ExitButton_Click(object sender, System.EventArgs e)
 		{
 			//Close();
 
