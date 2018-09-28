@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.myMenuStrip = new System.Windows.Forms.MenuStrip();
+			this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
 			this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.updateProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,23 +36,23 @@
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.usersListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.myStatusStrip = new System.Windows.Forms.StatusStrip();
+			this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
 			this.welcomeToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-			this.myMenuStrip.SuspendLayout();
-			this.myStatusStrip.SuspendLayout();
+			this.mainMenuStrip.SuspendLayout();
+			this.mainStatusStrip.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// myMenuStrip
+			// mainMenuStrip
 			// 
-			this.myMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem,
             this.adminToolStripMenuItem});
-			this.myMenuStrip.Location = new System.Drawing.Point(0, 0);
-			this.myMenuStrip.Name = "myMenuStrip";
-			this.myMenuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-			this.myMenuStrip.Size = new System.Drawing.Size(505, 24);
-			this.myMenuStrip.TabIndex = 0;
-			this.myMenuStrip.Text = "menuStrip1";
+			this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
+			this.mainMenuStrip.Name = "mainMenuStrip";
+			this.mainMenuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+			this.mainMenuStrip.Size = new System.Drawing.Size(505, 24);
+			this.mainMenuStrip.TabIndex = 0;
+			this.mainMenuStrip.Text = "menuStrip1";
 			// 
 			// settingsToolStripMenuItem
 			// 
@@ -106,16 +106,16 @@
 			this.usersListToolStripMenuItem.Text = "Users List";
 			this.usersListToolStripMenuItem.Click += new System.EventHandler(this.UsersListToolStripMenuItem_Click);
 			// 
-			// myStatusStrip
+			// mainStatusStrip
 			// 
-			this.myStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.mainStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.welcomeToolStripStatusLabel});
-			this.myStatusStrip.Location = new System.Drawing.Point(0, 375);
-			this.myStatusStrip.Name = "myStatusStrip";
-			this.myStatusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
-			this.myStatusStrip.Size = new System.Drawing.Size(505, 22);
-			this.myStatusStrip.TabIndex = 1;
-			this.myStatusStrip.Text = "statusStrip1";
+			this.mainStatusStrip.Location = new System.Drawing.Point(0, 375);
+			this.mainStatusStrip.Name = "mainStatusStrip";
+			this.mainStatusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
+			this.mainStatusStrip.Size = new System.Drawing.Size(505, 22);
+			this.mainStatusStrip.TabIndex = 1;
+			this.mainStatusStrip.Text = "statusStrip1";
 			// 
 			// welcomeToolStripStatusLabel
 			// 
@@ -129,20 +129,20 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(505, 397);
-			this.Controls.Add(this.myStatusStrip);
-			this.Controls.Add(this.myMenuStrip);
+			this.Controls.Add(this.mainStatusStrip);
+			this.Controls.Add(this.mainMenuStrip);
 			this.IsMdiContainer = true;
-			this.MainMenuStrip = this.myMenuStrip;
+			this.MainMenuStrip = this.mainMenuStrip;
 			this.Name = "MainForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "User Management";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
 			this.Load += new System.EventHandler(this.MainForm_Load);
-			this.myMenuStrip.ResumeLayout(false);
-			this.myMenuStrip.PerformLayout();
-			this.myStatusStrip.ResumeLayout(false);
-			this.myStatusStrip.PerformLayout();
+			this.mainMenuStrip.ResumeLayout(false);
+			this.mainMenuStrip.PerformLayout();
+			this.mainStatusStrip.ResumeLayout(false);
+			this.mainStatusStrip.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -150,12 +150,12 @@
 
 		#endregion
 
-		private System.Windows.Forms.MenuStrip myMenuStrip;
+		private System.Windows.Forms.MenuStrip mainMenuStrip;
 		private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem updateProfileToolStripMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
 		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-		private System.Windows.Forms.StatusStrip myStatusStrip;
+		private System.Windows.Forms.StatusStrip mainStatusStrip;
 		private System.Windows.Forms.ToolStripStatusLabel welcomeToolStripStatusLabel;
 		private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;

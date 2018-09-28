@@ -105,17 +105,19 @@ namespace MyApplication
 				}
 
 				// **************************************************
-				System.Windows.Forms.MessageBox.Show("Welcome!");
+				//System.Windows.Forms.MessageBox.Show("Welcome!");
 				// **************************************************
 
+				Infrastructure.Utility.AuthenticatedUser = foundedUser;
+
+				Hide();
+
 				// **************************************************
-				//Infrastructure.Utility.AuthenticatedUser = foundedUser;
-
-				//Hide();
-
 				//MainForm mainForm = new MainForm();
 
 				//mainForm.Show();
+
+				Infrastructure.Utility.MainForm.Show();
 				// **************************************************
 			}
 			catch (System.Exception ex)

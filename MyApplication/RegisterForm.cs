@@ -15,70 +15,70 @@ namespace MyApplication
 
 		private void RegisterButton_Click(object sender, System.EventArgs e)
 		{
-			// **************************************************
-			// **************************************************
-			// **************************************************
-			if ((string.IsNullOrWhiteSpace(usernameTextBox.Text)) ||
-				(string.IsNullOrWhiteSpace(passwordTextBox.Text)))
-			{
-				//usernameTextBox.Text =
-				//	usernameTextBox.Text.Trim();
+			//// **************************************************
+			//// **************************************************
+			//// **************************************************
+			//if ((string.IsNullOrWhiteSpace(usernameTextBox.Text)) ||
+			//	(string.IsNullOrWhiteSpace(passwordTextBox.Text)))
+			//{
+			//	//usernameTextBox.Text =
+			//	//	usernameTextBox.Text.Trim();
 
-				//passwordTextBox.Text =
-				//	passwordTextBox.Text.Trim();
+			//	//passwordTextBox.Text =
+			//	//	passwordTextBox.Text.Trim();
 
-				usernameTextBox.Text =
-					usernameTextBox.Text.Replace(" ", string.Empty);
+			//	usernameTextBox.Text =
+			//		usernameTextBox.Text.Replace(" ", string.Empty);
 
-				passwordTextBox.Text =
-					passwordTextBox.Text.Replace(" ", string.Empty);
+			//	passwordTextBox.Text =
+			//		passwordTextBox.Text.Replace(" ", string.Empty);
 
-				System.Windows.Forms.MessageBox.Show("Username and Password is requied!");
+			//	System.Windows.Forms.MessageBox.Show("Username and Password is requied!");
 
-				if (usernameTextBox.Text == string.Empty)
-				{
-					usernameTextBox.Focus();
-				}
-				else
-				{
-					passwordTextBox.Focus();
-				}
+			//	if (usernameTextBox.Text == string.Empty)
+			//	{
+			//		usernameTextBox.Focus();
+			//	}
+			//	else
+			//	{
+			//		passwordTextBox.Focus();
+			//	}
 
-				return;
-			}
-			// **************************************************
+			//	return;
+			//}
+			//// **************************************************
 
-			// **************************************************
-			string errorMessages = string.Empty; // ""
+			//// **************************************************
+			//string errorMessages = string.Empty; // ""
 
-			if (usernameTextBox.Text.Length < 6)
-			{
-				errorMessages =
-					"Username length should be at least 6 characters!";
-			}
+			//if (usernameTextBox.Text.Length < 6)
+			//{
+			//	errorMessages =
+			//		"Username length should be at least 6 characters!";
+			//}
 
-			if (passwordTextBox.Text.Length < 8)
-			{
-				if (errorMessages != string.Empty)
-				{
-					errorMessages +=
-						System.Environment.NewLine; // "\n\r"
-				}
+			//if (passwordTextBox.Text.Length < 8)
+			//{
+			//	if (errorMessages != string.Empty)
+			//	{
+			//		errorMessages +=
+			//			System.Environment.NewLine; // "\n\r"
+			//	}
 
-				errorMessages +=
-					"Password length should be at least 8 characters!";
-			}
+			//	errorMessages +=
+			//		"Password length should be at least 8 characters!";
+			//}
 
-			// اگر خطایی وجود داشت
-			if (errorMessages != string.Empty)
-			{
-				System.Windows.Forms.MessageBox.Show(errorMessages);
+			//// اگر خطایی وجود داشت
+			//if (errorMessages != string.Empty)
+			//{
+			//	System.Windows.Forms.MessageBox.Show(errorMessages);
 
-				return;
-			}
-			// **************************************************
-			// **************************************************
-			// **************************************************
+			//	return;
+			//}
+			//// **************************************************
+			//// **************************************************
+			//// **************************************************
 
 			// از این قسمت به بعد باید سر کلاس نوشته شود
 

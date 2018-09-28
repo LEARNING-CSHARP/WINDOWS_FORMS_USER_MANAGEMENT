@@ -20,9 +20,7 @@
 			//{
 			//	adminToolStripMenuItem.Visible = false;
 			//}
-			// **************************************************
 
-			// **************************************************
 			adminToolStripMenuItem.Visible =
 				Infrastructure.Utility.AuthenticatedUser.IsAdmin;
 			// **************************************************
