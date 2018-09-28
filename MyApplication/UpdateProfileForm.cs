@@ -69,9 +69,11 @@ namespace MyApplication
 
 				databaseContext.SaveChanges();
 
+				// **************************************************
 				Infrastructure.Utility.AuthenticatedUser = currentUser;
 
 				((MainForm)this.MdiParent).UpdateWelcomeToolStripStatusLabel();
+				// **************************************************
 
 				System.Windows.Forms.MessageBox
 					.Show("Your profile was updated successfully...");
