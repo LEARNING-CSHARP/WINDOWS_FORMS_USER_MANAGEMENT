@@ -106,6 +106,7 @@ namespace MyApplication.Admin
 					new Models.DatabaseContext();
 
 				//var users; // Note: Compile Error!
+				//var users = null; // Note: Compile Error!
 
 				System.Collections.Generic.List<Models.User> users = null;
 

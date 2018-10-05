@@ -38,6 +38,7 @@
 			this.usersListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
 			this.welcomeToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+			this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.mainMenuStrip.SuspendLayout();
 			this.mainStatusStrip.SuspendLayout();
 			this.SuspendLayout();
@@ -60,6 +61,7 @@
             this.updateProfileToolStripMenuItem,
             this.changePasswordToolStripMenuItem,
             this.toolStripMenuItem1,
+            this.logoutToolStripMenuItem,
             this.exitToolStripMenuItem});
 			this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
 			this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
@@ -68,26 +70,26 @@
 			// updateProfileToolStripMenuItem
 			// 
 			this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
-			this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+			this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.updateProfileToolStripMenuItem.Text = "&Update Profile";
 			this.updateProfileToolStripMenuItem.Click += new System.EventHandler(this.UpdateProfileToolStripMenuItem_Click);
 			// 
 			// changePasswordToolStripMenuItem
 			// 
 			this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-			this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+			this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.changePasswordToolStripMenuItem.Text = "Change Password";
 			this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.ChangePasswordToolStripMenuItem_Click);
 			// 
 			// toolStripMenuItem1
 			// 
 			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-			this.toolStripMenuItem1.Size = new System.Drawing.Size(165, 6);
+			this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
 			// 
 			// exitToolStripMenuItem
 			// 
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.exitToolStripMenuItem.Text = "E&xit";
 			this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
 			// 
@@ -122,6 +124,13 @@
 			this.welcomeToolStripStatusLabel.Name = "welcomeToolStripStatusLabel";
 			this.welcomeToolStripStatusLabel.Size = new System.Drawing.Size(32, 17);
 			this.welcomeToolStripStatusLabel.Text = "-----";
+			// 
+			// logoutToolStripMenuItem
+			// 
+			this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+			this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.logoutToolStripMenuItem.Text = "Logout";
+			this.logoutToolStripMenuItem.Click += new System.EventHandler(this.LogoutToolStripMenuItem_Click);
 			// 
 			// MainForm
 			// 
@@ -160,5 +169,6 @@
 		private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem usersListToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
 	}
 }

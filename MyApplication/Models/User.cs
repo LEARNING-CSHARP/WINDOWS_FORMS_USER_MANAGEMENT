@@ -85,7 +85,7 @@
 					result += " [User]";
 				}
 
-				return (result);
+				return result;
 			}
 		}
 		// **********
