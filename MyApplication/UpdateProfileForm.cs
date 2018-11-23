@@ -70,9 +70,23 @@ namespace MyApplication
 				databaseContext.SaveChanges();
 
 				// **************************************************
+				// **************************************************
+				// **************************************************
 				Infrastructure.Utility.AuthenticatedUser = currentUser;
 
-				((MainForm)this.MdiParent).UpdateWelcomeToolStripStatusLabel();
+				// **************************************************
+				//((MainForm)this.MdiParent).InitializeMainForm();
+				// **************************************************
+
+				// **************************************************
+				MainForm mainForm = this.MdiParent as MainForm;
+
+				if (mainForm != null)
+				{
+					mainForm.InitializeMainForm();
+				}
+				// **************************************************
+				// **************************************************
 				// **************************************************
 
 				System.Windows.Forms.MessageBox

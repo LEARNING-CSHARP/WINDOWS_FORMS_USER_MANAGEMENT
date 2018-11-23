@@ -25,14 +25,15 @@ namespace MyApplication
 				errorMessages =
 					"Old password is required!";
 			}
-			else
-			{
-				if (oldPasswordTextBox.Text.Length < 8)
-				{
-					errorMessages =
-						"The old password length should be greater than or equal to 8 characters!";
-				}
-			}
+			// در زمان تغییر گذرواژه، نیازی به نوشتن دستورات ذیل نمی‌باشد
+			//else
+			//{
+			//	if (oldPasswordTextBox.Text.Length < 8)
+			//	{
+			//		errorMessages =
+			//			"The old password length should be greater than or equal to 8 characters!";
+			//	}
+			//}
 
 			if (string.IsNullOrWhiteSpace(newPasswordTextBox.Text))
 			{

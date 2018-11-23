@@ -105,19 +105,31 @@ namespace MyApplication
 				}
 
 				// **************************************************
+				// **************************************************
+				// **************************************************
 				//System.Windows.Forms.MessageBox.Show("Welcome!");
 				// **************************************************
 
+				// **************************************************
 				Infrastructure.Utility.AuthenticatedUser = foundedUser;
 
 				Hide();
+				// **************************************************
 
 				// **************************************************
-				//MainForm mainForm = new MainForm();
+				MainForm mainForm = new MainForm();
 
-				//mainForm.Show();
+				mainForm.InitializeMainForm();
 
-				Infrastructure.Utility.MainForm.Show();
+				mainForm.Show();
+				// **************************************************
+
+				// **************************************************
+				//Infrastructure.Utility.MainForm.InitializeMainForm();
+
+				//Infrastructure.Utility.MainForm.Show();
+				// **************************************************
+				// **************************************************
 				// **************************************************
 			}
 			catch (System.Exception ex)
@@ -135,6 +147,11 @@ namespace MyApplication
 		}
 
 		private void ResetButton_Click(object sender, System.EventArgs e)
+		{
+			ResetForm();
+		}
+
+		public void ResetForm()
 		{
 			passwordTextBox.Text = string.Empty;
 			usernameTextBox.Text = string.Empty;

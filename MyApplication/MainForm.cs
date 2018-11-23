@@ -9,8 +9,12 @@
 
 		private void MainForm_Load(object sender, System.EventArgs e)
 		{
-			UpdateWelcomeToolStripStatusLabel();
+			// نیازی به نوشتن دستور ذیل وجود ندارد
+			//InitializeMainForm();
+		}
 
+		public void InitializeMainForm()
+		{
 			// **************************************************
 			//if (Infrastructure.Utility.AuthenticatedUser.IsAdmin)
 			//{
@@ -24,10 +28,7 @@
 			adminToolStripMenuItem.Visible =
 				Infrastructure.Utility.AuthenticatedUser.IsAdmin;
 			// **************************************************
-		}
 
-		public void UpdateWelcomeToolStripStatusLabel()
-		{
 			// **************************************************
 			//welcomeToolStripStatusLabel.Text =
 			//	"Welcome " + Infrastructure.Utility.AuthenticatedUser.Username + "!";

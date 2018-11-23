@@ -8,9 +8,14 @@ namespace Infrastructure
 		}
 
 		// **************************************************
-		//public static System.Guid UserId { get; set; }
+		// **************************************************
+		// **************************************************
+		//public static string FullName { get; set; }
+		//public static System.Guid? UserId { get; set; }
 
 		public static Models.User AuthenticatedUser { get; set; }
+		// **************************************************
+		// **************************************************
 		// **************************************************
 
 		// **************************************************
@@ -32,6 +37,8 @@ namespace Infrastructure
 					mainForm =
 						new MyApplication.MainForm();
 				}
+
+				mainForm.InitializeMainForm();
 
 				return mainForm;
 			}
@@ -60,6 +67,8 @@ namespace Infrastructure
 						new MyApplication.LoginForm();
 				}
 
+				loginForm.ResetForm();
+
 				return loginForm;
 			}
 		}
@@ -86,6 +95,8 @@ namespace Infrastructure
 					registerForm =
 						new MyApplication.RegisterForm();
 				}
+
+				registerForm.ResetForm();
 
 				return registerForm;
 			}
