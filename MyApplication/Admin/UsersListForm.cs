@@ -33,12 +33,18 @@ namespace MyApplication.Admin
 
 			if (selectedUser != null)
 			{
+				// **************************************************
+				//UpdateUserForm updateUserForm = new UpdateUserForm();
+
+				//updateUserForm.SelectedUserId = selectedUser.Id;
+				// **************************************************
+
+				// **************************************************
 				UpdateUserForm updateUserForm = new UpdateUserForm
 				{
 					SelectedUser = selectedUser
 				};
-
-				//updateUserForm.SelectedUserId = selectedUser.Id;
+				// **************************************************
 
 				updateUserForm.ShowDialog();
 
@@ -105,11 +111,6 @@ namespace MyApplication.Admin
 				databaseContext =
 					new Models.DatabaseContext();
 
-				//var users; // Note: Compile Error!
-				//var users = null; // Note: Compile Error!
-
-				System.Collections.Generic.List<Models.User> users = null;
-
 				// **************************************************
 				fullNameTextBox.Text =
 					fullNameTextBox.Text.Trim();
@@ -122,6 +123,11 @@ namespace MyApplication.Admin
 						fullNameTextBox.Text.Replace("  ", " ");
 				}
 				// **************************************************
+
+				//var users; // Note: Compile Error!
+				//var users = null; // Note: Compile Error!
+
+				System.Collections.Generic.List<Models.User> users = null;
 
 				if (fullNameTextBox.Text == string.Empty)
 				{
@@ -169,6 +175,7 @@ namespace MyApplication.Admin
 						;
 				}
 
+				// **************************************************
 				// Unbinding
 
 				//usersListBox.Items.Clear();
@@ -177,7 +184,9 @@ namespace MyApplication.Admin
 				//{
 				//	usersListBox.Items.Add(item.DisplayName);
 				//}
+				// **************************************************
 
+				// **************************************************
 				// Binding
 				//usersListBox.DataSource = null;
 
@@ -185,6 +194,7 @@ namespace MyApplication.Admin
 				//usersListBox.DisplayMember = "FullName";
 				usersListBox.DisplayMember = "DisplayName";
 				usersListBox.DataSource = users;
+				// **************************************************
 
 				//if (users.Count == 0)
 				//{

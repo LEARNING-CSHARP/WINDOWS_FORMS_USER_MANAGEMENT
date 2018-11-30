@@ -172,11 +172,15 @@ namespace MyApplication
 		{
 			Hide();
 
+			// **************************************************
 			//LoginForm loginForm = new LoginForm();
 
 			//loginForm.Show();
+			// **************************************************
 
+			// **************************************************
 			Infrastructure.Utility.LoginForm.Show();
+			// **************************************************
 		}
 
 		private void ExitButton_Click(object sender, System.EventArgs e)

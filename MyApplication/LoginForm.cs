@@ -163,11 +163,15 @@ namespace MyApplication
 		{
 			Hide();
 
+			// **************************************************
 			//RegisterForm registerForm = new RegisterForm();
 
 			//registerForm.Show();
+			// **************************************************
 
+			// **************************************************
 			Infrastructure.Utility.RegisterForm.Show();
+			// **************************************************
 		}
 
 		private void ExitButton_Click(object sender, System.EventArgs e)
