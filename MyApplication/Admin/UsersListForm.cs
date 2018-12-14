@@ -74,14 +74,23 @@ namespace MyApplication.Admin
 
 					if (selectedUser != null)
 					{
-						if (selectedUser.IsAdmin == false)
+						Models.User foundedUser =
+							databaseContext.Users
+							.Where(current => current.Id == selectedUser.Id)
+							.FirstOrDefault();
+
+						if (foundedUser != null)
 						{
-							databaseContext.Entry(selectedUser).State = System.Data.Entity.EntityState.Deleted;
+							if (foundedUser.IsAdmin == false)
+							{
+								if (string.Compare(foundedUser.Username,
+									Infrastructure.Utility.AuthenticatedUser.Username, ignoreCase: true) != 0)
+								{
+									databaseContext.Users.Remove(foundedUser);
 
-							// Note: Does Not Work!
-							//databaseContext.Users.Remove(selectedUser);
-
-							databaseContext.SaveChanges();
+									databaseContext.SaveChanges();
+								}
+							}
 						}
 					}
 				}
