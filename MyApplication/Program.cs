@@ -17,6 +17,8 @@ namespace MyApplication
 			// **************************************************
 
 			// **************************************************
+			// **************************************************
+			// **************************************************
 			Models.DatabaseContext databaseContext = null;
 
 			try
@@ -24,18 +26,29 @@ namespace MyApplication
 				databaseContext =
 					new Models.DatabaseContext();
 
-				//int adminCount =
-				//	databaseContext.Users
-				//	.Where(current => current.IsAdmin)
-				//	.Count();
+				databaseContext =
+					new Models.DatabaseContext();
 
+				// **************************************************
+				//var users =
+				//	databaseContext.Users
+				//	.ToList()
+				//	;
+
+				//int userCount = users.Count;
+				// **************************************************
+
+				// **************************************************
 				//int userCount =
 				//	databaseContext.Users
 				//	.Count();
+				// **************************************************
 
+				// **************************************************
 				bool hasAnyUser =
 					databaseContext.Users
 					.Any();
+				// **************************************************
 
 				if (hasAnyUser == false)
 				{
@@ -67,6 +80,8 @@ namespace MyApplication
 					databaseContext = null;
 				}
 			}
+			// **************************************************
+			// **************************************************
 			// **************************************************
 
 			// **************************************************

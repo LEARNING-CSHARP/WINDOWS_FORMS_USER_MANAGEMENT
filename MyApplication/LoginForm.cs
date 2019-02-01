@@ -18,8 +18,8 @@ namespace MyApplication
 			// **************************************************
 			// **************************************************
 			// **************************************************
-			if ((string.IsNullOrWhiteSpace(usernameTextBox.Text)) ||
-				(string.IsNullOrWhiteSpace(passwordTextBox.Text)))
+			if (string.IsNullOrWhiteSpace(usernameTextBox.Text) ||
+				string.IsNullOrWhiteSpace(passwordTextBox.Text))
 			{
 				//usernameTextBox.Text =
 				//	usernameTextBox.Text.Trim();
@@ -107,21 +107,21 @@ namespace MyApplication
 				// **************************************************
 				// **************************************************
 				// **************************************************
-				//System.Windows.Forms.MessageBox.Show("Welcome!");
+				System.Windows.Forms.MessageBox.Show("Welcome!");
 				// **************************************************
 
 				// **************************************************
-				Infrastructure.Utility.AuthenticatedUser = foundedUser;
+				//Infrastructure.Utility.AuthenticatedUser = foundedUser;
 
-				Hide();
+				//Hide();
 				// **************************************************
 
 				// **************************************************
-				MainForm mainForm = new MainForm();
+				//MainForm mainForm = new MainForm();
 
-				mainForm.InitializeMainForm();
+				//mainForm.InitializeMainForm();
 
-				mainForm.Show();
+				//mainForm.Show();
 				// **************************************************
 
 				// **************************************************
