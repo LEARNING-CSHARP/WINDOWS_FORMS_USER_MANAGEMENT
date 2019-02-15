@@ -98,19 +98,10 @@
 				{
 					MdiParent = this
 				};
+
+				updateProfileForm.Show();
 			}
-
-			updateProfileForm.Show();
 		}
-
-		//private void ChangePasswordToolStripMenuItem_Click(object sender, System.EventArgs e)
-		//{
-		//	ChangePasswordForm changePasswordForm = new ChangePasswordForm();
-
-		//	changePasswordForm.MdiParent = this;
-
-		//	changePasswordForm.Show();
-		//}
 
 		private ChangePasswordForm changePasswordForm;
 
@@ -122,19 +113,10 @@
 				{
 					MdiParent = this
 				};
+
+				changePasswordForm.Show();
 			}
-
-			changePasswordForm.Show();
 		}
-
-		//private void UsersListToolStripMenuItem_Click(object sender, System.EventArgs e)
-		//{
-		//	Admin.UsersListForm usersListForm = new Admin.UsersListForm();
-
-		//	usersListForm.MdiParent = this;
-
-		//	usersListForm.Show();
-		//}
 
 		private Admin.UsersListForm usersListForm;
 
@@ -146,15 +128,9 @@
 				{
 					MdiParent = this
 				};
+
+				usersListForm.Show();
 			}
-
-			usersListForm.Show();
-		}
-
-		private void MainForm_FormClosed
-			(object sender, System.Windows.Forms.FormClosedEventArgs e)
-		{
-			System.Windows.Forms.Application.Exit();
 		}
 
 		private void LogoutToolStripMenuItem_Click(object sender, System.EventArgs e)
@@ -164,6 +140,12 @@
 			Infrastructure.Utility.AuthenticatedUser = null;
 
 			Infrastructure.Utility.LoginForm.Show();
+		}
+
+		private void MainForm_FormClosed
+			(object sender, System.Windows.Forms.FormClosedEventArgs e)
+		{
+			System.Windows.Forms.Application.Exit();
 		}
 	}
 }

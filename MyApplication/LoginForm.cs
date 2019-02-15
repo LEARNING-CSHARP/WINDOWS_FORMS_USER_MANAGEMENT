@@ -107,16 +107,16 @@ namespace MyApplication
 				// **************************************************
 				// **************************************************
 				// **************************************************
-				System.Windows.Forms.MessageBox.Show("Welcome!");
+				//System.Windows.Forms.MessageBox.Show("Welcome!");
 				// **************************************************
 
 				// **************************************************
-				//Infrastructure.Utility.AuthenticatedUser = foundedUser;
+				Infrastructure.Utility.AuthenticatedUser = foundedUser;
+				// **************************************************
 
+				// **************************************************
 				//Hide();
-				// **************************************************
 
-				// **************************************************
 				//MainForm mainForm = new MainForm();
 
 				//mainForm.InitializeMainForm();
@@ -125,9 +125,11 @@ namespace MyApplication
 				// **************************************************
 
 				// **************************************************
-				//Infrastructure.Utility.MainForm.InitializeMainForm();
+				Hide();
 
-				//Infrastructure.Utility.MainForm.Show();
+				Infrastructure.Utility.MainForm.InitializeMainForm();
+
+				Infrastructure.Utility.MainForm.Show();
 				// **************************************************
 				// **************************************************
 				// **************************************************
@@ -161,15 +163,29 @@ namespace MyApplication
 
 		private void RegisterButton_Click(object sender, System.EventArgs e)
 		{
-			Hide();
-
+			// **************************************************
+			// توجه: دستورات ذیل به درد نمی‌خورد
 			// **************************************************
 			//RegisterForm registerForm = new RegisterForm();
 
 			//registerForm.Show();
+
+			//Close();
 			// **************************************************
 
 			// **************************************************
+			// توجه: دستورات ذیل کار می‌کند ولی اصلا بهینه نیست چون پدر حافظه را درمی‌آورد
+			// **************************************************
+			//RegisterForm registerForm = new RegisterForm();
+
+			//registerForm.Show();
+
+			//Hide();
+			// **************************************************
+
+			// **************************************************
+			Hide();
+
 			Infrastructure.Utility.RegisterForm.Show();
 			// **************************************************
 		}
