@@ -79,6 +79,7 @@
 			}
 		}
 
+		// **************************************************
 		//private void UpdateProfileToolStripMenuItem_Click(object sender, System.EventArgs e)
 		//{
 		//	UpdateProfileForm updateProfileForm = new UpdateProfileForm();
@@ -87,7 +88,9 @@
 
 		//	updateProfileForm.Show();
 		//}
+		// **************************************************
 
+		// **************************************************
 		private UpdateProfileForm updateProfileForm;
 
 		private void UpdateProfileToolStripMenuItem_Click(object sender, System.EventArgs e)
@@ -102,7 +105,9 @@
 				updateProfileForm.Show();
 			}
 		}
+		// **************************************************
 
+		// **************************************************
 		private ChangePasswordForm changePasswordForm;
 
 		private void ChangePasswordToolStripMenuItem_Click(object sender, System.EventArgs e)
@@ -117,7 +122,9 @@
 				changePasswordForm.Show();
 			}
 		}
+		// **************************************************
 
+		// **************************************************
 		private Admin.UsersListForm usersListForm;
 
 		private void UsersListToolStripMenuItem_Click(object sender, System.EventArgs e)
@@ -132,6 +139,7 @@
 				usersListForm.Show();
 			}
 		}
+		// **************************************************
 
 		private void LogoutToolStripMenuItem_Click(object sender, System.EventArgs e)
 		{

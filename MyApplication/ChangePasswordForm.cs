@@ -116,7 +116,7 @@ namespace MyApplication
 
 				if (string.Compare(currentUser.Password, oldPasswordTextBox.Text, ignoreCase: false) != 0)
 				{
-					System.Windows.Forms.MessageBox.Show("Old password is not correct!");
+					System.Windows.Forms.MessageBox.Show("The old password is not correct!");
 
 					oldPasswordTextBox.Focus();
 
@@ -127,7 +127,7 @@ namespace MyApplication
 
 				databaseContext.SaveChanges();
 
-				System.Windows.Forms.MessageBox.Show("Your password has been changed successfully.");
+				System.Windows.Forms.MessageBox.Show("Your password changed successfully.");
 			}
 			catch (System.Exception ex)
 			{

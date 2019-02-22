@@ -26,9 +26,6 @@ namespace MyApplication
 				databaseContext =
 					new Models.DatabaseContext();
 
-				databaseContext =
-					new Models.DatabaseContext();
-
 				// **************************************************
 				//var users =
 				//	databaseContext.Users

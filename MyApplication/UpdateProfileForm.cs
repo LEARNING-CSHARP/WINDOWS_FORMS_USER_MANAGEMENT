@@ -79,18 +79,22 @@ namespace MyApplication
 				// **************************************************
 
 				// **************************************************
-				MainForm mainForm = this.MdiParent as MainForm;
+				//MainForm mainForm = MdiParent as MainForm;
 
-				if (mainForm != null)
-				{
-					mainForm.InitializeMainForm();
-				}
+				//if (mainForm != null)
+				//{
+				//	mainForm.InitializeMainForm();
+				//}
+				// **************************************************
+
+				// **************************************************
+				Infrastructure.Utility.MainForm.InitializeMainForm();
 				// **************************************************
 				// **************************************************
 				// **************************************************
 
 				System.Windows.Forms.MessageBox
-					.Show("Your profile was updated successfully...");
+					.Show("Your profile has updated successfully...");
 			}
 			catch (System.Exception ex)
 			{
