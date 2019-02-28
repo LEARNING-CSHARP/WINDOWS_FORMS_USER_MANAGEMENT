@@ -19,8 +19,8 @@ namespace MyApplication
 			// **************************************************
 			// **************************************************
 			// **************************************************
-			if ((string.IsNullOrWhiteSpace(usernameTextBox.Text)) ||
-				(string.IsNullOrWhiteSpace(passwordTextBox.Text)))
+			if (string.IsNullOrWhiteSpace(usernameTextBox.Text) ||
+				string.IsNullOrWhiteSpace(passwordTextBox.Text))
 			{
 				//usernameTextBox.Text =
 				//	usernameTextBox.Text.Trim();
@@ -57,19 +57,23 @@ namespace MyApplication
 				errorMessages =
 					"Username length should be at least 6 characters!";
 			}
+			// **************************************************
 
+			// **************************************************
 			if (passwordTextBox.Text.Length < 8)
 			{
 				if (errorMessages != string.Empty)
 				{
 					errorMessages +=
-						System.Environment.NewLine; // "\n\r"
+						System.Environment.NewLine; // "\r\n"
 				}
 
 				errorMessages +=
 					"Password length should be at least 8 characters!";
 			}
+			// **************************************************
 
+			// **************************************************
 			// اگر خطایی وجود داشت
 			if (errorMessages != string.Empty)
 			{
@@ -119,7 +123,7 @@ namespace MyApplication
 					Username = usernameTextBox.Text,
 
 					// بستگی به سناریو و قواعد و قوانین شرکت یا پروژه دارد
-					IsActive = true
+					IsActive = true,
 				};
 
 				databaseContext.Users.Add(user);
@@ -140,7 +144,9 @@ namespace MyApplication
 				// دقت داشته باشید، هر چند که دستور ذیل کاملا صحیح می‌باشد
 				// ولی شیک‌تر آن است که از تابع بعدی استفاده نماییم
 				//ResetButton_Click(null, null);
+				// **************************************************
 
+				// **************************************************
 				ResetForm();
 				// **************************************************
 			}
@@ -174,11 +180,9 @@ namespace MyApplication
 
 		private void LoginButton_Click(object sender, System.EventArgs e)
 		{
-			// **************************************************
 			Hide();
 
 			Infrastructure.Utility.LoginForm.Show();
-			// **************************************************
 		}
 
 		private void ExitButton_Click(object sender, System.EventArgs e)

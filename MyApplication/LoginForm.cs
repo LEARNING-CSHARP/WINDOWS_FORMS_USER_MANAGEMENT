@@ -59,6 +59,11 @@ namespace MyApplication
 				databaseContext =
 					new Models.DatabaseContext();
 
+				//Models.User foundedUser =
+				//	databaseContext.Users
+				//	.Where(current => current.Username == usernameTextBox.Text)
+				//	.FirstOrDefault();
+
 				Models.User foundedUser =
 					databaseContext.Users
 					.Where(current => string.Compare(current.Username, usernameTextBox.Text, true) == 0)
@@ -69,7 +74,7 @@ namespace MyApplication
 					//System.Windows.Forms.MessageBox
 					//	.Show("Username is not correct!");
 
-					// دقت کنید که در این حالت پیغام باید گنگ باشد
+					// دقت کنید که در این حالت، پیغام باید گنگ باشد
 
 					System.Windows.Forms.MessageBox
 						.Show("Username and/or Password is not correct!");
@@ -84,7 +89,7 @@ namespace MyApplication
 					//System.Windows.Forms.MessageBox
 					//	.Show("Password is not correct!");
 
-					// دقت کنید که در این حالت پیغام باید گنگ باشد
+					// دقت کنید که در این حالت نیز، پیغام باید گنگ باشد
 
 					System.Windows.Forms.MessageBox
 						.Show("Username and/or Password is not correct!");
@@ -107,11 +112,11 @@ namespace MyApplication
 				// **************************************************
 				// **************************************************
 				// **************************************************
-				//System.Windows.Forms.MessageBox.Show("Welcome!");
+				System.Windows.Forms.MessageBox.Show("Welcome!");
 				// **************************************************
 
 				// **************************************************
-				Infrastructure.Utility.AuthenticatedUser = foundedUser;
+				//Infrastructure.Utility.AuthenticatedUser = foundedUser;
 				// **************************************************
 
 				// **************************************************
@@ -125,11 +130,11 @@ namespace MyApplication
 				// **************************************************
 
 				// **************************************************
-				Hide();
+				//Hide();
 
-				Infrastructure.Utility.MainForm.InitializeMainForm();
+				//Infrastructure.Utility.MainForm.InitializeMainForm();
 
-				Infrastructure.Utility.MainForm.Show();
+				//Infrastructure.Utility.MainForm.Show();
 				// **************************************************
 				// **************************************************
 				// **************************************************
@@ -174,7 +179,7 @@ namespace MyApplication
 			// **************************************************
 
 			// **************************************************
-			// توجه: دستورات ذیل کار می‌کند ولی اصلا بهینه نیست چون پدر حافظه را درمی‌آورد
+			// توجه: دستورات ذیل کار می‌کند، ولی اصلا بهینه نیست، چون پدر حافظه را درمی‌آورد
 			// **************************************************
 			//RegisterForm registerForm = new RegisterForm();
 
@@ -192,6 +197,8 @@ namespace MyApplication
 
 		private void ExitButton_Click(object sender, System.EventArgs e)
 		{
+			//Close();
+
 			System.Windows.Forms.Application.Exit();
 		}
 	}
