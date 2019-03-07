@@ -70,12 +70,13 @@ namespace MyApplication
 				databaseContext.SaveChanges();
 
 				// **************************************************
-				// **************************************************
-				// **************************************************
 				Infrastructure.Utility.AuthenticatedUser = currentUser;
+				// **************************************************
 
 				// **************************************************
-				//((MainForm)this.MdiParent).InitializeMainForm();
+				// **************************************************
+				// **************************************************
+				//((MainForm)this.MdiParent).ResetForm();
 				// **************************************************
 
 				// **************************************************
@@ -83,18 +84,21 @@ namespace MyApplication
 
 				//if (mainForm != null)
 				//{
-				//	mainForm.InitializeMainForm();
+				//	mainForm.ResetForm();
 				//}
 				// **************************************************
 
 				// **************************************************
-				Infrastructure.Utility.MainForm.InitializeMainForm();
+				Infrastructure.Utility.MainForm.ResetForm();
 				// **************************************************
 				// **************************************************
 				// **************************************************
 
 				System.Windows.Forms.MessageBox
-					.Show("Your profile has updated successfully...");
+					.Show("Your profile updated successfully...");
+
+				// استفاده کنیم Close فرم به طور اتوماتیک بسته شود، می‌توانیم از دستور MessageBox اگر بخواهیم بعد از UpdateProfileForm در داخل
+				//Close();
 			}
 			catch (System.Exception ex)
 			{

@@ -62,7 +62,7 @@ namespace Infrastructure
 						new MyApplication.MainForm();
 				}
 
-				mainForm.InitializeMainForm();
+				mainForm.ResetForm();
 
 				return mainForm;
 			}

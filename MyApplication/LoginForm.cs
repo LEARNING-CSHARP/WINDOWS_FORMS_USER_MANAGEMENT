@@ -11,6 +11,7 @@ namespace MyApplication
 
 		private void LoginForm_Load(object sender, System.EventArgs e)
 		{
+			ResetForm();
 		}
 
 		private void LoginButton_Click(object sender, System.EventArgs e)
@@ -112,11 +113,11 @@ namespace MyApplication
 				// **************************************************
 				// **************************************************
 				// **************************************************
-				System.Windows.Forms.MessageBox.Show("Welcome!");
+				//System.Windows.Forms.MessageBox.Show("Welcome!");
 				// **************************************************
 
 				// **************************************************
-				//Infrastructure.Utility.AuthenticatedUser = foundedUser;
+				Infrastructure.Utility.AuthenticatedUser = foundedUser;
 				// **************************************************
 
 				// **************************************************
@@ -124,17 +125,17 @@ namespace MyApplication
 
 				//MainForm mainForm = new MainForm();
 
-				//mainForm.InitializeMainForm();
+				//mainForm.ResetForm();
 
 				//mainForm.Show();
 				// **************************************************
 
 				// **************************************************
-				//Hide();
+				Hide();
 
-				//Infrastructure.Utility.MainForm.InitializeMainForm();
+				Infrastructure.Utility.MainForm.ResetForm();
 
-				//Infrastructure.Utility.MainForm.Show();
+				Infrastructure.Utility.MainForm.Show();
 				// **************************************************
 				// **************************************************
 				// **************************************************
@@ -160,6 +161,8 @@ namespace MyApplication
 
 		public void ResetForm()
 		{
+			Infrastructure.Utility.AuthenticatedUser = null;
+
 			passwordTextBox.Text = string.Empty;
 			usernameTextBox.Text = string.Empty;
 

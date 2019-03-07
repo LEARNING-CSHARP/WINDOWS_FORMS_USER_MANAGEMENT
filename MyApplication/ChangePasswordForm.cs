@@ -128,6 +128,8 @@ namespace MyApplication
 				databaseContext.SaveChanges();
 
 				System.Windows.Forms.MessageBox.Show("Your password changed successfully.");
+
+				//Close();
 			}
 			catch (System.Exception ex)
 			{

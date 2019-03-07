@@ -10,10 +10,10 @@
 		private void MainForm_Load(object sender, System.EventArgs e)
 		{
 			// نیازی به نوشتن دستور ذیل وجود ندارد
-			//InitializeMainForm();
+			//ResetForm();
 		}
 
-		public void InitializeMainForm()
+		public void ResetForm()
 		{
 			// **************************************************
 			//if (Infrastructure.Utility.AuthenticatedUser.IsAdmin)
@@ -145,7 +145,7 @@
 		{
 			Infrastructure.Utility.MainForm.Hide();
 
-			Infrastructure.Utility.AuthenticatedUser = null;
+			Infrastructure.Utility.LoginForm.ResetForm();
 
 			Infrastructure.Utility.LoginForm.Show();
 		}
