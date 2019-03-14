@@ -34,9 +34,10 @@ namespace MyApplication.Admin
 			if (selectedUser != null)
 			{
 				// **************************************************
-				//UpdateUserForm updateUserForm = new UpdateUserForm();
-
-				//updateUserForm.SelectedUserId = selectedUser.Id;
+				//UpdateUserForm updateUserForm = new UpdateUserForm
+				//{
+				//	SelectedUserId = selectedUser.Id
+				//};
 				// **************************************************
 
 				// **************************************************
@@ -138,6 +139,9 @@ namespace MyApplication.Admin
 
 				System.Collections.Generic.List<Models.User> users = null;
 
+				// دستور ذیل خیلی جالب نیست
+				//var users = new System.Collections.Generic.List<Models.User>();
+
 				if (fullNameTextBox.Text == string.Empty)
 				{
 					users =
@@ -200,8 +204,11 @@ namespace MyApplication.Admin
 				//usersListBox.DataSource = null;
 
 				usersListBox.ValueMember = "Id";
-				//usersListBox.DisplayMember = "FullName";
 				usersListBox.DisplayMember = "DisplayName";
+
+				//usersListBox.DisplayMember = "FullName";
+				//usersListBox.DisplayMember = "Username";
+
 				usersListBox.DataSource = users;
 				// **************************************************
 
