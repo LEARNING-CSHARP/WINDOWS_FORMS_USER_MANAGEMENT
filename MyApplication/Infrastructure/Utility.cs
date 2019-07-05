@@ -12,7 +12,9 @@ namespace Infrastructure
 		// **************************************************
 		//public static string FullName { get; set; }
 		//public static System.Guid? UserId { get; set; }
+		// **************************************************
 
+		// **************************************************
 		public static Models.User AuthenticatedUser { get; set; }
 		// **************************************************
 		// **************************************************
@@ -56,7 +58,7 @@ namespace Infrastructure
 		{
 			get
 			{
-				if (mainForm == null)
+				if ((mainForm == null) || (mainForm.IsDisposed))
 				{
 					mainForm =
 						new MyApplication.MainForm();
@@ -85,7 +87,7 @@ namespace Infrastructure
 		{
 			get
 			{
-				if (loginForm == null)
+				if ((loginForm == null) || (loginForm.IsDisposed))
 				{
 					loginForm =
 						new MyApplication.LoginForm();
@@ -114,7 +116,7 @@ namespace Infrastructure
 		{
 			get
 			{
-				if (registerForm == null)
+				if ((registerForm == null) || (registerForm.IsDisposed))
 				{
 					registerForm =
 						new MyApplication.RegisterForm();

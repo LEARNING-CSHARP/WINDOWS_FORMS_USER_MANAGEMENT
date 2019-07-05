@@ -82,7 +82,7 @@ namespace MyApplication
 			// **************************************************
 
 			// **************************************************
-			//#region Solution (1)
+			#region Solution (1)
 			//Infrastructure.BaseForm startupForm = new LoginForm();
 			////Infrastructure.BaseForm startupForm = new RegisterForm();
 
@@ -97,7 +97,7 @@ namespace MyApplication
 
 			//	startupForm = null;
 			//}
-			//#endregion /Solution (1)
+			#endregion /Solution (1)
 			// **************************************************
 
 			// **************************************************

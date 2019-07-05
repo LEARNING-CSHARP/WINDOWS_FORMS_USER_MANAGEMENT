@@ -130,8 +130,6 @@ namespace MyApplication
 
 				databaseContext.SaveChanges();
 
-				System.Windows.Forms.MessageBox.Show("Registration Done!");
-
 				// **************************************************
 				//fullNameTextBox.Text = string.Empty;
 				//passwordTextBox.Text = string.Empty;
@@ -149,6 +147,8 @@ namespace MyApplication
 				// **************************************************
 				ResetForm();
 				// **************************************************
+
+				System.Windows.Forms.MessageBox.Show("Registration Done!");
 			}
 			catch (System.Exception ex)
 			{
@@ -166,6 +166,14 @@ namespace MyApplication
 
 		private void ResetButton_Click(object sender, System.EventArgs e)
 		{
+			// **************************************************
+			//usernameTextBox.Text = string.Empty;
+			//passwordTextBox.Text = string.Empty;
+			//fullNameTextBox.Text = string.Empty;
+
+			//usernameTextBox.Focus();
+			// **************************************************
+
 			ResetForm();
 		}
 

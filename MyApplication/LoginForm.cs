@@ -34,7 +34,7 @@ namespace MyApplication
 				passwordTextBox.Text =
 					passwordTextBox.Text.Replace(" ", string.Empty);
 
-				System.Windows.Forms.MessageBox.Show("Username and Password is requied!");
+				System.Windows.Forms.MessageBox.Show("Username and Password are requied!");
 
 				if (usernameTextBox.Text == string.Empty)
 				{
@@ -111,31 +111,33 @@ namespace MyApplication
 				}
 
 				// **************************************************
-				// **************************************************
-				// **************************************************
 				//System.Windows.Forms.MessageBox.Show("Welcome!");
 				// **************************************************
 
+				// **************************************************
+				// **************************************************
 				// **************************************************
 				Infrastructure.Utility.AuthenticatedUser = foundedUser;
 				// **************************************************
 
 				// **************************************************
-				//Hide();
-
-				//MainForm mainForm = new MainForm();
-
-				//mainForm.ResetForm();
-
-				//mainForm.Show();
-				// **************************************************
-
-				// **************************************************
 				Hide();
 
-				Infrastructure.Utility.MainForm.ResetForm();
+				MainForm mainForm = new MainForm();
 
-				Infrastructure.Utility.MainForm.Show();
+				mainForm.ResetForm();
+
+				mainForm.Show();
+				// **************************************************
+				// **************************************************
+				// **************************************************
+
+				// **************************************************
+				//Hide();
+
+				//Infrastructure.Utility.MainForm.ResetForm();
+
+				//Infrastructure.Utility.MainForm.Show();
 				// **************************************************
 				// **************************************************
 				// **************************************************
