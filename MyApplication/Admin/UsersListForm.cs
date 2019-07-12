@@ -9,12 +9,8 @@ namespace MyApplication.Admin
 			InitializeComponent();
 		}
 
-		//private Models.DatabaseContext databaseContext;
-
 		private void UsersListForm_Load(object sender, System.EventArgs e)
 		{
-			//databaseContext =
-			//	new Models.DatabaseContext();
 		}
 
 		private void SearchButton_Click(object sender, System.EventArgs e)
@@ -203,11 +199,11 @@ namespace MyApplication.Admin
 				// Binding
 				//usersListBox.DataSource = null;
 
-				usersListBox.ValueMember = "Id";
-				usersListBox.DisplayMember = "DisplayName";
+				//usersListBox.ValueMember = "Id";
+				usersListBox.ValueMember = nameof(Models.User.Id);
 
-				//usersListBox.DisplayMember = "FullName";
-				//usersListBox.DisplayMember = "Username";
+				//usersListBox.DisplayMember = nameof(Models.User.Username);
+				usersListBox.DisplayMember = nameof(Models.User.DisplayName);
 
 				usersListBox.DataSource = users;
 				// **************************************************
@@ -229,16 +225,6 @@ namespace MyApplication.Admin
 					databaseContext = null;
 				}
 			}
-		}
-
-		private void UsersListForm_FormClosed
-			(object sender, System.Windows.Forms.FormClosedEventArgs e)
-		{
-			//if (databaseContext != null)
-			//{
-			//	databaseContext.Dispose();
-			//	databaseContext = null;
-			//}
 		}
 	}
 }

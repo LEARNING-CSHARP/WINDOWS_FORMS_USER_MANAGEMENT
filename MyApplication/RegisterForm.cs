@@ -12,6 +12,7 @@ namespace MyApplication
 
 		private void RegisterForm_Load(object sender, System.EventArgs e)
 		{
+			ResetForm();
 		}
 
 		private void RegisterButton_Click(object sender, System.EventArgs e)

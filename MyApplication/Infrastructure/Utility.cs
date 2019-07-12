@@ -64,8 +64,6 @@ namespace Infrastructure
 						new MyApplication.MainForm();
 				}
 
-				mainForm.ResetForm();
-
 				return mainForm;
 			}
 		}
@@ -93,8 +91,6 @@ namespace Infrastructure
 						new MyApplication.LoginForm();
 				}
 
-				loginForm.ResetForm();
-
 				return loginForm;
 			}
 		}
@@ -121,8 +117,6 @@ namespace Infrastructure
 					registerForm =
 						new MyApplication.RegisterForm();
 				}
-
-				registerForm.ResetForm();
 
 				return registerForm;
 			}

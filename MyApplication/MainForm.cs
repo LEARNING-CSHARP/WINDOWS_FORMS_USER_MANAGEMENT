@@ -9,7 +9,6 @@
 
 		private void MainForm_Load(object sender, System.EventArgs e)
 		{
-			// نیازی به نوشتن دستور ذیل وجود ندارد
 			//ResetForm();
 		}
 
@@ -45,16 +44,29 @@
 			// **************************************************
 
 			// **************************************************
-			if (string.IsNullOrWhiteSpace(Infrastructure.Utility.AuthenticatedUser.FullName))
+			//if (string.IsNullOrWhiteSpace(Infrastructure.Utility.AuthenticatedUser.FullName))
+			//{
+			//	welcomeToolStripStatusLabel.Text =
+			//		$"Welcome { Infrastructure.Utility.AuthenticatedUser.Username }!";
+			//}
+			//else
+			//{
+			//	welcomeToolStripStatusLabel.Text =
+			//		$"Welcome { Infrastructure.Utility.AuthenticatedUser.FullName }!";
+			//}
+			// **************************************************
+
+			// **************************************************
+			string welcome =
+				Infrastructure.Utility.AuthenticatedUser.Username;
+
+			if (string.IsNullOrWhiteSpace(Infrastructure.Utility.AuthenticatedUser.FullName) == false)
 			{
-				welcomeToolStripStatusLabel.Text =
-					$"Welcome { Infrastructure.Utility.AuthenticatedUser.Username }!";
+				welcome =
+					Infrastructure.Utility.AuthenticatedUser.FullName;
 			}
-			else
-			{
-				welcomeToolStripStatusLabel.Text =
-					$"Welcome { Infrastructure.Utility.AuthenticatedUser.FullName }!";
-			}
+
+			welcomeToolStripStatusLabel.Text = $"Welcome { welcome }!";
 			// **************************************************
 		}
 

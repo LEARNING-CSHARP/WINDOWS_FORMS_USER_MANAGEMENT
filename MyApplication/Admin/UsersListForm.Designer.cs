@@ -96,7 +96,6 @@
 			this.MinimumSize = new System.Drawing.Size(430, 270);
 			this.Name = "UsersListForm";
 			this.Text = "Users List";
-			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UsersListForm_FormClosed);
 			this.Load += new System.EventHandler(this.UsersListForm_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
