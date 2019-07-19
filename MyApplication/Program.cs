@@ -49,14 +49,15 @@ namespace MyApplication
 
 				if (hasAnyUser == false)
 				{
-					Models.User adminUser = new Models.User();
+					Models.User adminUser = new Models.User
+					{
+						IsAdmin = true,
+						IsActive = true,
 
-					adminUser.IsAdmin = true;
-					adminUser.IsActive = true;
-
-					adminUser.Username = "Dariush";
-					adminUser.Password = "1234512345";
-					adminUser.FullName = "Mr. Dariush Tasdighi";
+						Username = "Dariush",
+						Password = "1234512345",
+						FullName = "Mr. Dariush Tasdighi",
+					};
 
 					databaseContext.Users.Add(adminUser);
 
@@ -83,8 +84,8 @@ namespace MyApplication
 
 			// **************************************************
 			#region Solution (1)
-			//Infrastructure.BaseForm startupForm = new LoginForm();
-			////Infrastructure.BaseForm startupForm = new RegisterForm();
+			////Infrastructure.BaseForm startupForm = new LoginForm();
+			//Infrastructure.BaseForm startupForm = new RegisterForm();
 
 			//System.Windows.Forms.Application.Run(startupForm);
 
