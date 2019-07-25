@@ -40,6 +40,11 @@
 
 			// **************************************************
 			//welcomeToolStripStatusLabel.Text =
+			//	$"Welcome {Infrastructure.Utility.AuthenticatedUser.Username}!";
+			// **************************************************
+
+			// **************************************************
+			//welcomeToolStripStatusLabel.Text =
 			//	$"Welcome { Infrastructure.Utility.AuthenticatedUser.Username }!";
 			// **************************************************
 
@@ -57,38 +62,17 @@
 			// **************************************************
 
 			// **************************************************
-			string welcome =
+			string userDisplayName =
 				Infrastructure.Utility.AuthenticatedUser.Username;
 
 			if (string.IsNullOrWhiteSpace(Infrastructure.Utility.AuthenticatedUser.FullName) == false)
 			{
-				welcome =
+				userDisplayName =
 					Infrastructure.Utility.AuthenticatedUser.FullName;
 			}
 
-			welcomeToolStripStatusLabel.Text = $"Welcome { welcome }!";
+			welcomeToolStripStatusLabel.Text = $"Welcome { userDisplayName }!";
 			// **************************************************
-		}
-
-		private void ExitToolStripMenuItem_Click(object sender, System.EventArgs e)
-		{
-			//Note: Close() is not correct!
-			//Close();
-
-			System.Windows.Forms.DialogResult result =
-				System.Windows.Forms.MessageBox.Show
-					(text: "آیا به خروج از برنامه اطمینان دارید؟",
-					caption: "سوال",
-					buttons: System.Windows.Forms.MessageBoxButtons.YesNo,
-					icon: System.Windows.Forms.MessageBoxIcon.Question,
-					defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button2,
-					options: System.Windows.Forms.MessageBoxOptions.RightAlign |
-					System.Windows.Forms.MessageBoxOptions.RtlReading);
-
-			if (result == System.Windows.Forms.DialogResult.Yes)
-			{
-				System.Windows.Forms.Application.Exit();
-			}
 		}
 
 		// **************************************************
@@ -107,11 +91,11 @@
 
 		private void UpdateProfileToolStripMenuItem_Click(object sender, System.EventArgs e)
 		{
-			if ((updateProfileForm == null) || (updateProfileForm.IsDisposed))
+			if (updateProfileForm == null || updateProfileForm.IsDisposed)
 			{
 				updateProfileForm = new UpdateProfileForm
 				{
-					MdiParent = this
+					MdiParent = this,
 				};
 
 				updateProfileForm.Show();
@@ -124,11 +108,11 @@
 
 		private void ChangePasswordToolStripMenuItem_Click(object sender, System.EventArgs e)
 		{
-			if ((changePasswordForm == null) || (changePasswordForm.IsDisposed))
+			if (changePasswordForm == null || changePasswordForm.IsDisposed)
 			{
 				changePasswordForm = new ChangePasswordForm
 				{
-					MdiParent = this
+					MdiParent = this,
 				};
 
 				changePasswordForm.Show();
@@ -141,11 +125,11 @@
 
 		private void UsersListToolStripMenuItem_Click(object sender, System.EventArgs e)
 		{
-			if ((usersListForm == null) || (usersListForm.IsDisposed))
+			if (usersListForm == null || usersListForm.IsDisposed)
 			{
 				usersListForm = new Admin.UsersListForm
 				{
-					MdiParent = this
+					MdiParent = this,
 				};
 
 				usersListForm.Show();
@@ -160,6 +144,30 @@
 			Infrastructure.Utility.LoginForm.ResetForm();
 
 			Infrastructure.Utility.LoginForm.Show();
+		}
+
+		private void ExitToolStripMenuItem_Click(object sender, System.EventArgs e)
+		{
+			Close();
+		}
+
+		private void MainForm_FormClosing
+			(object sender, System.Windows.Forms.FormClosingEventArgs e)
+		{
+			System.Windows.Forms.DialogResult result =
+				System.Windows.Forms.MessageBox.Show
+					(text: "آیا به خروج از برنامه اطمینان دارید؟",
+					caption: "سوال",
+					buttons: System.Windows.Forms.MessageBoxButtons.YesNo,
+					icon: System.Windows.Forms.MessageBoxIcon.Question,
+					defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button2,
+					options: System.Windows.Forms.MessageBoxOptions.RightAlign |
+					System.Windows.Forms.MessageBoxOptions.RtlReading);
+
+			if (result == System.Windows.Forms.DialogResult.No)
+			{
+				e.Cancel = true;
+			}
 		}
 
 		private void MainForm_FormClosed
