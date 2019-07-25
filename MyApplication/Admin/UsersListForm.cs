@@ -20,14 +20,28 @@ namespace MyApplication.Admin
 
 		private void UsersListBox_DoubleClick(object sender, System.EventArgs e)
 		{
+			// **************************************************
 			// روش احمقانه
+			// **************************************************
 			//Models.User selectedUser =
 			//	(Models.User)usersListBox.SelectedItem;
+			// **************************************************
 
-			Models.User selectedUser =
-				usersListBox.SelectedItem as Models.User;
+			// **************************************************
+			// روش هوشمندانه
+			// **************************************************
+			//Models.User selectedUser =
+			//	usersListBox.SelectedItem as Models.User;
 
-			if (selectedUser != null)
+			//if (selectedUser != null)
+			//{
+			//}
+			// **************************************************
+
+			// **************************************************
+			// روش مدرن
+			// **************************************************
+			if (usersListBox.SelectedItem is Models.User selectedUser)
 			{
 				// **************************************************
 				//UpdateUserForm updateUserForm = new UpdateUserForm
@@ -47,6 +61,7 @@ namespace MyApplication.Admin
 
 				Search();
 			}
+			// **************************************************
 		}
 
 		private void DeleteUsersButton_Click(object sender, System.EventArgs e)
@@ -67,9 +82,20 @@ namespace MyApplication.Admin
 
 				foreach (var selectedItem in usersListBox.SelectedItems)
 				{
-					Models.User selectedUser = selectedItem as Models.User;
+					// **************************************************
+					// روش هوشمندانه
+					// **************************************************
+					//Models.User selectedUser = selectedItem as Models.User;
 
-					if (selectedUser != null)
+					//if (selectedUser != null)
+					//{
+					//}
+					// **************************************************
+
+					// **************************************************
+					// روش مدرن
+					// **************************************************
+					if (selectedItem is Models.User selectedUser)
 					{
 						Models.User foundedUser =
 							databaseContext.Users

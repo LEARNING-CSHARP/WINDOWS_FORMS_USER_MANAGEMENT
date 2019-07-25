@@ -11,6 +11,7 @@ namespace Infrastructure
 		// **************************************************
 		// **************************************************
 		//public static string FullName { get; set; }
+		//public static string Username { get; set; }
 		//public static System.Guid? UserId { get; set; }
 		// **************************************************
 
@@ -23,9 +24,13 @@ namespace Infrastructure
 		// **************************************************
 		// Solution (1)
 		// **************************************************
+
+		// **************************************************
 		//public static MyApplication.MainForm MainForm;
 		//public static MyApplication.LoginForm LoginForm;
 		//public static MyApplication.RegisterForm RegisterForm;
+		// **************************************************
+
 		// **************************************************
 		// /Solution (1)
 		// **************************************************
@@ -33,9 +38,13 @@ namespace Infrastructure
 		// **************************************************
 		// Solution (2)
 		// **************************************************
+
+		// **************************************************
 		//public static MyApplication.MainForm MainForm = new MyApplication.MainForm();
 		//public static MyApplication.LoginForm LoginForm = new MyApplication.LoginForm();
 		//public static MyApplication.RegisterForm RegisterForm = new MyApplication.RegisterForm();
+		// **************************************************
+
 		// **************************************************
 		// /Solution (2)
 		// **************************************************
@@ -58,7 +67,7 @@ namespace Infrastructure
 		{
 			get
 			{
-				if ((mainForm == null) || (mainForm.IsDisposed))
+				if (mainForm == null || mainForm.IsDisposed)
 				{
 					mainForm =
 						new MyApplication.MainForm();
@@ -85,7 +94,7 @@ namespace Infrastructure
 		{
 			get
 			{
-				if ((loginForm == null) || (loginForm.IsDisposed))
+				if (loginForm == null || loginForm.IsDisposed)
 				{
 					loginForm =
 						new MyApplication.LoginForm();
@@ -112,7 +121,7 @@ namespace Infrastructure
 		{
 			get
 			{
-				if ((registerForm == null) || (registerForm.IsDisposed))
+				if (registerForm == null || registerForm.IsDisposed)
 				{
 					registerForm =
 						new MyApplication.RegisterForm();
