@@ -73,6 +73,7 @@
 			this.fullNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.fullNameTextBox.Location = new System.Drawing.Point(91, 12);
+			this.fullNameTextBox.MaxLength = 50;
 			this.fullNameTextBox.Name = "fullNameTextBox";
 			this.fullNameTextBox.Size = new System.Drawing.Size(319, 21);
 			this.fullNameTextBox.TabIndex = 1;

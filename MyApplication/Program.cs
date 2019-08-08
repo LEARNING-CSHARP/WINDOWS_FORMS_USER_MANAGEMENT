@@ -66,7 +66,7 @@ namespace MyApplication
 			}
 			catch (System.Exception ex)
 			{
-				System.Windows.Forms.MessageBox.Show(ex.Message);
+				System.Windows.Forms.MessageBox.Show($"Error: { ex.Message }");
 
 				return;
 			}

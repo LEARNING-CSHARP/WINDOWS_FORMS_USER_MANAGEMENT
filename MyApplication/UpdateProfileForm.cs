@@ -11,6 +11,11 @@ namespace MyApplication
 
 		private void UpdateProfileForm_Load(object sender, System.EventArgs e)
 		{
+			// **************************************************
+			//fullNameTextBox.Text = Infrastructure.Utility.AuthenticatedUser.FullName;
+			//descriptionTextBox.Text = Infrastructure.Utility.AuthenticatedUser.Description;
+			// **************************************************
+
 			Models.DatabaseContext databaseContext = null;
 
 			try
@@ -33,7 +38,7 @@ namespace MyApplication
 			}
 			catch (System.Exception ex)
 			{
-				System.Windows.Forms.MessageBox.Show("Error: " + ex.Message);
+				System.Windows.Forms.MessageBox.Show($"Error: { ex.Message }");
 			}
 			finally
 			{
@@ -102,7 +107,7 @@ namespace MyApplication
 			}
 			catch (System.Exception ex)
 			{
-				System.Windows.Forms.MessageBox.Show("Error: " + ex.Message);
+				System.Windows.Forms.MessageBox.Show($"Error: { ex.Message }");
 			}
 			finally
 			{

@@ -52,7 +52,7 @@
 			this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
 			this.mainMenuStrip.Name = "mainMenuStrip";
 			this.mainMenuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-			this.mainMenuStrip.Size = new System.Drawing.Size(505, 24);
+			this.mainMenuStrip.Size = new System.Drawing.Size(612, 24);
 			this.mainMenuStrip.TabIndex = 0;
 			this.mainMenuStrip.Text = "menuStrip1";
 			// 
@@ -121,10 +121,10 @@
 			this.mainStatusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
 			this.mainStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.welcomeToolStripStatusLabel});
-			this.mainStatusStrip.Location = new System.Drawing.Point(0, 375);
+			this.mainStatusStrip.Location = new System.Drawing.Point(0, 239);
 			this.mainStatusStrip.Name = "mainStatusStrip";
 			this.mainStatusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
-			this.mainStatusStrip.Size = new System.Drawing.Size(505, 22);
+			this.mainStatusStrip.Size = new System.Drawing.Size(612, 22);
 			this.mainStatusStrip.TabIndex = 1;
 			this.mainStatusStrip.Text = "statusStrip1";
 			// 
@@ -139,7 +139,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(505, 397);
+			this.ClientSize = new System.Drawing.Size(612, 261);
 			this.Controls.Add(this.mainStatusStrip);
 			this.Controls.Add(this.mainMenuStrip);
 			this.IsMdiContainer = true;
