@@ -32,6 +32,8 @@
 
 		[System.ComponentModel.DataAnnotations.StringLength
 			(maximumLength: 40, MinimumLength = 8)]
+
+		[System.ComponentModel.Browsable(browsable: false)]
 		public string Password { get; set; }
 		// **********
 
@@ -45,10 +47,14 @@
 		// **********
 
 		// **********
+
+		[System.ComponentModel.Browsable(browsable: false)]
 		public string Description { get; set; }
 		// **********
 
 		// **********
+
+		[System.ComponentModel.Browsable(browsable: false)]
 		public string DisplayName
 		{
 			get

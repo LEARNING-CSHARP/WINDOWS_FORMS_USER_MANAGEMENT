@@ -8,6 +8,7 @@
 		}
 
 		// **********
+		[System.ComponentModel.Browsable(browsable: false)]
 		public System.Guid Id { get; set; }
 		// **********
 	}

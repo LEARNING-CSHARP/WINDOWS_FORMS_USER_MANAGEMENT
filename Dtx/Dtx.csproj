@@ -51,6 +51,9 @@
     <Compile Include="Windows\Forms\CheckBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Windows\Forms\DataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Windows\Forms\Label.cs">
       <SubType>Component</SubType>
     </Compile>

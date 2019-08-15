@@ -97,9 +97,9 @@
 				{
 					MdiParent = this,
 				};
-
-				updateProfileForm.Show();
 			}
+
+			updateProfileForm.Show();
 		}
 		// **************************************************
 
@@ -114,9 +114,9 @@
 				{
 					MdiParent = this,
 				};
-
-				changePasswordForm.Show();
 			}
+
+			changePasswordForm.Show();
 		}
 		// **************************************************
 
@@ -131,9 +131,26 @@
 				{
 					MdiParent = this,
 				};
-
-				usersListForm.Show();
 			}
+
+			usersListForm.Show();
+		}
+		// **************************************************
+
+		// **************************************************
+		private Admin.NewUsersListForm newUsersListForm;
+
+		private void NewUsersListToolStripMenuItem_Click(object sender, System.EventArgs e)
+		{
+			if (newUsersListForm == null || newUsersListForm.IsDisposed)
+			{
+				newUsersListForm = new Admin.NewUsersListForm
+				{
+					MdiParent = this,
+				};
+			}
+
+			newUsersListForm.Show();
 		}
 		// **************************************************
 

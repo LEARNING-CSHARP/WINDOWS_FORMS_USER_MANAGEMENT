@@ -39,6 +39,7 @@
 			this.usersListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
 			this.welcomeToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+			this.newUsersListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.mainMenuStrip.SuspendLayout();
 			this.mainStatusStrip.SuspendLayout();
 			this.SuspendLayout();
@@ -104,7 +105,8 @@
 			// adminToolStripMenuItem
 			// 
 			this.adminToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usersListToolStripMenuItem});
+            this.usersListToolStripMenuItem,
+            this.newUsersListToolStripMenuItem});
 			this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
 			this.adminToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
 			this.adminToolStripMenuItem.Text = "&Admin";
@@ -112,7 +114,7 @@
 			// usersListToolStripMenuItem
 			// 
 			this.usersListToolStripMenuItem.Name = "usersListToolStripMenuItem";
-			this.usersListToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+			this.usersListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.usersListToolStripMenuItem.Text = "&Users List";
 			this.usersListToolStripMenuItem.Click += new System.EventHandler(this.UsersListToolStripMenuItem_Click);
 			// 
@@ -133,6 +135,13 @@
 			this.welcomeToolStripStatusLabel.Name = "welcomeToolStripStatusLabel";
 			this.welcomeToolStripStatusLabel.Size = new System.Drawing.Size(32, 17);
 			this.welcomeToolStripStatusLabel.Text = "-----";
+			// 
+			// newUsersListToolStripMenuItem
+			// 
+			this.newUsersListToolStripMenuItem.Name = "newUsersListToolStripMenuItem";
+			this.newUsersListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.newUsersListToolStripMenuItem.Text = "New Users List";
+			this.newUsersListToolStripMenuItem.Click += new System.EventHandler(this.NewUsersListToolStripMenuItem_Click);
 			// 
 			// MainForm
 			// 
@@ -173,5 +182,6 @@
 		private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem usersListToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem newUsersListToolStripMenuItem;
 	}
 }
