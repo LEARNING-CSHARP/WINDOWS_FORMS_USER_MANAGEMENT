@@ -57,12 +57,7 @@
 
 				if (string.IsNullOrWhiteSpace(FullName) == false)
 				{
-					result = FullName;
-				}
-
-				if (result != string.Empty)
-				{
-					result += " - ";
+					result = $"{ FullName } - ";
 				}
 
 				result += $"[{ Username }]";

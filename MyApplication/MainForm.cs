@@ -166,6 +166,7 @@
 
 			if (result == System.Windows.Forms.DialogResult.No)
 			{
+				// بی خیال شو = شتر دیدی ندیدی
 				e.Cancel = true;
 			}
 		}

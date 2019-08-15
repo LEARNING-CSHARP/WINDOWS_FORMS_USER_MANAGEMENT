@@ -46,14 +46,14 @@ namespace MyApplication.Admin
 				// **************************************************
 				//UpdateUserForm updateUserForm = new UpdateUserForm
 				//{
-				//	SelectedUserId = selectedUser.Id
+				//	SelectedUserId = selectedUser.Id,
 				//};
 				// **************************************************
 
 				// **************************************************
 				UpdateUserForm updateUserForm = new UpdateUserForm
 				{
-					SelectedUser = selectedUser
+					SelectedUser = selectedUser,
 				};
 				// **************************************************
 
@@ -106,8 +106,7 @@ namespace MyApplication.Admin
 						{
 							if (foundedUser.IsAdmin == false)
 							{
-								if (string.Compare(foundedUser.Username,
-									Infrastructure.Utility.AuthenticatedUser.Username, ignoreCase: true) != 0)
+								if (foundedUser.Id != Infrastructure.Utility.AuthenticatedUser.Id)
 								{
 									databaseContext.Users.Remove(foundedUser);
 
@@ -217,7 +216,7 @@ namespace MyApplication.Admin
 
 				//foreach (var item in users)
 				//{
-				//	usersListBox.Items.Add(item.DisplayName);
+				//	usersListBox.Items.Add(item.Username);
 				//}
 				// **************************************************
 
@@ -228,6 +227,7 @@ namespace MyApplication.Admin
 				//usersListBox.ValueMember = "Id";
 				usersListBox.ValueMember = nameof(Models.User.Id);
 
+				//usersListBox.DisplayMember = "Username";
 				//usersListBox.DisplayMember = nameof(Models.User.Username);
 				usersListBox.DisplayMember = nameof(Models.User.DisplayName);
 
