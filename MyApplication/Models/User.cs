@@ -54,7 +54,7 @@
 
 		// **********
 
-		[System.ComponentModel.Browsable(browsable: false)]
+		//[System.ComponentModel.Browsable(browsable: false)]
 		public string DisplayName
 		{
 			get

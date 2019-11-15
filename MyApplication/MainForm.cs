@@ -78,9 +78,10 @@
 		// **************************************************
 		//private void UpdateProfileToolStripMenuItem_Click(object sender, System.EventArgs e)
 		//{
-		//	UpdateProfileForm updateProfileForm = new UpdateProfileForm();
-
-		//	updateProfileForm.MdiParent = this;
+		//	UpdateProfileForm updateProfileForm = new UpdateProfileForm
+		//	{
+		//		MdiParent = this,
+		//	};
 
 		//	updateProfileForm.Show();
 		//}

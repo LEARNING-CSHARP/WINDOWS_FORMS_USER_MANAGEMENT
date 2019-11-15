@@ -51,8 +51,10 @@ namespace MyApplication
 			// **************************************************
 
 			// **************************************************
-			string errorMessages = string.Empty; // ""
+			string errorMessages = string.Empty;
+			// **************************************************
 
+			// **************************************************
 			if (usernameTextBox.Text.Length < 6)
 			{
 				errorMessages =
