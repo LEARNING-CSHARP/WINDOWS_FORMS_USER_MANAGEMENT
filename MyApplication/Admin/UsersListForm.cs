@@ -106,12 +106,12 @@ namespace MyApplication.Admin
 						{
 							if (foundedUser.IsAdmin == false)
 							{
-								if (foundedUser.Id != Infrastructure.Utility.AuthenticatedUser.Id)
-								{
-									databaseContext.Users.Remove(foundedUser);
+								//if (foundedUser.Id != Infrastructure.Utility.AuthenticatedUser.Id)
+								//{
+								databaseContext.Users.Remove(foundedUser);
 
-									databaseContext.SaveChanges();
-								}
+								databaseContext.SaveChanges();
+								//}
 							}
 						}
 					}
@@ -228,7 +228,9 @@ namespace MyApplication.Admin
 				usersListBox.ValueMember = nameof(Models.User.Id);
 
 				//usersListBox.DisplayMember = "Username";
+				//usersListBox.DisplayMember = "Username1";
 				//usersListBox.DisplayMember = nameof(Models.User.Username);
+				//usersListBox.DisplayMember = nameof(Models.User.Username1);
 				usersListBox.DisplayMember = nameof(Models.User.DisplayName);
 
 				usersListBox.DataSource = users;
