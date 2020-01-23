@@ -104,15 +104,20 @@ namespace MyApplication
 				//	.Where(current => current.Username == usernameTextBox.Text)
 				//	.FirstOrDefault();
 
+				//Models.User user =
+				//	databaseContext.Users
+				//	.Where(current => string.Compare(current.Username, usernameTextBox.Text, true) == 0)
+				//	.FirstOrDefault();
+
 				Models.User user =
 					databaseContext.Users
-					.Where(current => string.Compare(current.Username, usernameTextBox.Text, true) == 0)
+					.Where(current => current.Username.ToLower() == usernameTextBox.Text.ToLower())
 					.FirstOrDefault();
 
 				if (user != null)
 				{
 					System.Windows.Forms.MessageBox.Show
-						("This username is already exist! Please choose another one...");
+						("This username already exists! Please choose another one...");
 
 					usernameTextBox.Focus();
 

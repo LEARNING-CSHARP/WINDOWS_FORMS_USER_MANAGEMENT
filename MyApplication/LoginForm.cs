@@ -65,13 +65,20 @@ namespace MyApplication
 				//	.Where(current => current.Username == usernameTextBox.Text)
 				//	.FirstOrDefault();
 
+				//Models.User foundedUser =
+				//	databaseContext.Users
+				//	.Where(current => string.Compare(current.Username, usernameTextBox.Text, true) == 0)
+				//	.FirstOrDefault();
+
 				Models.User foundedUser =
 					databaseContext.Users
-					.Where(current => string.Compare(current.Username, usernameTextBox.Text, true) == 0)
+					.Where(current => current.Username.ToLower() == usernameTextBox.Text.ToLower())
 					.FirstOrDefault();
 
 				if (foundedUser == null)
 				{
+					// پیغام ذیل کاملا دقیق بوده ولی از نظر مسایل امنیتی صلاح نیست
+
 					//System.Windows.Forms.MessageBox
 					//	.Show("Username is not correct!");
 
@@ -87,6 +94,8 @@ namespace MyApplication
 
 				if (string.Compare(foundedUser.Password, passwordTextBox.Text, ignoreCase: false) != 0)
 				{
+					// پیغام ذیل کاملا دقیق بوده ولی از نظر مسایل امنیتی صلاح نیست
+
 					//System.Windows.Forms.MessageBox
 					//	.Show("Password is not correct!");
 
@@ -118,17 +127,17 @@ namespace MyApplication
 				// **************************************************
 				// **************************************************
 				Infrastructure.Utility.AuthenticatedUser = foundedUser;
-				//// **************************************************
+				// **************************************************
 
-				//// **************************************************
-				////Hide();
+				// **************************************************
+				//Hide();
 
-				////MainForm mainForm = new MainForm();
+				//MainForm mainForm = new MainForm();
 
-				////mainForm.Show();
-				//// **************************************************
+				//mainForm.Show();
+				// **************************************************
 
-				//// **************************************************
+				// **************************************************
 				Hide();
 
 				Infrastructure.Utility.MainForm.ResetForm();
