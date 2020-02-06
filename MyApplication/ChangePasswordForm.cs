@@ -72,7 +72,7 @@ namespace MyApplication
 			else
 			{
 				//if (string.Compare(confirmNewPasswordTextBox.Text, newPasswordTextBox.Text, ignoreCase: false) != 0)
-				if (confirmNewPasswordTextBox.Text.ToLower() != newPasswordTextBox.Text.ToLower())
+				if (confirmNewPasswordTextBox.Text != newPasswordTextBox.Text)
 				{
 					if (errorMessages != string.Empty)
 					{

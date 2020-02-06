@@ -59,9 +59,9 @@
 			this.newPasswordTextBox.Location = new System.Drawing.Point(157, 39);
 			this.newPasswordTextBox.MaxLength = 40;
 			this.newPasswordTextBox.Name = "newPasswordTextBox";
-			this.newPasswordTextBox.PasswordChar = '*';
 			this.newPasswordTextBox.Size = new System.Drawing.Size(244, 21);
 			this.newPasswordTextBox.TabIndex = 3;
+			this.newPasswordTextBox.UseSystemPasswordChar = true;
 			// 
 			// oldPasswordTextBox
 			// 
@@ -70,9 +70,9 @@
 			this.oldPasswordTextBox.Location = new System.Drawing.Point(157, 12);
 			this.oldPasswordTextBox.MaxLength = 40;
 			this.oldPasswordTextBox.Name = "oldPasswordTextBox";
-			this.oldPasswordTextBox.PasswordChar = '*';
 			this.oldPasswordTextBox.Size = new System.Drawing.Size(244, 21);
 			this.oldPasswordTextBox.TabIndex = 1;
+			this.oldPasswordTextBox.UseSystemPasswordChar = true;
 			// 
 			// oldPasswordLabel
 			// 
@@ -101,9 +101,9 @@
 			this.confirmNewPasswordTextBox.Location = new System.Drawing.Point(157, 66);
 			this.confirmNewPasswordTextBox.MaxLength = 40;
 			this.confirmNewPasswordTextBox.Name = "confirmNewPasswordTextBox";
-			this.confirmNewPasswordTextBox.PasswordChar = '*';
 			this.confirmNewPasswordTextBox.Size = new System.Drawing.Size(244, 21);
 			this.confirmNewPasswordTextBox.TabIndex = 5;
+			this.confirmNewPasswordTextBox.UseSystemPasswordChar = true;
 			// 
 			// ChangePasswordForm
 			// 
