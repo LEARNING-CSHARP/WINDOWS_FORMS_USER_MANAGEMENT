@@ -71,7 +71,8 @@ namespace MyApplication
 			}
 			else
 			{
-				if (string.Compare(confirmNewPasswordTextBox.Text, newPasswordTextBox.Text, ignoreCase: false) != 0)
+				//if (string.Compare(confirmNewPasswordTextBox.Text, newPasswordTextBox.Text, ignoreCase: false) != 0)
+				if (confirmNewPasswordTextBox.Text.ToLower() != newPasswordTextBox.Text.ToLower())
 				{
 					if (errorMessages != string.Empty)
 					{
@@ -114,7 +115,8 @@ namespace MyApplication
 					System.Windows.Forms.Application.Exit();
 				}
 
-				if (string.Compare(currentUser.Password, oldPasswordTextBox.Text, ignoreCase: false) != 0)
+				//if (string.Compare(currentUser.Password, oldPasswordTextBox.Text, ignoreCase: false) != 0)
+				if (currentUser.Password != oldPasswordTextBox.Text)
 				{
 					System.Windows.Forms.MessageBox.Show("The old password is not correct!");
 
