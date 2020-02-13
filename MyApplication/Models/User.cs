@@ -59,31 +59,29 @@
 		{
 			get
 			{
-				string result = string.Empty;
+				string result = $"Username: { Username }";
 
 				if (string.IsNullOrWhiteSpace(FullName) == false)
 				{
-					result = $"{ FullName } - ";
+					result += $" - Full Name: { FullName }";
 				}
-
-				result += $"[{ Username }]";
 
 				if (IsActive)
 				{
-					result += " [Enabled]";
+					result += " - [Enabled]";
 				}
 				else
 				{
-					result += " [Disabled]";
+					result += " - [Disabled]";
 				}
 
 				if (IsAdmin)
 				{
-					result += " [Admin]";
+					result += " - [Admin]";
 				}
 				else
 				{
-					result += " [User]";
+					result += " - [User]";
 				}
 
 				return result;

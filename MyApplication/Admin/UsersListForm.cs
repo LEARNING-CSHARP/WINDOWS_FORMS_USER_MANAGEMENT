@@ -18,6 +18,145 @@ namespace MyApplication.Admin
 			Search();
 		}
 
+		private void Search()
+		{
+			Models.DatabaseContext databaseContext = null;
+
+			try
+			{
+				databaseContext =
+					new Models.DatabaseContext();
+
+				// **************************************************
+				fullNameTextBox.Text =
+					fullNameTextBox.Text.Trim();
+
+				// تا وقتی که در داخل متن، دو فاصله وجود دارد
+				// دو فاصله را به یک فاصله تبدیل کن
+				while (fullNameTextBox.Text.Contains("  "))
+				{
+					fullNameTextBox.Text =
+						fullNameTextBox.Text.Replace("  ", " ");
+				}
+				// **************************************************
+
+				//var users; // Note: Compile Error!
+				//var users = null; // Note: Compile Error!
+
+				System.Collections.Generic.List<Models.User> users = null;
+
+				// دستور ذیل خیلی جالب نیست
+				//var users = new System.Collections.Generic.List<Models.User>();
+
+				if (fullNameTextBox.Text == string.Empty)
+				{
+					users =
+						databaseContext.Users
+						.OrderBy(current => current.FullName)
+						.ToList()
+						;
+				}
+				else
+				{
+					//users =
+					//	databaseContext.Users
+					//	.Where(current => current.FullName == fullNameTextBox.Text)
+					//	.OrderBy(current => current.FullName)
+					//	.ToList()
+					//	;
+
+					//users =
+					//	databaseContext.Users
+					//	.Where(current => string.Compare(current.FullName, fullNameTextBox.Text, true) == 0)
+					//	.OrderBy(current => current.FullName)
+					//	.ToList()
+					//	;
+
+					//users =
+					//	databaseContext.Users
+					//	.Where(current => current.FullName.ToLower() == fullNameTextBox.Text.ToLower())
+					//	.OrderBy(current => current.FullName)
+					//	.ToList()
+					//	;
+
+					//users =
+					//	databaseContext.Users
+					//	.Where(current => current.FullName.ToLower().StartsWith(fullNameTextBox.Text.ToLower()))
+					//	.OrderBy(current => current.FullName)
+					//	.ToList()
+					//	;
+
+					//users =
+					//	databaseContext.Users
+					//	.Where(current => current.FullName.ToLower().EndsWith(fullNameTextBox.Text.ToLower()))
+					//	.OrderBy(current => current.FullName)
+					//	.ToList()
+					//	;
+
+					users =
+						databaseContext.Users
+						.Where(current => current.FullName.ToLower().Contains(fullNameTextBox.Text.ToLower()))
+						.OrderBy(current => current.FullName)
+						.ToList()
+						;
+				}
+
+				// **************************************************
+				// Unbinding
+				// **************************************************
+				//usersListBox.Items.Clear();
+
+				//foreach (var item in users)
+				//{
+				//	usersListBox.Items.Add(item.Username);
+				//}
+				// **************************************************
+
+				// **************************************************
+				// Binding
+				// **************************************************
+				//usersListBox.DataSource = null;
+
+				//usersListBox.ValueMember = "Id";
+				//usersListBox.DisplayMember = "Username";
+
+				//usersListBox.ValueMember = "Id1";
+				//usersListBox.DisplayMember = "Username1";
+
+				//usersListBox.ValueMember = nameof(Models.User.Id);
+				//usersListBox.DisplayMember = nameof(Models.User.Username);
+
+				//usersListBox.ValueMember = nameof(Models.User.Id1);
+				//usersListBox.DisplayMember = nameof(Models.User.Username1);
+
+				//usersListBox.ValueMember = nameof(Models.User.Id);
+				//usersListBox.DisplayMember = nameof(Models.User.FullName);
+
+				usersListBox.ValueMember = nameof(Models.User.Id);
+				usersListBox.DisplayMember = nameof(Models.User.DisplayName);
+
+				usersListBox.DataSource = users;
+				// **************************************************
+
+				//if (users.Count == 0)
+				//{
+				//	System.Windows.Forms.MessageBox.Show("There is not any user with this full name!");
+				//}
+			}
+			catch (System.Exception ex)
+			{
+				System.Windows.Forms.MessageBox.Show($"Error: { ex.Message }");
+			}
+			finally
+			{
+				if (databaseContext != null)
+				{
+					databaseContext.Dispose();
+					databaseContext = null;
+				}
+			}
+		}
+
 		private void UsersListBox_DoubleClick(object sender, System.EventArgs e)
 		{
 			// **************************************************
@@ -118,128 +257,6 @@ namespace MyApplication.Admin
 				}
 
 				Search();
-			}
-			catch (System.Exception ex)
-			{
-				System.Windows.Forms.MessageBox.Show($"Error: { ex.Message }");
-			}
-			finally
-			{
-				if (databaseContext != null)
-				{
-					databaseContext.Dispose();
-					databaseContext = null;
-				}
-			}
-		}
-
-		private void Search()
-		{
-			Models.DatabaseContext databaseContext = null;
-
-			try
-			{
-				databaseContext =
-					new Models.DatabaseContext();
-
-				// **************************************************
-				fullNameTextBox.Text =
-					fullNameTextBox.Text.Trim();
-
-				// تا وقتی که در داخل متن، دو فاصله وجود دارد
-				// دو فاصله را به یک فاصله تبدیل کن
-				while (fullNameTextBox.Text.Contains("  "))
-				{
-					fullNameTextBox.Text =
-						fullNameTextBox.Text.Replace("  ", " ");
-				}
-				// **************************************************
-
-				//var users; // Note: Compile Error!
-				//var users = null; // Note: Compile Error!
-
-				System.Collections.Generic.List<Models.User> users = null;
-
-				// دستور ذیل خیلی جالب نیست
-				//var users = new System.Collections.Generic.List<Models.User>();
-
-				if (fullNameTextBox.Text == string.Empty)
-				{
-					users =
-						databaseContext.Users
-						.OrderBy(current => current.FullName)
-						.ToList()
-						;
-				}
-				else
-				{
-					//users =
-					//	databaseContext.Users
-					//	.Where(current => current.FullName == fullNameTextBox.Text)
-					//	.OrderBy(current => current.FullName)
-					//	.ToList()
-					//	;
-
-					//users =
-					//	databaseContext.Users
-					//	.Where(current => string.Compare(current.FullName, fullNameTextBox.Text, true) == 0)
-					//	.OrderBy(current => current.FullName)
-					//	.ToList()
-					//	;
-
-					//users =
-					//	databaseContext.Users
-					//	.Where(current => current.FullName.StartsWith(fullNameTextBox.Text))
-					//	.OrderBy(current => current.FullName)
-					//	.ToList()
-					//	;
-
-					//users =
-					//	databaseContext.Users
-					//	.Where(current => current.FullName.EndsWith(fullNameTextBox.Text))
-					//	.OrderBy(current => current.FullName)
-					//	.ToList()
-					//	;
-
-					users =
-						databaseContext.Users
-						.Where(current => current.FullName.Contains(fullNameTextBox.Text))
-						.OrderBy(current => current.FullName)
-						.ToList()
-						;
-				}
-
-				// **************************************************
-				// Unbinding
-
-				//usersListBox.Items.Clear();
-
-				//foreach (var item in users)
-				//{
-				//	usersListBox.Items.Add(item.Username);
-				//}
-				// **************************************************
-
-				// **************************************************
-				// Binding
-				//usersListBox.DataSource = null;
-
-				//usersListBox.ValueMember = "Id";
-				usersListBox.ValueMember = nameof(Models.User.Id);
-
-				//usersListBox.DisplayMember = "Username";
-				//usersListBox.DisplayMember = "Username1";
-				//usersListBox.DisplayMember = nameof(Models.User.Username);
-				//usersListBox.DisplayMember = nameof(Models.User.Username1);
-				usersListBox.DisplayMember = nameof(Models.User.DisplayName);
-
-				usersListBox.DataSource = users;
-				// **************************************************
-
-				//if (users.Count == 0)
-				//{
-				//	System.Windows.Forms.MessageBox.Show("There is not any user with this full name!");
-				//}
 			}
 			catch (System.Exception ex)
 			{
