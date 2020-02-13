@@ -245,12 +245,9 @@ namespace MyApplication.Admin
 						{
 							if (foundedUser.IsAdmin == false)
 							{
-								//if (foundedUser.Id != Infrastructure.Utility.AuthenticatedUser.Id)
-								//{
 								databaseContext.Users.Remove(foundedUser);
 
 								databaseContext.SaveChanges();
-								//}
 							}
 						}
 					}

@@ -34,7 +34,7 @@
 			this.fullNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.fullNameTextBox.Location = new System.Drawing.Point(127, 18);
-			this.fullNameTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.fullNameTextBox.Margin = new System.Windows.Forms.Padding(5);
 			this.fullNameTextBox.Name = "fullNameTextBox";
 			this.fullNameTextBox.Size = new System.Drawing.Size(784, 28);
 			this.fullNameTextBox.TabIndex = 1;
@@ -53,7 +53,7 @@
 			// searchButton
 			// 
 			this.searchButton.Location = new System.Drawing.Point(127, 60);
-			this.searchButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.searchButton.Margin = new System.Windows.Forms.Padding(5);
 			this.searchButton.Name = "searchButton";
 			this.searchButton.Size = new System.Drawing.Size(118, 35);
 			this.searchButton.TabIndex = 2;
@@ -69,18 +69,18 @@
 			this.usersListBox.FormattingEnabled = true;
 			this.usersListBox.ItemHeight = 20;
 			this.usersListBox.Location = new System.Drawing.Point(19, 105);
-			this.usersListBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.usersListBox.Margin = new System.Windows.Forms.Padding(5);
 			this.usersListBox.Name = "usersListBox";
 			this.usersListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-			this.usersListBox.Size = new System.Drawing.Size(893, 184);
+			this.usersListBox.Size = new System.Drawing.Size(893, 264);
 			this.usersListBox.TabIndex = 3;
 			this.usersListBox.DoubleClick += new System.EventHandler(this.UsersListBox_DoubleClick);
 			// 
 			// deleteUsersButton
 			// 
 			this.deleteUsersButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.deleteUsersButton.Location = new System.Drawing.Point(19, 302);
-			this.deleteUsersButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.deleteUsersButton.Location = new System.Drawing.Point(19, 388);
+			this.deleteUsersButton.Margin = new System.Windows.Forms.Padding(5);
 			this.deleteUsersButton.Name = "deleteUsersButton";
 			this.deleteUsersButton.Size = new System.Drawing.Size(226, 35);
 			this.deleteUsersButton.TabIndex = 4;
@@ -93,7 +93,7 @@
 			this.AcceptButton = this.searchButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(933, 355);
+			this.ClientSize = new System.Drawing.Size(933, 441);
 			this.Controls.Add(this.deleteUsersButton);
 			this.Controls.Add(this.usersListBox);
 			this.Controls.Add(this.searchButton);

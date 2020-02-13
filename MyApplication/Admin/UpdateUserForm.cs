@@ -14,6 +14,12 @@ namespace MyApplication.Admin
 
 		private void UpdateUserForm_Load(object sender, System.EventArgs e)
 		{
+			if (Infrastructure.Utility.AuthenticatedUser.Id == SelectedUser.Id)
+			{
+				isAdminCheckBox.Enabled = false;
+				isActiveCheckBox.Enabled = false;
+			}
+
 			Models.DatabaseContext databaseContext = null;
 
 			try
@@ -85,6 +91,13 @@ namespace MyApplication.Admin
 				foundedUser.Description = descriptionTextBox.Text;
 
 				databaseContext.SaveChanges();
+
+				if (Infrastructure.Utility.AuthenticatedUser.Id == SelectedUser.Id)
+				{
+					Infrastructure.Utility.AuthenticatedUser = foundedUser;
+
+					Infrastructure.Utility.MainForm.ResetForm();
+				}
 
 				Close();
 			}
