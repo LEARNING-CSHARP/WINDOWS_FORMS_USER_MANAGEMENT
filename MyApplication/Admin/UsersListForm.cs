@@ -50,6 +50,12 @@ namespace MyApplication.Admin
 
 				if (fullNameTextBox.Text == string.Empty)
 				{
+					//var users =
+					//	databaseContext.Users
+					//	.OrderBy(current => current.FullName)
+					//	.ToList()
+					//	;
+
 					users =
 						databaseContext.Users
 						.OrderBy(current => current.FullName)
@@ -123,8 +129,8 @@ namespace MyApplication.Admin
 				//usersListBox.ValueMember = "Id1";
 				//usersListBox.DisplayMember = "Username1";
 
-				//usersListBox.ValueMember = nameof(Models.User.Id);
-				//usersListBox.DisplayMember = nameof(Models.User.Username);
+				//usersListBox.ValueMember = nameof(Models.User.Id); // "Id"
+				//usersListBox.DisplayMember = nameof(Models.User.Username); // "Username"
 
 				//usersListBox.ValueMember = nameof(Models.User.Id1);
 				//usersListBox.DisplayMember = nameof(Models.User.Username1);
@@ -159,6 +165,13 @@ namespace MyApplication.Admin
 
 		private void UsersListBox_DoubleClick(object sender, System.EventArgs e)
 		{
+			if(usersListBox.SelectedItem == null)
+			{
+				System.Windows.Forms.MessageBox.Show("You did not specify user for editing!");
+
+				return;
+			}
+
 			// **************************************************
 			// روش احمقانه
 			// **************************************************

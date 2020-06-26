@@ -14,6 +14,8 @@ namespace MyApplication.Admin
 
 		private void UpdateUserForm_Load(object sender, System.EventArgs e)
 		{
+			// یعنی خود کاربر ادمین که لاگین کرده‌است
+			// نتواند خودش را غیر فعال کرده و یا دسترسی خود را از ادمین خارج نماید
 			if (Infrastructure.Utility.AuthenticatedUser.Id == SelectedUser.Id)
 			{
 				isAdminCheckBox.Enabled = false;
