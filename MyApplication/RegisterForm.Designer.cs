@@ -65,7 +65,7 @@
 			this.passwordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.passwordTextBox.Location = new System.Drawing.Point(83, 39);
-			this.passwordTextBox.MaxLength = 40;
+			this.passwordTextBox.MaxLength = 20;
 			this.passwordTextBox.Name = "passwordTextBox";
 			this.passwordTextBox.Size = new System.Drawing.Size(317, 21);
 			this.passwordTextBox.TabIndex = 3;

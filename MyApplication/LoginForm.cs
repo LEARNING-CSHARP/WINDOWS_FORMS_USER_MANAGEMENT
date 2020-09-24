@@ -22,6 +22,8 @@ namespace MyApplication
 			if (string.IsNullOrWhiteSpace(usernameTextBox.Text) ||
 				string.IsNullOrWhiteSpace(passwordTextBox.Text))
 			{
+				System.Windows.Forms.MessageBox.Show("Username and Password are requied!");
+
 				//usernameTextBox.Text =
 				//	usernameTextBox.Text.Trim();
 
@@ -33,8 +35,6 @@ namespace MyApplication
 
 				passwordTextBox.Text =
 					passwordTextBox.Text.Replace(" ", string.Empty);
-
-				System.Windows.Forms.MessageBox.Show("Username and Password are requied!");
 
 				if (usernameTextBox.Text == string.Empty)
 				{

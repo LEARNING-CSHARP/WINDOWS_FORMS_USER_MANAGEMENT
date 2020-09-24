@@ -31,7 +31,10 @@
 			(AllowEmptyStrings = false)]
 
 		[System.ComponentModel.DataAnnotations.StringLength
-			(maximumLength: 40, MinimumLength = 8)]
+			(maximumLength: 20, MinimumLength = 8)]
+
+		//[System.ComponentModel.DataAnnotations.StringLength
+		//	(maximumLength: 40, MinimumLength = 40)]
 
 		[System.ComponentModel.Browsable(browsable: false)]
 		public string Password { get; set; }

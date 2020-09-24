@@ -57,7 +57,7 @@
 			this.newPasswordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.newPasswordTextBox.Location = new System.Drawing.Point(157, 39);
-			this.newPasswordTextBox.MaxLength = 40;
+			this.newPasswordTextBox.MaxLength = 20;
 			this.newPasswordTextBox.Name = "newPasswordTextBox";
 			this.newPasswordTextBox.Size = new System.Drawing.Size(244, 21);
 			this.newPasswordTextBox.TabIndex = 3;
@@ -68,7 +68,7 @@
 			this.oldPasswordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.oldPasswordTextBox.Location = new System.Drawing.Point(157, 12);
-			this.oldPasswordTextBox.MaxLength = 40;
+			this.oldPasswordTextBox.MaxLength = 20;
 			this.oldPasswordTextBox.Name = "oldPasswordTextBox";
 			this.oldPasswordTextBox.Size = new System.Drawing.Size(244, 21);
 			this.oldPasswordTextBox.TabIndex = 1;
@@ -99,7 +99,7 @@
 			this.confirmNewPasswordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.confirmNewPasswordTextBox.Location = new System.Drawing.Point(157, 66);
-			this.confirmNewPasswordTextBox.MaxLength = 40;
+			this.confirmNewPasswordTextBox.MaxLength = 20;
 			this.confirmNewPasswordTextBox.Name = "confirmNewPasswordTextBox";
 			this.confirmNewPasswordTextBox.Size = new System.Drawing.Size(244, 21);
 			this.confirmNewPasswordTextBox.TabIndex = 5;
