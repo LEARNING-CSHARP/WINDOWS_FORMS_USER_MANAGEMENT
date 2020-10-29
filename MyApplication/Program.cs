@@ -96,7 +96,7 @@ namespace MyApplication
 			//		startupForm.Dispose();
 			//	}
 
-			//	startupForm = null;
+			//	//startupForm = null;
 			//}
 			#endregion /Solution (1)
 			// **************************************************

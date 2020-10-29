@@ -39,7 +39,8 @@ namespace MyApplication
 			{
 				if (errorMessages != string.Empty)
 				{
-					errorMessages += System.Environment.NewLine;
+					errorMessages +=
+						System.Environment.NewLine;
 				}
 
 				errorMessages +=
@@ -51,7 +52,8 @@ namespace MyApplication
 				{
 					if (errorMessages != string.Empty)
 					{
-						errorMessages += System.Environment.NewLine;
+						errorMessages +=
+							System.Environment.NewLine;
 					}
 
 					errorMessages +=
@@ -63,7 +65,8 @@ namespace MyApplication
 			{
 				if (errorMessages != string.Empty)
 				{
-					errorMessages += System.Environment.NewLine;
+					errorMessages +=
+						System.Environment.NewLine;
 				}
 
 				errorMessages +=
@@ -71,12 +74,13 @@ namespace MyApplication
 			}
 			else
 			{
-				//if (string.Compare(confirmNewPasswordTextBox.Text, newPasswordTextBox.Text, ignoreCase: false) != 0)
-				if (confirmNewPasswordTextBox.Text != newPasswordTextBox.Text)
+				//if (confirmNewPasswordTextBox.Text != newPasswordTextBox.Text)
+				if (string.Compare(confirmNewPasswordTextBox.Text, newPasswordTextBox.Text, ignoreCase: false) != 0)
 				{
 					if (errorMessages != string.Empty)
 					{
-						errorMessages += System.Environment.NewLine;
+						errorMessages +=
+							System.Environment.NewLine;
 					}
 
 					errorMessages +=
@@ -110,13 +114,20 @@ namespace MyApplication
 					.Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
 					.FirstOrDefault();
 
+				// **************************************************
 				if (currentUser == null)
 				{
 					System.Windows.Forms.Application.Exit();
 				}
 
-				//if (string.Compare(currentUser.Password, oldPasswordTextBox.Text, ignoreCase: false) != 0)
-				if (currentUser.Password != oldPasswordTextBox.Text)
+				if (currentUser.IsActive == false)
+				{
+					System.Windows.Forms.Application.Exit();
+				}
+				// **************************************************
+
+				//if (currentUser.Password != oldPasswordTextBox.Text)
+				if (string.Compare(currentUser.Password, oldPasswordTextBox.Text, ignoreCase: false) != 0)
 				{
 					System.Windows.Forms.MessageBox.Show("The old password is not correct!");
 

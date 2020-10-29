@@ -28,10 +28,17 @@ namespace MyApplication
 					.Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
 					.FirstOrDefault();
 
+				// **************************************************
 				if (currentUser == null)
 				{
 					System.Windows.Forms.Application.Exit();
 				}
+
+				if (currentUser.IsActive == false)
+				{
+					System.Windows.Forms.Application.Exit();
+				}
+				// **************************************************
 
 				fullNameTextBox.Text = currentUser.FullName;
 				descriptionTextBox.Text = currentUser.Description;
@@ -64,10 +71,17 @@ namespace MyApplication
 					.Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
 					.FirstOrDefault();
 
+				// **************************************************
 				if (currentUser == null)
 				{
 					System.Windows.Forms.Application.Exit();
 				}
+
+				if (currentUser.IsActive == false)
+				{
+					System.Windows.Forms.Application.Exit();
+				}
+				// **************************************************
 
 				currentUser.FullName = fullNameTextBox.Text;
 				currentUser.Description = descriptionTextBox.Text;
