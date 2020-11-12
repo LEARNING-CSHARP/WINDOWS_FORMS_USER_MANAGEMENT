@@ -101,9 +101,9 @@
 			this.saveAndCloseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.saveAndCloseButton.Location = new System.Drawing.Point(89, 230);
 			this.saveAndCloseButton.Name = "saveAndCloseButton";
-			this.saveAndCloseButton.Size = new System.Drawing.Size(141, 23);
+			this.saveAndCloseButton.Size = new System.Drawing.Size(62, 23);
 			this.saveAndCloseButton.TabIndex = 6;
-			this.saveAndCloseButton.Text = "&Save And Close";
+			this.saveAndCloseButton.Text = "&Save";
 			this.saveAndCloseButton.UseVisualStyleBackColor = true;
 			this.saveAndCloseButton.Click += new System.EventHandler(this.SaveButton_Click);
 			// 

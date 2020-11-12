@@ -137,5 +137,30 @@ namespace Infrastructure
 		// **************************************************
 		// /Solution (3)
 		// **************************************************
+
+		public static string FixText(string text)
+		{
+			if (text == null)
+			{
+				return string.Empty;
+			}
+
+			text = text.Trim();
+
+			if (text == string.Empty)
+			{
+				return string.Empty;
+			}
+
+			// تا وقتی که در داخل متن، دو فاصله وجود دارد
+			// دو فاصله را به یک فاصله تبدیل کن
+			while (text.Contains("  "))
+			{
+				text =
+					text.Replace("  ", " ");
+			}
+
+			return text;
+		}
 	}
 }

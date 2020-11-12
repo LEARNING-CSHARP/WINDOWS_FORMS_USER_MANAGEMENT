@@ -27,18 +27,8 @@ namespace MyApplication.Admin
 				databaseContext =
 					new Models.DatabaseContext();
 
-				// **************************************************
 				fullNameTextBox.Text =
-					fullNameTextBox.Text.Trim();
-
-				// تا وقتی که در داخل متن، دو فاصله وجود دارد
-				// دو فاصله را به یک فاصله تبدیل کن
-				while (fullNameTextBox.Text.Contains("  "))
-				{
-					fullNameTextBox.Text =
-						fullNameTextBox.Text.Replace("  ", " ");
-				}
-				// **************************************************
+					Infrastructure.Utility.FixText(fullNameTextBox.Text);
 
 				//var users; // Note: Compile Error!
 				//var users = null; // Note: Compile Error!
@@ -146,7 +136,7 @@ namespace MyApplication.Admin
 
 				//if (users.Count == 0)
 				//{
-				//	System.Windows.Forms.MessageBox.Show("There is not any user with this full name!");
+				//	System.Windows.Forms.MessageBox.Show("There is not any user for displaying!");
 				//}
 			}
 			catch (System.Exception ex)
@@ -165,7 +155,7 @@ namespace MyApplication.Admin
 
 		private void UsersListBox_DoubleClick(object sender, System.EventArgs e)
 		{
-			if(usersListBox.SelectedItem == null)
+			if (usersListBox.SelectedItem == null)
 			{
 				System.Windows.Forms.MessageBox.Show("You did not specify user for editing!");
 
@@ -177,6 +167,18 @@ namespace MyApplication.Admin
 			// **************************************************
 			//Models.User selectedUser =
 			//	(Models.User)usersListBox.SelectedItem;
+			// **************************************************
+
+			// **************************************************
+			// روش یه کم منطقی
+			// **************************************************
+			//Models.User selectedUser = null;
+
+			//if (usersListBox.SelectedItem is Models.User)
+			//{
+			//	selectedUser =
+			//		(Models.User)usersListBox.SelectedItem;
+			//}
 			// **************************************************
 
 			// **************************************************

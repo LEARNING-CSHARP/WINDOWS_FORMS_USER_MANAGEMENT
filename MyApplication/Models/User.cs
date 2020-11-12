@@ -62,11 +62,13 @@
 		{
 			get
 			{
-				string result = $"Username: { Username }";
+				string result =
+					$"Username: { Username }";
 
 				if (string.IsNullOrWhiteSpace(FullName) == false)
 				{
-					result += $" - Full Name: { FullName }";
+					result +=
+						$" - Full Name: { FullName }";
 				}
 
 				if (IsActive)
