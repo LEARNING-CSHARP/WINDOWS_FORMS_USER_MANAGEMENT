@@ -9,6 +9,10 @@ namespace MyApplication.Admin
 			InitializeComponent();
 		}
 
+		private void NewUsersListForm_Load(object sender, System.EventArgs e)
+		{
+		}
+
 		private void SearchButton_Click(object sender, System.EventArgs e)
 		{
 			Search();
