@@ -49,7 +49,7 @@ namespace MyApplication
 
 				if (hasAnyUser == false)
 				{
-					Models.User adminUser = new Models.User
+					var adminUser = new Models.User
 					{
 						IsAdmin = true,
 						IsActive = true,
@@ -84,19 +84,30 @@ namespace MyApplication
 
 			// **************************************************
 			#region Solution (1)
-			////Infrastructure.BaseForm startupForm = new LoginForm();
-			//Infrastructure.BaseForm startupForm = new RegisterForm();
+			//LoginForm startupForm = null;
 
-			//System.Windows.Forms.Application.Run(startupForm);
-
-			//if (startupForm != null)
+			//try
 			//{
-			//	if (startupForm.IsDisposed == false)
-			//	{
-			//		startupForm.Dispose();
-			//	}
+			//	startupForm =
+			//		new LoginForm();
 
-			//	//startupForm = null;
+			//	System.Windows.Forms.Application.Run(startupForm);
+			//}
+			//catch (System.Exception ex)
+			//{
+			//	System.Windows.Forms.MessageBox.Show($"Error: { ex.Message }");
+			//}
+			//finally
+			//{
+			//	if (startupForm != null)
+			//	{
+			//		if (startupForm.IsDisposed == false)
+			//		{
+			//			startupForm.Dispose();
+			//		}
+
+			//		//startupForm = null;
+			//	}
 			//}
 			#endregion /Solution (1)
 			// **************************************************
@@ -105,6 +116,10 @@ namespace MyApplication
 			#region Solution (2)
 			System.Windows.Forms.Application.Run(Infrastructure.Utility.LoginForm);
 			//System.Windows.Forms.Application.Run(Infrastructure.Utility.RegisterForm);
+
+			Infrastructure.Utility.DisposeMainForm();
+			Infrastructure.Utility.DisposeLoginForm();
+			Infrastructure.Utility.DisposeRegisterForm();
 			#endregion /Solution (2)
 			// **************************************************
 		}

@@ -1,0 +1,75 @@
+﻿					// **************************************************
+					//Models.User user = new Models.User();
+
+					//user.IsAdmin = true;
+					//user.IsActive = true;
+					//user.Username = "Dariush";
+					//user.FullName = "Dariush Tasdighi";
+					// **************************************************
+
+					// **************************************************
+					//Models.User user = new();
+
+					//user.IsAdmin = true;
+					//user.IsActive = true;
+					//user.Username = "Dariush";
+					//user.FullName = "Dariush Tasdighi";
+					// **************************************************
+
+					// **************************************************
+					//var user = new Models.User();
+
+					//user.IsAdmin = true;
+					//user.IsActive = true;
+					//user.Username = "Dariush";
+					//user.FullName = "Dariush Tasdighi";
+					// **************************************************
+
+					// **************************************************
+					//int x;
+					//x = 10;
+
+					//string y;
+					//y = "Dariush";
+
+					////var z;
+
+					//var t = 10;
+					//var m = "Dariush";
+					// **************************************************
+
+					// **************************************************
+					//var user =
+					//	new Models.User()
+					//	{ IsAdmin = true, IsActive = true, Username = "Dariush", FullName = "Dariush Tasdighi" };
+					// **************************************************
+
+					// **************************************************
+					//var user = new Models.User()
+					//{
+					//	IsAdmin = true,
+					//	IsActive = true,
+					//	Username = "Dariush",
+					//	FullName = "Dariush Tasdighi"
+					//};
+					// **************************************************
+
+					// **************************************************
+					//var user = new Models.User
+					//{
+					//	IsAdmin = true,
+					//	IsActive = true,
+					//	Username = "Dariush",
+					//	FullName = "Dariush Tasdighi"
+					//};
+					// **************************************************
+
+					// **************************************************
+					var user = new Models.User
+					{
+						IsAdmin = true,
+						IsActive = true,
+						Username = "Dariush",
+						FullName = "Dariush Tasdighi",
+					};
+					// **************************************************

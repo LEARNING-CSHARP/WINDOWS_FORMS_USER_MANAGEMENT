@@ -47,7 +47,7 @@
 			// 
 			this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.exitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-			this.exitButton.Location = new System.Drawing.Point(326, 67);
+			this.exitButton.Location = new System.Drawing.Point(326, 66);
 			this.exitButton.Name = "exitButton";
 			this.exitButton.Size = new System.Drawing.Size(75, 23);
 			this.exitButton.TabIndex = 7;
@@ -58,7 +58,7 @@
 			// registerButton
 			// 
 			this.registerButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.registerButton.Location = new System.Drawing.Point(245, 67);
+			this.registerButton.Location = new System.Drawing.Point(245, 66);
 			this.registerButton.Name = "registerButton";
 			this.registerButton.Size = new System.Drawing.Size(75, 23);
 			this.registerButton.TabIndex = 6;

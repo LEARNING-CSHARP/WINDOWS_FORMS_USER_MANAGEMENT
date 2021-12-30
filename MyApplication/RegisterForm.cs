@@ -99,17 +99,18 @@ namespace MyApplication
 				databaseContext =
 					new Models.DatabaseContext();
 
-				//Models.User user =
+				//var user =
 				//	databaseContext.Users
 				//	.Where(current => current.Username == usernameTextBox.Text)
 				//	.FirstOrDefault();
 
-				//Models.User user =
+				// کار نمی‌کند EF Core در
+				//var user =
 				//	databaseContext.Users
 				//	.Where(current => string.Compare(current.Username, usernameTextBox.Text, true) == 0)
 				//	.FirstOrDefault();
 
-				Models.User user =
+				var user =
 					databaseContext.Users
 					.Where(current => current.Username.ToLower() == usernameTextBox.Text.ToLower())
 					.FirstOrDefault();

@@ -5,6 +5,11 @@ namespace Infrastructure
 	{
 		static Utility()
 		{
+			// Solution (3)
+			//MainForm = new MyApplication.MainForm();
+			//LoginForm = new MyApplication.LoginForm();
+			//RegisterForm = new MyApplication.RegisterForm();
+			// /Solution (3)
 		}
 
 		// **************************************************
@@ -24,13 +29,9 @@ namespace Infrastructure
 		// **************************************************
 		// Solution (1)
 		// **************************************************
-
-		// **************************************************
 		//public static MyApplication.MainForm MainForm;
 		//public static MyApplication.LoginForm LoginForm;
 		//public static MyApplication.RegisterForm RegisterForm;
-		// **************************************************
-
 		// **************************************************
 		// /Solution (1)
 		// **************************************************
@@ -38,13 +39,9 @@ namespace Infrastructure
 		// **************************************************
 		// Solution (2)
 		// **************************************************
-
-		// **************************************************
 		//public static MyApplication.MainForm MainForm = new MyApplication.MainForm();
 		//public static MyApplication.LoginForm LoginForm = new MyApplication.LoginForm();
 		//public static MyApplication.RegisterForm RegisterForm = new MyApplication.RegisterForm();
-		// **************************************************
-
 		// **************************************************
 		// /Solution (2)
 		// **************************************************
@@ -52,34 +49,15 @@ namespace Infrastructure
 		// **************************************************
 		// Solution (3)
 		// **************************************************
-
+		//public static MyApplication.MainForm MainForm;
+		//public static MyApplication.LoginForm LoginForm;
+		//public static MyApplication.RegisterForm RegisterForm;
 		// **************************************************
-		// **************************************************
-		// **************************************************
-		private static MyApplication.MainForm mainForm;
-		// **************************************************
-
-		// **************************************************
-		/// <summary>
-		/// Lazy Loading = Lazy Initialization
-		/// </summary>
-		public static MyApplication.MainForm MainForm
-		{
-			get
-			{
-				if (mainForm == null || mainForm.IsDisposed)
-				{
-					mainForm =
-						new MyApplication.MainForm();
-				}
-
-				return mainForm;
-			}
-		}
-		// **************************************************
-		// **************************************************
+		// /Solution (3)
 		// **************************************************
 
+		// **************************************************
+		// Solution (4)
 		// **************************************************
 		// **************************************************
 		// **************************************************
@@ -101,6 +79,21 @@ namespace Infrastructure
 				}
 
 				return loginForm;
+			}
+		}
+		// **************************************************
+
+		// **************************************************
+		public static void DisposeLoginForm()
+		{
+			if (loginForm != null)
+			{
+				if (loginForm.IsDisposed == false)
+				{
+					loginForm.Dispose();
+				}
+
+				loginForm = null;
 			}
 		}
 		// **************************************************
@@ -131,11 +124,66 @@ namespace Infrastructure
 			}
 		}
 		// **************************************************
+
+		// **************************************************
+		public static void DisposeRegisterForm()
+		{
+			if (registerForm != null)
+			{
+				if (registerForm.IsDisposed == false)
+				{
+					registerForm.Dispose();
+				}
+
+				registerForm = null;
+			}
+		}
+		// **************************************************
 		// **************************************************
 		// **************************************************
 
 		// **************************************************
-		// /Solution (3)
+		// **************************************************
+		// **************************************************
+		private static MyApplication.MainForm mainForm;
+		// **************************************************
+
+		// **************************************************
+		/// <summary>
+		/// Lazy Loading = Lazy Initialization
+		/// </summary>
+		public static MyApplication.MainForm MainForm
+		{
+			get
+			{
+				if (mainForm == null || mainForm.IsDisposed)
+				{
+					mainForm =
+						new MyApplication.MainForm();
+				}
+
+				return mainForm;
+			}
+		}
+		// **************************************************
+
+		// **************************************************
+		public static void DisposeMainForm()
+		{
+			if (mainForm != null)
+			{
+				if (mainForm.IsDisposed == false)
+				{
+					mainForm.Dispose();
+				}
+
+				mainForm = null;
+			}
+		}
+		// **************************************************
+		// **************************************************
+		// **************************************************
+		// /Solution (4)
 		// **************************************************
 
 		public static string FixText(string text)
