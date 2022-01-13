@@ -171,12 +171,12 @@ namespace MyApplication
 
 		public void ResetForm()
 		{
-			Infrastructure.Utility.AuthenticatedUser = null;
-
 			passwordTextBox.Text = string.Empty;
 			usernameTextBox.Text = string.Empty;
 
 			usernameTextBox.Focus();
+
+			Infrastructure.Utility.AuthenticatedUser = null;
 		}
 
 		private void RegisterButton_Click(object sender, System.EventArgs e)

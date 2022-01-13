@@ -38,7 +38,7 @@ namespace MyApplication.Admin
 				// دستور ذیل خیلی جالب نیست
 				//var users = new System.Collections.Generic.List<Models.User>();
 
-				if (fullNameTextBox.Text == string.Empty)
+				if (fullNameTextBox.Text == null)
 				{
 					//var users =
 					//	databaseContext.Users

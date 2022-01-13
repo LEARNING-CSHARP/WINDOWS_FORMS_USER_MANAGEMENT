@@ -75,7 +75,8 @@ namespace MyApplication
 			else
 			{
 				//if (confirmNewPasswordTextBox.Text != newPasswordTextBox.Text)
-				if (string.Compare(confirmNewPasswordTextBox.Text, newPasswordTextBox.Text, ignoreCase: false) != 0)
+				if (string.Compare(confirmNewPasswordTextBox.Text,
+					newPasswordTextBox.Text, ignoreCase: false) != 0)
 				{
 					if (errorMessages != string.Empty)
 					{
@@ -109,7 +110,7 @@ namespace MyApplication
 				databaseContext =
 					new Models.DatabaseContext();
 
-				Models.User currentUser =
+				var currentUser =
 					databaseContext.Users
 					.Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
 					.FirstOrDefault();

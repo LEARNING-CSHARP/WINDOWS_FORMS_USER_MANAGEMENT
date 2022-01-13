@@ -12,8 +12,11 @@ namespace MyApplication
 		private void UpdateProfileForm_Load(object sender, System.EventArgs e)
 		{
 			// **************************************************
-			//fullNameTextBox.Text = Infrastructure.Utility.AuthenticatedUser.FullName;
-			//descriptionTextBox.Text = Infrastructure.Utility.AuthenticatedUser.Description;
+			//fullNameTextBox.Text =
+			//	Infrastructure.Utility.AuthenticatedUser.FullName;
+
+			//descriptionTextBox.Text =
+			//	Infrastructure.Utility.AuthenticatedUser.Description;
 			// **************************************************
 
 			Models.DatabaseContext databaseContext = null;
@@ -23,7 +26,7 @@ namespace MyApplication
 				databaseContext =
 					new Models.DatabaseContext();
 
-				Models.User currentUser =
+				var currentUser =
 					databaseContext.Users
 					.Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
 					.FirstOrDefault();
@@ -66,7 +69,7 @@ namespace MyApplication
 				databaseContext =
 					new Models.DatabaseContext();
 
-				Models.User currentUser =
+				var currentUser =
 					databaseContext.Users
 					.Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
 					.FirstOrDefault();
@@ -89,28 +92,9 @@ namespace MyApplication
 				databaseContext.SaveChanges();
 
 				// **************************************************
-				// **************************************************
-				// **************************************************
 				Infrastructure.Utility.AuthenticatedUser = currentUser;
-				// **************************************************
 
-				// **************************************************
-				//((MainForm)this.MdiParent).ResetForm();
-				// **************************************************
-
-				// **************************************************
-				//MainForm mainForm = MdiParent as MainForm;
-
-				//if (mainForm != null)
-				//{
-				//	mainForm.ResetForm();
-				//}
-				// **************************************************
-
-				// **************************************************
 				Infrastructure.Utility.MainForm.ResetForm();
-				// **************************************************
-				// **************************************************
 				// **************************************************
 
 				System.Windows.Forms.MessageBox

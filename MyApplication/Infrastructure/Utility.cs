@@ -190,14 +190,15 @@ namespace Infrastructure
 		{
 			if (text == null)
 			{
-				return string.Empty;
+				return null;
 			}
 
-			text = text.Trim();
+			text =
+				text.Trim();
 
 			if (text == string.Empty)
 			{
-				return string.Empty;
+				return null;
 			}
 
 			// تا وقتی که در داخل متن، دو فاصله وجود دارد
