@@ -203,6 +203,7 @@ namespace MyApplication
 
 			// **************************************************
 			Hide();
+			//Infrastructure.Utility.LoginForm.Hide();
 
 			Infrastructure.Utility.RegisterForm.Show();
 			// **************************************************

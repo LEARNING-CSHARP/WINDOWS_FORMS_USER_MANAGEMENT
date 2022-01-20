@@ -62,8 +62,11 @@
 		{
 			get
 			{
+				//string result =
+				//	$"Username: { Username }";
+
 				string result =
-					$"Username: { Username }";
+					$"{nameof(Username)}: { Username }";
 
 				if (string.IsNullOrWhiteSpace(FullName) == false)
 				{

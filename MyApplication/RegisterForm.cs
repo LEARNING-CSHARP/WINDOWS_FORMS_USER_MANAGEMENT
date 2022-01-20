@@ -198,6 +198,7 @@ namespace MyApplication
 		private void LoginButton_Click(object sender, System.EventArgs e)
 		{
 			Hide();
+			//Infrastructure.Utility.RegisterForm.Hide();
 
 			Infrastructure.Utility.LoginForm.Show();
 		}

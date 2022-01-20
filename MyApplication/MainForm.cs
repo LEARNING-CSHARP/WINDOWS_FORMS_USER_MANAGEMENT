@@ -173,11 +173,12 @@
 
 		private void LogoutToolStripMenuItem_Click(object sender, System.EventArgs e)
 		{
-			Infrastructure.Utility.MainForm.Hide();
-
-			Infrastructure.Utility.LoginForm.ResetForm();
+			Hide();
+			//Infrastructure.Utility.MainForm.Hide();
 
 			Infrastructure.Utility.LoginForm.Show();
+
+			Infrastructure.Utility.LoginForm.ResetForm();
 		}
 
 		private void ExitToolStripMenuItem_Click(object sender, System.EventArgs e)

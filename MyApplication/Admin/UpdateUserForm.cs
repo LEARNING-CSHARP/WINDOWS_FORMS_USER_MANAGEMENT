@@ -29,7 +29,7 @@ namespace MyApplication.Admin
 				databaseContext =
 					new Models.DatabaseContext();
 
-				Models.User foundedUser =
+				var foundedUser =
 					databaseContext.Users
 					.Where(current => current.Id == SelectedUser.Id)
 					//.Where(current => current.Id == SelectedUserId)
@@ -37,7 +37,8 @@ namespace MyApplication.Admin
 
 				if (foundedUser == null)
 				{
-					System.Windows.Forms.MessageBox.Show("There is no such a user anymore!");
+					System.Windows.Forms.MessageBox
+						.Show("There is no such a user anymore!");
 
 					Close();
 				}
@@ -81,7 +82,8 @@ namespace MyApplication.Admin
 
 				if (foundedUser == null)
 				{
-					System.Windows.Forms.MessageBox.Show("There is no such a user anymore!");
+					System.Windows.Forms.MessageBox
+						.Show("There is no such a user anymore!");
 
 					Close();
 				}

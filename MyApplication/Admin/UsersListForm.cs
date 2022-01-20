@@ -27,8 +27,11 @@ namespace MyApplication.Admin
 				databaseContext =
 					new Models.DatabaseContext();
 
-				fullNameTextBox.Text =
-					Infrastructure.Utility.FixText(fullNameTextBox.Text);
+				string fullName =
+					fullNameTextBox.Text;
+
+				fullName =
+					Infrastructure.Utility.FixText(fullName);
 
 				//var users; // Note: Compile Error!
 				//var users = null; // Note: Compile Error!
@@ -38,7 +41,7 @@ namespace MyApplication.Admin
 				// دستور ذیل خیلی جالب نیست
 				//var users = new System.Collections.Generic.List<Models.User>();
 
-				if (fullNameTextBox.Text == null)
+				if (fullName == null)
 				{
 					//var users =
 					//	databaseContext.Users
@@ -56,42 +59,42 @@ namespace MyApplication.Admin
 				{
 					//users =
 					//	databaseContext.Users
-					//	.Where(current => current.FullName == fullNameTextBox.Text)
+					//	.Where(current => current.FullName == fullName)
 					//	.OrderBy(current => current.FullName)
 					//	.ToList()
 					//	;
 
 					//users =
 					//	databaseContext.Users
-					//	.Where(current => string.Compare(current.FullName, fullNameTextBox.Text, true) == 0)
+					//	.Where(current => string.Compare(current.FullName, fullName, true) == 0)
 					//	.OrderBy(current => current.FullName)
 					//	.ToList()
 					//	;
 
 					//users =
 					//	databaseContext.Users
-					//	.Where(current => current.FullName.ToLower() == fullNameTextBox.Text.ToLower())
+					//	.Where(current => current.FullName.ToLower() == fullName.ToLower())
 					//	.OrderBy(current => current.FullName)
 					//	.ToList()
 					//	;
 
 					//users =
 					//	databaseContext.Users
-					//	.Where(current => current.FullName.ToLower().StartsWith(fullNameTextBox.Text.ToLower()))
+					//	.Where(current => current.FullName.ToLower().StartsWith(fullName.ToLower()))
 					//	.OrderBy(current => current.FullName)
 					//	.ToList()
 					//	;
 
 					//users =
 					//	databaseContext.Users
-					//	.Where(current => current.FullName.ToLower().EndsWith(fullNameTextBox.Text.ToLower()))
+					//	.Where(current => current.FullName.ToLower().EndsWith(fullName.ToLower()))
 					//	.OrderBy(current => current.FullName)
 					//	.ToList()
 					//	;
 
 					users =
 						databaseContext.Users
-						.Where(current => current.FullName.ToLower().Contains(fullNameTextBox.Text.ToLower()))
+						.Where(current => current.FullName.ToLower().Contains(fullName.ToLower()))
 						.OrderBy(current => current.FullName)
 						.ToList()
 						;
@@ -109,10 +112,14 @@ namespace MyApplication.Admin
 				// **************************************************
 
 				// **************************************************
+				// **************************************************
+				// **************************************************
 				// Binding
 				// **************************************************
-				//usersListBox.DataSource = null;
+				usersListBox.DataSource = null;
+				// **************************************************
 
+				// **************************************************
 				//usersListBox.ValueMember = "Id";
 				//usersListBox.DisplayMember = "Username";
 
@@ -133,10 +140,13 @@ namespace MyApplication.Admin
 
 				usersListBox.DataSource = users;
 				// **************************************************
+				// **************************************************
+				// **************************************************
 
 				//if (users.Count == 0)
 				//{
-				//	System.Windows.Forms.MessageBox.Show("There is not any user for displaying!");
+				//	System.Windows.Forms.MessageBox
+				//		.Show("There is not any user for displaying!");
 				//}
 			}
 			catch (System.Exception ex)
@@ -157,7 +167,8 @@ namespace MyApplication.Admin
 		{
 			if (usersListBox.SelectedItem == null)
 			{
-				System.Windows.Forms.MessageBox.Show("You did not specify user for editing!");
+				System.Windows.Forms.MessageBox
+					.Show("You did not specify any user for editing!");
 
 				return;
 			}
@@ -165,7 +176,7 @@ namespace MyApplication.Admin
 			// **************************************************
 			// روش احمقانه
 			// **************************************************
-			//Models.User selectedUser =
+			//var selectedUser =
 			//	(Models.User)usersListBox.SelectedItem;
 			// **************************************************
 
@@ -184,7 +195,7 @@ namespace MyApplication.Admin
 			// **************************************************
 			// روش هوشمندانه
 			// **************************************************
-			//Models.User selectedUser =
+			//var selectedUser =
 			//	usersListBox.SelectedItem as Models.User;
 
 			//if (selectedUser != null)
@@ -198,17 +209,19 @@ namespace MyApplication.Admin
 			if (usersListBox.SelectedItem is Models.User selectedUser)
 			{
 				// **************************************************
-				//UpdateUserForm updateUserForm = new UpdateUserForm
-				//{
-				//	SelectedUserId = selectedUser.Id,
-				//};
+				//var updateUserForm =
+				//	new UpdateUserForm
+				//	{
+				//		SelectedUserId = selectedUser.Id,
+				//	};
 				// **************************************************
 
 				// **************************************************
-				UpdateUserForm updateUserForm = new UpdateUserForm
-				{
-					SelectedUser = selectedUser,
-				};
+				var updateUserForm =
+					new UpdateUserForm
+					{
+						SelectedUser = selectedUser,
+					};
 				// **************************************************
 
 				updateUserForm.ShowDialog();
@@ -222,7 +235,8 @@ namespace MyApplication.Admin
 		{
 			if (usersListBox.SelectedItems.Count == 0)
 			{
-				System.Windows.Forms.MessageBox.Show("You did not select any users for deleting!");
+				System.Windows.Forms.MessageBox
+					.Show("You did not select any users for deleting!");
 
 				return;
 			}
@@ -239,7 +253,7 @@ namespace MyApplication.Admin
 					// **************************************************
 					// روش هوشمندانه
 					// **************************************************
-					//Models.User selectedUser = selectedItem as Models.User;
+					//var selectedUser = selectedItem as Models.User;
 
 					//if (selectedUser != null)
 					//{
@@ -251,7 +265,7 @@ namespace MyApplication.Admin
 					// **************************************************
 					if (selectedItem is Models.User selectedUser)
 					{
-						Models.User foundedUser =
+						var foundedUser =
 							databaseContext.Users
 							.Where(current => current.Id == selectedUser.Id)
 							.FirstOrDefault();
