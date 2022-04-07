@@ -24,19 +24,31 @@ namespace MyApplication
 			{
 				System.Windows.Forms.MessageBox.Show("Username and Password are requied!");
 
+				// **************************************************
 				//usernameTextBox.Text =
 				//	usernameTextBox.Text.Trim();
 
 				//passwordTextBox.Text =
 				//	passwordTextBox.Text.Trim();
+				// **************************************************
 
+				// **************************************************
+				//usernameTextBox.Text =
+				//	usernameTextBox.Text?.Trim();
+
+				//passwordTextBox.Text =
+				//	passwordTextBox.Text?.Trim();
+				// **************************************************
+
+				// **************************************************
 				usernameTextBox.Text =
-					usernameTextBox.Text.Replace(" ", string.Empty);
+					usernameTextBox.Text?.Replace(" ", string.Empty);
 
 				passwordTextBox.Text =
-					passwordTextBox.Text.Replace(" ", string.Empty);
+					passwordTextBox.Text?.Replace(" ", string.Empty);
+				// **************************************************
 
-				if (usernameTextBox.Text == string.Empty)
+				if (string.IsNullOrWhiteSpace(usernameTextBox.Text))
 				{
 					usernameTextBox.Focus();
 				}
@@ -51,7 +63,9 @@ namespace MyApplication
 			// **************************************************
 			// **************************************************
 
-			// از این قسمت به بعد باید سر کلاس نوشته شود
+			// **************************************************
+			// از این قسمت به بعد، باید سر کلاس نوشته شود
+			// **************************************************
 
 			Models.DatabaseContext databaseContext = null;
 
@@ -62,28 +76,34 @@ namespace MyApplication
 
 				//var foundedUser =
 				//	databaseContext.Users
+				//	// Where() => using System.Linq;
 				//	.Where(current => current.Username == usernameTextBox.Text)
+				//	// FirstOrDefault() => using System.Linq;
 				//	.FirstOrDefault();
 
 				// کار نمی‌کند EF Core در
 				//var foundedUser =
 				//	databaseContext.Users
+				//	// Where() => using System.Linq;
 				//	.Where(current => string.Compare(current.Username, usernameTextBox.Text, true) == 0)
+				//	// FirstOrDefault() => using System.Linq;
 				//	.FirstOrDefault();
 
 				var foundedUser =
 					databaseContext.Users
+					// Where() => using System.Linq;
 					.Where(current => current.Username.ToLower() == usernameTextBox.Text.ToLower())
+					// FirstOrDefault() => using System.Linq;
 					.FirstOrDefault();
 
 				if (foundedUser == null)
 				{
-					// پیغام ذیل کاملا دقیق بوده ولی از نظر مسایل امنیتی صلاح نیست
+					// پیغام ذیل کاملا دقیق بوده، ولی از نظر مسائل امنیتی صلاح نیست
 
 					//System.Windows.Forms.MessageBox
 					//	.Show("Username is not correct!");
 
-					// دقت کنید که در این حالت، پیغام باید گنگ باشد
+					// دقت کنید که در این حالت، پیغام خطا باید گنگ باشد
 
 					System.Windows.Forms.MessageBox
 						.Show("Username and/or Password is not correct!");
@@ -95,12 +115,12 @@ namespace MyApplication
 
 				if (string.Compare(foundedUser.Password, passwordTextBox.Text, ignoreCase: false) != 0)
 				{
-					// پیغام ذیل کاملا دقیق بوده ولی از نظر مسایل امنیتی صلاح نیست
+					// پیغام ذیل کاملا دقیق بوده، ولی از نظر مسائل امنیتی صلاح نیست
 
 					//System.Windows.Forms.MessageBox
 					//	.Show("Password is not correct!");
 
-					// دقت کنید که در این حالت نیز، پیغام باید گنگ باشد
+					// دقت کنید که در این حالت، پیغام خطا باید گنگ باشد
 
 					System.Windows.Forms.MessageBox
 						.Show("Username and/or Password is not correct!");
@@ -113,7 +133,7 @@ namespace MyApplication
 				if (foundedUser.IsActive == false)
 				{
 					System.Windows.Forms.MessageBox
-						.Show("You can not login to this application! Please contact support team.");
+						.Show("You can not login right now! Please contact support.");
 
 					usernameTextBox.Focus();
 
@@ -186,7 +206,7 @@ namespace MyApplication
 			// **************************************************
 			//Close();
 
-			//RegisterForm registerForm = new RegisterForm();
+			//var registerForm = new RegisterForm();
 
 			//registerForm.Show();
 			// **************************************************
@@ -196,7 +216,7 @@ namespace MyApplication
 			// **************************************************
 			//Hide();
 
-			//RegisterForm registerForm = new RegisterForm();
+			//var registerForm = new RegisterForm();
 
 			//registerForm.Show();
 			// **************************************************

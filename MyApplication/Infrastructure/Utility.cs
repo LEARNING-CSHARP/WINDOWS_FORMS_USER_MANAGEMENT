@@ -61,7 +61,7 @@ namespace Infrastructure
 		// **************************************************
 		// **************************************************
 		// **************************************************
-		private static MyApplication.LoginForm loginForm;
+		private static MyApplication.LoginForm _loginForm;
 		// **************************************************
 
 		// **************************************************
@@ -72,13 +72,13 @@ namespace Infrastructure
 		{
 			get
 			{
-				if (loginForm == null || loginForm.IsDisposed)
+				if (_loginForm == null || _loginForm.IsDisposed)
 				{
-					loginForm =
+					_loginForm =
 						new MyApplication.LoginForm();
 				}
 
-				return loginForm;
+				return _loginForm;
 			}
 		}
 		// **************************************************
@@ -86,14 +86,14 @@ namespace Infrastructure
 		// **************************************************
 		public static void DisposeLoginForm()
 		{
-			if (loginForm != null)
+			if (_loginForm != null)
 			{
-				if (loginForm.IsDisposed == false)
+				if (_loginForm.IsDisposed == false)
 				{
-					loginForm.Dispose();
+					_loginForm.Dispose();
 				}
 
-				loginForm = null;
+				_loginForm = null;
 			}
 		}
 		// **************************************************
@@ -103,7 +103,7 @@ namespace Infrastructure
 		// **************************************************
 		// **************************************************
 		// **************************************************
-		private static MyApplication.RegisterForm registerForm;
+		private static MyApplication.RegisterForm _registerForm;
 		// **************************************************
 
 		// **************************************************
@@ -114,13 +114,13 @@ namespace Infrastructure
 		{
 			get
 			{
-				if (registerForm == null || registerForm.IsDisposed)
+				if (_registerForm == null || _registerForm.IsDisposed)
 				{
-					registerForm =
+					_registerForm =
 						new MyApplication.RegisterForm();
 				}
 
-				return registerForm;
+				return _registerForm;
 			}
 		}
 		// **************************************************
@@ -128,14 +128,14 @@ namespace Infrastructure
 		// **************************************************
 		public static void DisposeRegisterForm()
 		{
-			if (registerForm != null)
+			if (_registerForm != null)
 			{
-				if (registerForm.IsDisposed == false)
+				if (_registerForm.IsDisposed == false)
 				{
-					registerForm.Dispose();
+					_registerForm.Dispose();
 				}
 
-				registerForm = null;
+				_registerForm = null;
 			}
 		}
 		// **************************************************
@@ -145,7 +145,7 @@ namespace Infrastructure
 		// **************************************************
 		// **************************************************
 		// **************************************************
-		private static MyApplication.MainForm mainForm;
+		private static MyApplication.MainForm _mainForm;
 		// **************************************************
 
 		// **************************************************
@@ -156,13 +156,13 @@ namespace Infrastructure
 		{
 			get
 			{
-				if (mainForm == null || mainForm.IsDisposed)
+				if (_mainForm == null || _mainForm.IsDisposed)
 				{
-					mainForm =
+					_mainForm =
 						new MyApplication.MainForm();
 				}
 
-				return mainForm;
+				return _mainForm;
 			}
 		}
 		// **************************************************
@@ -170,14 +170,14 @@ namespace Infrastructure
 		// **************************************************
 		public static void DisposeMainForm()
 		{
-			if (mainForm != null)
+			if (_mainForm != null)
 			{
-				if (mainForm.IsDisposed == false)
+				if (_mainForm.IsDisposed == false)
 				{
-					mainForm.Dispose();
+					_mainForm.Dispose();
 				}
 
-				mainForm = null;
+				_mainForm = null;
 			}
 		}
 		// **************************************************

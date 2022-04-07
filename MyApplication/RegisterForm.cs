@@ -89,8 +89,8 @@ namespace MyApplication
 			// **************************************************
 
 			// از این قسمت به بعد باید سر کلاس نوشته شود
-			// در ضمن، دقت کنید، چون دستورات فوق را سر کلاس نباید بنویسید
-			// در زمان ورود اطلاعات برای ثبت‌نام، داده‌های درستی را خودتان وارد کنید
+			// در ضمن، دقت کنید، چون دستورات فوق را سر کلاس نمی‌نویسید
+			// در زمان ورود اطلاعات، برای ثبت‌نام، داده‌های درستی را خودتان وارد کنید
 
 			Models.DatabaseContext databaseContext = null;
 
@@ -139,6 +139,8 @@ namespace MyApplication
 
 				databaseContext.SaveChanges();
 
+				System.Windows.Forms.MessageBox.Show("Registration Done!");
+
 				// **************************************************
 				//fullNameTextBox.Text = string.Empty;
 				//passwordTextBox.Text = string.Empty;
@@ -156,8 +158,6 @@ namespace MyApplication
 				// **************************************************
 				ResetForm();
 				// **************************************************
-
-				System.Windows.Forms.MessageBox.Show("Registration Done!");
 			}
 			catch (System.Exception ex)
 			{
