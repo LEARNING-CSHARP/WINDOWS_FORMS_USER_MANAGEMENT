@@ -27,7 +27,7 @@ namespace MyApplication.Admin
 				databaseContext =
 					new Models.DatabaseContext();
 
-				string fullName =
+				var fullName =
 					fullNameTextBox.Text;
 
 				fullName =
@@ -123,18 +123,38 @@ namespace MyApplication.Admin
 				//usersListBox.ValueMember = "Id";
 				//usersListBox.DisplayMember = "Username";
 
+				//usersListBox.DataSource = users;
+				// **************************************************
+
+				// **************************************************
 				//usersListBox.ValueMember = "Id1";
 				//usersListBox.DisplayMember = "Username1";
 
+				//usersListBox.DataSource = users;
+				// **************************************************
+
+				// **************************************************
 				//usersListBox.ValueMember = nameof(Models.User.Id); // "Id"
 				//usersListBox.DisplayMember = nameof(Models.User.Username); // "Username"
 
+				//usersListBox.DataSource = users;
+				// **************************************************
+
+				// **************************************************
 				//usersListBox.ValueMember = nameof(Models.User.Id1);
 				//usersListBox.DisplayMember = nameof(Models.User.Username1);
 
+				//usersListBox.DataSource = users;
+				// **************************************************
+
+				// **************************************************
 				//usersListBox.ValueMember = nameof(Models.User.Id);
 				//usersListBox.DisplayMember = nameof(Models.User.FullName);
 
+				//usersListBox.DataSource = users;
+				// **************************************************
+
+				// **************************************************
 				usersListBox.ValueMember = nameof(Models.User.Id);
 				usersListBox.DisplayMember = nameof(Models.User.DisplayName);
 

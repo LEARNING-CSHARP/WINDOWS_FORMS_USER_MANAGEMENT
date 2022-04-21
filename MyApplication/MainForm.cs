@@ -102,72 +102,72 @@
 		// **************************************************
 
 		// **************************************************
-		private UpdateProfileForm updateProfileForm;
+		private UpdateProfileForm _updateProfileForm;
 
 		private void UpdateProfileToolStripMenuItem_Click(object sender, System.EventArgs e)
 		{
-			if (updateProfileForm == null || updateProfileForm.IsDisposed)
+			if (_updateProfileForm == null || _updateProfileForm.IsDisposed)
 			{
-				updateProfileForm = new UpdateProfileForm
+				_updateProfileForm = new UpdateProfileForm
 				{
 					MdiParent = this,
 				};
 			}
 
-			updateProfileForm.Show();
+			_updateProfileForm.Show();
 		}
 		// **************************************************
 		// **************************************************
 		// **************************************************
 
 		// **************************************************
-		private ChangePasswordForm changePasswordForm;
+		private ChangePasswordForm _changePasswordForm;
 
 		private void ChangePasswordToolStripMenuItem_Click(object sender, System.EventArgs e)
 		{
-			if (changePasswordForm == null || changePasswordForm.IsDisposed)
+			if (_changePasswordForm == null || _changePasswordForm.IsDisposed)
 			{
-				changePasswordForm = new ChangePasswordForm
+				_changePasswordForm = new ChangePasswordForm
 				{
 					MdiParent = this,
 				};
 			}
 
-			changePasswordForm.Show();
+			_changePasswordForm.Show();
 		}
 		// **************************************************
 
 		// **************************************************
-		private Admin.UsersListForm usersListForm;
+		private Admin.UsersListForm _usersListForm;
 
 		private void UsersListToolStripMenuItem_Click(object sender, System.EventArgs e)
 		{
-			if (usersListForm == null || usersListForm.IsDisposed)
+			if (_usersListForm == null || _usersListForm.IsDisposed)
 			{
-				usersListForm = new Admin.UsersListForm
+				_usersListForm = new Admin.UsersListForm
 				{
 					MdiParent = this,
 				};
 			}
 
-			usersListForm.Show();
+			_usersListForm.Show();
 		}
 		// **************************************************
 
 		// **************************************************
-		private Admin.NewUsersListForm newUsersListForm;
+		private Admin.NewUsersListForm _newUsersListForm;
 
 		private void NewUsersListToolStripMenuItem_Click(object sender, System.EventArgs e)
 		{
-			if (newUsersListForm == null || newUsersListForm.IsDisposed)
+			if (_newUsersListForm == null || _newUsersListForm.IsDisposed)
 			{
-				newUsersListForm = new Admin.NewUsersListForm
+				_newUsersListForm = new Admin.NewUsersListForm
 				{
 					MdiParent = this,
 				};
 			}
 
-			newUsersListForm.Show();
+			_newUsersListForm.Show();
 		}
 		// **************************************************
 

@@ -188,18 +188,13 @@ namespace Infrastructure
 
 		public static string FixText(string text)
 		{
-			if (text == null)
+			if(string.IsNullOrWhiteSpace(text))
 			{
 				return null;
 			}
 
 			text =
 				text.Trim();
-
-			if (text == string.Empty)
-			{
-				return null;
-			}
 
 			// تا وقتی که در داخل متن، دو فاصله وجود دارد
 			// دو فاصله را به یک فاصله تبدیل کن
