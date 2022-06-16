@@ -35,7 +35,8 @@ namespace MyApplication
 				passwordTextBox.Text =
 					passwordTextBox.Text.Replace(" ", string.Empty);
 
-				System.Windows.Forms.MessageBox.Show("Username and Password is requied!");
+				System.Windows.Forms.MessageBox
+					.Show(text: "Username and Password is requied!");
 
 				if (usernameTextBox.Text == string.Empty)
 				{
@@ -80,7 +81,7 @@ namespace MyApplication
 			// اگر خطایی وجود داشت
 			if (errorMessages != string.Empty)
 			{
-				System.Windows.Forms.MessageBox.Show(errorMessages);
+				System.Windows.Forms.MessageBox.Show(text: errorMessages);
 
 				return;
 			}
@@ -118,7 +119,7 @@ namespace MyApplication
 				if (user != null)
 				{
 					System.Windows.Forms.MessageBox.Show
-						("This username already exists! Please choose another one...");
+						(text: "This username is already exist! Please choose another one...");
 
 					usernameTextBox.Focus();
 
@@ -139,7 +140,8 @@ namespace MyApplication
 
 				databaseContext.SaveChanges();
 
-				System.Windows.Forms.MessageBox.Show("Registration Done!");
+				System.Windows.Forms.MessageBox
+					.Show(text: "Registration Done!");
 
 				// **************************************************
 				//fullNameTextBox.Text = string.Empty;
@@ -161,7 +163,7 @@ namespace MyApplication
 			}
 			catch (System.Exception ex)
 			{
-				System.Windows.Forms.MessageBox.Show($"Error: { ex.Message }");
+				System.Windows.Forms.MessageBox.Show($"Error: {ex.Message}");
 			}
 			finally
 			{

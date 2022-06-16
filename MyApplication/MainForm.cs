@@ -81,7 +81,7 @@
 					Infrastructure.Utility.AuthenticatedUser.FullName;
 			}
 
-			welcomeToolStripStatusLabel.Text = $"Welcome { userDisplayName }!";
+			welcomeToolStripStatusLabel.Text = $"Welcome {userDisplayName}!";
 			// **************************************************
 			// **************************************************
 			// **************************************************
@@ -121,19 +121,20 @@
 		// **************************************************
 
 		// **************************************************
-		private ChangePasswordForm _changePasswordForm;
+		//private ChangePasswordForm _changePasswordForm;
+		private ChangePasswordForm ChangePasswordForm { get; set; }
 
 		private void ChangePasswordToolStripMenuItem_Click(object sender, System.EventArgs e)
 		{
-			if (_changePasswordForm == null || _changePasswordForm.IsDisposed)
+			if (ChangePasswordForm == null || ChangePasswordForm.IsDisposed)
 			{
-				_changePasswordForm = new ChangePasswordForm
+				ChangePasswordForm = new ChangePasswordForm
 				{
 					MdiParent = this,
 				};
 			}
 
-			_changePasswordForm.Show();
+			ChangePasswordForm.Show();
 		}
 		// **************************************************
 

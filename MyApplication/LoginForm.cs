@@ -22,7 +22,8 @@ namespace MyApplication
 			if (string.IsNullOrWhiteSpace(usernameTextBox.Text) ||
 				string.IsNullOrWhiteSpace(passwordTextBox.Text))
 			{
-				System.Windows.Forms.MessageBox.Show("Username and Password are requied!");
+				System.Windows.Forms.MessageBox
+					.Show(text: "Username and Password are requied!");
 
 				// **************************************************
 				//usernameTextBox.Text =
@@ -76,9 +77,9 @@ namespace MyApplication
 
 				//var foundedUser =
 				//	databaseContext.Users
-				//	// Where() => using System.Linq;
+				//	// Where() -> using System.Linq;
 				//	.Where(current => current.Username == usernameTextBox.Text)
-				//	// FirstOrDefault() => using System.Linq;
+				//	// FirstOrDefault() -> using System.Linq;
 				//	.FirstOrDefault();
 
 				// کار نمی‌کند EF Core در
@@ -172,7 +173,7 @@ namespace MyApplication
 			}
 			catch (System.Exception ex)
 			{
-				System.Windows.Forms.MessageBox.Show($"Error: { ex.Message }");
+				System.Windows.Forms.MessageBox.Show($"Error: {ex.Message}");
 			}
 			finally
 			{
