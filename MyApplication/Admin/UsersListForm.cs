@@ -64,6 +64,7 @@ namespace MyApplication.Admin
 					//	.ToList()
 					//	;
 
+					// کار نمی‌کند EF Core در
 					//users =
 					//	databaseContext.Users
 					//	.Where(current => string.Compare(current.FullName, fullName, true) == 0)
