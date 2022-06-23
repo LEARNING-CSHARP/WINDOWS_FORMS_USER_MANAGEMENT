@@ -29,12 +29,13 @@
 			this.oldPasswordLabel = new Dtx.Windows.Forms.Label();
 			this.confirmNewPasswordLabel = new Dtx.Windows.Forms.Label();
 			this.confirmNewPasswordTextBox = new Dtx.Windows.Forms.TextBox();
+			this.resetButton = new Dtx.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// changePasswordButton
 			// 
 			this.changePasswordButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.changePasswordButton.Location = new System.Drawing.Point(273, 93);
+			this.changePasswordButton.Location = new System.Drawing.Point(157, 91);
 			this.changePasswordButton.Name = "changePasswordButton";
 			this.changePasswordButton.Size = new System.Drawing.Size(128, 23);
 			this.changePasswordButton.TabIndex = 6;
@@ -105,12 +106,26 @@
 			this.confirmNewPasswordTextBox.TabIndex = 5;
 			this.confirmNewPasswordTextBox.UseSystemPasswordChar = true;
 			// 
+			// resetButton
+			// 
+			this.resetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.resetButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+			this.resetButton.Location = new System.Drawing.Point(291, 93);
+			this.resetButton.Name = "resetButton";
+			this.resetButton.Size = new System.Drawing.Size(75, 23);
+			this.resetButton.TabIndex = 7;
+			this.resetButton.Text = "&Reset";
+			this.resetButton.UseVisualStyleBackColor = true;
+			this.resetButton.Click += new System.EventHandler(this.ResetButton_Click);
+			// 
 			// ChangePasswordForm
 			// 
 			this.AcceptButton = this.changePasswordButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.CancelButton = this.resetButton;
 			this.ClientSize = new System.Drawing.Size(413, 126);
+			this.Controls.Add(this.resetButton);
 			this.Controls.Add(this.confirmNewPasswordLabel);
 			this.Controls.Add(this.confirmNewPasswordTextBox);
 			this.Controls.Add(this.changePasswordButton);
@@ -138,5 +153,6 @@
 		private Dtx.Windows.Forms.Button changePasswordButton;
 		private Dtx.Windows.Forms.Label confirmNewPasswordLabel;
 		private Dtx.Windows.Forms.TextBox confirmNewPasswordTextBox;
+		private Dtx.Windows.Forms.Button resetButton;
 	}
 }

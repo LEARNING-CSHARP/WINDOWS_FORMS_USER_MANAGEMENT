@@ -33,12 +33,13 @@
 			this.descriptionTextBox = new Dtx.Windows.Forms.TextBox();
 			this.fullNameTextBox = new Dtx.Windows.Forms.TextBox();
 			this.fullNameLabel = new Dtx.Windows.Forms.Label();
+			this.resetButton = new Dtx.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// saveButton
 			// 
 			this.saveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.saveButton.Location = new System.Drawing.Point(323, 196);
+			this.saveButton.Location = new System.Drawing.Point(91, 196);
 			this.saveButton.Name = "saveButton";
 			this.saveButton.Size = new System.Drawing.Size(87, 23);
 			this.saveButton.TabIndex = 4;
@@ -88,12 +89,26 @@
 			this.fullNameLabel.TabIndex = 0;
 			this.fullNameLabel.Text = "&Full Name";
 			// 
+			// resetButton
+			// 
+			this.resetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.resetButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+			this.resetButton.Location = new System.Drawing.Point(184, 196);
+			this.resetButton.Name = "resetButton";
+			this.resetButton.Size = new System.Drawing.Size(75, 23);
+			this.resetButton.TabIndex = 8;
+			this.resetButton.Text = "&Reset";
+			this.resetButton.UseVisualStyleBackColor = true;
+			this.resetButton.Click += new System.EventHandler(this.ResetButton_Click);
+			// 
 			// UpdateProfileForm
 			// 
 			this.AcceptButton = this.saveButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.CancelButton = this.resetButton;
 			this.ClientSize = new System.Drawing.Size(424, 231);
+			this.Controls.Add(this.resetButton);
 			this.Controls.Add(this.saveButton);
 			this.Controls.Add(this.descriptionLabel);
 			this.Controls.Add(this.descriptionTextBox);
@@ -116,5 +131,6 @@
 		private Dtx.Windows.Forms.TextBox fullNameTextBox;
 		private Dtx.Windows.Forms.Label fullNameLabel;
 		private Dtx.Windows.Forms.Button saveButton;
+		private Dtx.Windows.Forms.Button resetButton;
 	}
 }

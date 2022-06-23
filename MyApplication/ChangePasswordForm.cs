@@ -91,7 +91,7 @@ namespace MyApplication
 
 			if (errorMessages != string.Empty)
 			{
-				System.Windows.Forms.MessageBox.Show(errorMessages);
+				System.Windows.Forms.MessageBox.Show(text: errorMessages);
 
 				oldPasswordTextBox.Focus();
 
@@ -130,24 +130,30 @@ namespace MyApplication
 				//if (currentUser.Password != oldPasswordTextBox.Text)
 				if (string.Compare(currentUser.Password, oldPasswordTextBox.Text, ignoreCase: false) != 0)
 				{
-					System.Windows.Forms.MessageBox.Show("The old password is not correct!");
+					System.Windows.Forms.MessageBox
+						.Show(text: "The old password is not correct!");
 
 					oldPasswordTextBox.Focus();
 
 					return;
 				}
 
-				currentUser.Password = newPasswordTextBox.Text;
+				currentUser.Password =
+					newPasswordTextBox.Text;
 
 				databaseContext.SaveChanges();
 
-				System.Windows.Forms.MessageBox.Show("Your password changed successfully.");
+				ResetForm();
+
+				System.Windows.Forms.MessageBox
+					.Show(text: "Your password changed successfully.");
 
 				//Close();
 			}
 			catch (System.Exception ex)
 			{
-				System.Windows.Forms.MessageBox.Show($"Error: { ex.Message }");
+				System.Windows.Forms.MessageBox
+					.Show(text: $"Error: {ex.Message}");
 			}
 			finally
 			{
@@ -157,6 +163,18 @@ namespace MyApplication
 					databaseContext = null;
 				}
 			}
+		}
+
+		private void ResetButton_Click(object sender, System.EventArgs e)
+		{
+			ResetForm();
+		}
+
+		private void ResetForm()
+		{
+			oldPasswordTextBox.Text = string.Empty;
+			newPasswordTextBox.Text = string.Empty;
+			confirmNewPasswordTextBox.Text = string.Empty;
 		}
 	}
 }

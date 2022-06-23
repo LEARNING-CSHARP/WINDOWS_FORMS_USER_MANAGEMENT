@@ -11,6 +11,11 @@ namespace MyApplication
 
 		private void UpdateProfileForm_Load(object sender, System.EventArgs e)
 		{
+			ResetForm();
+		}
+
+		private void ResetForm()
+		{
 			// **************************************************
 			//fullNameTextBox.Text =
 			//	Infrastructure.Utility.AuthenticatedUser.FullName;
@@ -43,12 +48,15 @@ namespace MyApplication
 				}
 				// **************************************************
 
-				fullNameTextBox.Text = currentUser.FullName;
-				descriptionTextBox.Text = currentUser.Description;
+				fullNameTextBox.Text =
+					currentUser.FullName;
+
+				descriptionTextBox.Text =
+					currentUser.Description;
 			}
 			catch (System.Exception ex)
 			{
-				System.Windows.Forms.MessageBox.Show($"Error: { ex.Message }");
+				System.Windows.Forms.MessageBox.Show($"Error: {ex.Message}");
 			}
 			finally
 			{
@@ -86,8 +94,11 @@ namespace MyApplication
 				}
 				// **************************************************
 
-				currentUser.FullName = fullNameTextBox.Text;
-				currentUser.Description = descriptionTextBox.Text;
+				currentUser.FullName =
+					fullNameTextBox.Text;
+
+				currentUser.Description =
+					descriptionTextBox.Text;
 
 				databaseContext.SaveChanges();
 
@@ -105,7 +116,7 @@ namespace MyApplication
 			}
 			catch (System.Exception ex)
 			{
-				System.Windows.Forms.MessageBox.Show($"Error: { ex.Message }");
+				System.Windows.Forms.MessageBox.Show($"Error: {ex.Message}");
 			}
 			finally
 			{
@@ -115,6 +126,11 @@ namespace MyApplication
 					databaseContext = null;
 				}
 			}
+		}
+
+		private void ResetButton_Click(object sender, System.EventArgs e)
+		{
+			ResetForm();
 		}
 	}
 }
