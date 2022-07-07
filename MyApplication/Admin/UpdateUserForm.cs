@@ -38,7 +38,7 @@ namespace MyApplication.Admin
 				if (foundedUser == null)
 				{
 					System.Windows.Forms.MessageBox
-						.Show("There is no such a user anymore!");
+						.Show(text: "There is no such a user anymore!");
 
 					Close();
 				}
@@ -51,7 +51,7 @@ namespace MyApplication.Admin
 			}
 			catch (System.Exception ex)
 			{
-				System.Windows.Forms.MessageBox.Show($"Error: { ex.Message }");
+				System.Windows.Forms.MessageBox.Show(text: $"Error: { ex.Message }");
 
 				Close();
 			}
@@ -83,7 +83,7 @@ namespace MyApplication.Admin
 				if (foundedUser == null)
 				{
 					System.Windows.Forms.MessageBox
-						.Show("There is no such a user anymore!");
+						.Show(text: "There is no such a user anymore!");
 
 					Close();
 				}
@@ -107,7 +107,7 @@ namespace MyApplication.Admin
 			}
 			catch (System.Exception ex)
 			{
-				System.Windows.Forms.MessageBox.Show($"Error: { ex.Message }");
+				System.Windows.Forms.MessageBox.Show(text: $"Error: { ex.Message }");
 
 				Close();
 			}

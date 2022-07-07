@@ -102,12 +102,12 @@ namespace MyApplication
 					// پیغام ذیل کاملا دقیق بوده، ولی از نظر مسائل امنیتی صلاح نیست
 
 					//System.Windows.Forms.MessageBox
-					//	.Show("Username is not correct!");
+					//	.Show(text: "Username is not correct!");
 
 					// دقت کنید که در این حالت، پیغام خطا باید گنگ باشد
 
 					System.Windows.Forms.MessageBox
-						.Show("Username and/or Password is not correct!");
+						.Show(text: "Username and/or Password is not correct!");
 
 					usernameTextBox.Focus();
 
@@ -119,12 +119,12 @@ namespace MyApplication
 					// پیغام ذیل کاملا دقیق بوده، ولی از نظر مسائل امنیتی صلاح نیست
 
 					//System.Windows.Forms.MessageBox
-					//	.Show("Password is not correct!");
+					//	.Show(text: "Password is not correct!");
 
 					// دقت کنید که در این حالت، پیغام خطا باید گنگ باشد
 
 					System.Windows.Forms.MessageBox
-						.Show("Username and/or Password is not correct!");
+						.Show(text: "Username and/or Password is not correct!");
 
 					usernameTextBox.Focus();
 
@@ -134,7 +134,7 @@ namespace MyApplication
 				if (foundedUser.IsActive == false)
 				{
 					System.Windows.Forms.MessageBox
-						.Show("You can not login right now! Please contact support.");
+						.Show(text: "You can not login right now! Please contact support.");
 
 					usernameTextBox.Focus();
 
@@ -142,7 +142,7 @@ namespace MyApplication
 				}
 
 				// **************************************************
-				//System.Windows.Forms.MessageBox.Show("Welcome!");
+				//System.Windows.Forms.MessageBox.Show(text: "Welcome!");
 				// **************************************************
 
 				// **************************************************
@@ -173,7 +173,8 @@ namespace MyApplication
 			}
 			catch (System.Exception ex)
 			{
-				System.Windows.Forms.MessageBox.Show($"Error: {ex.Message}");
+				System.Windows.Forms.MessageBox
+					.Show($"Error: {ex.Message}");
 			}
 			finally
 			{

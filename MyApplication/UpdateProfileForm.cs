@@ -56,7 +56,7 @@ namespace MyApplication
 			}
 			catch (System.Exception ex)
 			{
-				System.Windows.Forms.MessageBox.Show($"Error: {ex.Message}");
+				System.Windows.Forms.MessageBox.Show(text: $"Error: {ex.Message}");
 			}
 			finally
 			{
@@ -109,14 +109,14 @@ namespace MyApplication
 				// **************************************************
 
 				System.Windows.Forms.MessageBox
-					.Show("Your profile updated successfully...");
+					.Show(text: "Your profile updated successfully...");
 
 				// استفاده کنیم Close فرم به طور اتوماتیک بسته شود، می‌توانیم از دستور MessageBox اگر بخواهیم بعد از UpdateProfileForm در داخل
 				//Close();
 			}
 			catch (System.Exception ex)
 			{
-				System.Windows.Forms.MessageBox.Show($"Error: {ex.Message}");
+				System.Windows.Forms.MessageBox.Show(text: $"Error: {ex.Message}");
 			}
 			finally
 			{

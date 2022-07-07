@@ -167,12 +167,13 @@ namespace MyApplication.Admin
 				//if (users.Count == 0)
 				//{
 				//	System.Windows.Forms.MessageBox
-				//		.Show("There is not any user for displaying!");
+				//		.Show(text: "There is not any user for displaying!");
 				//}
 			}
 			catch (System.Exception ex)
 			{
-				System.Windows.Forms.MessageBox.Show($"Error: { ex.Message }");
+				System.Windows.Forms.MessageBox
+					.Show(text: $"Error: {ex.Message}");
 			}
 			finally
 			{
@@ -189,7 +190,7 @@ namespace MyApplication.Admin
 			if (usersListBox.SelectedItem == null)
 			{
 				System.Windows.Forms.MessageBox
-					.Show("You did not specify any user for editing!");
+					.Show(text: "You did not specify any user for editing!");
 
 				return;
 			}
@@ -257,7 +258,7 @@ namespace MyApplication.Admin
 			if (usersListBox.SelectedItems.Count == 0)
 			{
 				System.Windows.Forms.MessageBox
-					.Show("You did not select any users for deleting!");
+					.Show(text: "You did not select any users for deleting!");
 
 				return;
 			}
@@ -295,7 +296,7 @@ namespace MyApplication.Admin
 						{
 							if (foundedUser.IsAdmin == false)
 							{
-								databaseContext.Users.Remove(foundedUser);
+								databaseContext.Users.Remove(entity: foundedUser);
 
 								databaseContext.SaveChanges();
 							}
@@ -307,7 +308,8 @@ namespace MyApplication.Admin
 			}
 			catch (System.Exception ex)
 			{
-				System.Windows.Forms.MessageBox.Show($"Error: { ex.Message }");
+				System.Windows.Forms.MessageBox
+					.Show(text: $"Error: {ex.Message}");
 			}
 			finally
 			{
